@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BA299ACB90000370CB /* LocationModel.swift */; };
+		2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BC299ACBAF000370CB /* locationManger.swift */; };
 		2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E42998F49D00244576 /* findingWaterApp.swift */; };
 		2DFE96E72998F49D00244576 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E62998F49D00244576 /* ContentView.swift */; };
 		2DFE96E92998F4A100244576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE96E82998F4A100244576 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DE4F7BA299ACB90000370CB /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		2DE4F7BC299ACBAF000370CB /* locationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManger.swift; sourceTree = "<group>"; };
 		2DFE96E12998F49D00244576 /* findingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFE96E42998F49D00244576 /* findingWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingWaterApp.swift; sourceTree = "<group>"; };
 		2DFE96E62998F49D00244576 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				2DFE96E82998F4A100244576 /* Assets.xcassets */,
 				2DFE96EA2998F4A100244576 /* findingWater.entitlements */,
 				2DFE96EB2998F4A100244576 /* Preview Content */,
+				2DE4F7BA299ACB90000370CB /* LocationModel.swift */,
+				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 			);
 			path = findingWater;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFE96E72998F49D00244576 /* ContentView.swift in Sources */,
+				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
+				2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +275,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"findingWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needa your Location for show in on the map";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -303,6 +312,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"findingWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needa your Location for show in on the map";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
