@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 
 struct Location: Identifiable {

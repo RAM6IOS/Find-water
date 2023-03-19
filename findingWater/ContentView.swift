@@ -7,13 +7,28 @@ import SwiftUI
 import MapKit
 import CoreLocation
 import CoreLocationUI
+
+@MainActor
 struct ContentView: View {
     @StateObject var model =  locationManger()
-    @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    
     let locations = [
         Location(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), free: true),
-        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.158917), free: false)
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.158917), free: false),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.553840, longitude: 3.114948), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.553899, longitude: 3.118301), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.552798, longitude: 3.108479), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.550966, longitude: 3.103164), free: false),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.553187, longitude: 3.108679), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.567564, longitude: 3.158442), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.546298, longitude: 3.093918), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.543958, longitude: 3.088122), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true),
+        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.544944, longitude: 3.074616), free: true)
+        
+        
     ]
+    
     var body: some View {
         NavigationView{
             ZStack(alignment:.bottomTrailing){
@@ -38,6 +53,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                
                 LocationButton(.currentLocation){
                     model.requesAllowOnceLocationPermission()
                 }
