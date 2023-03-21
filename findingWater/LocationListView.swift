@@ -9,7 +9,43 @@ import SwiftUI
 
 struct LocationListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            List{
+                ForEach(0..<10){_ in
+                    NavigationLink{
+                        LocationList_Details()
+                    }label: {
+                        HStack{
+                            Image("water")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80 , height: 80)
+                                .clipShape(Circle())
+                                .padding(.vertical, 8)
+                            VStack(alignment: .leading){
+                                Text("Test Location Name")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.75)
+                                HStack{
+                                    Image("default-avatar")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 35 , height: 35)
+                                    .clipShape(Circle())
+                                }
+                            }
+                            .padding(.leading)
+                        }
+                        
+                    }
+                   
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("LocationList")
+        }
     }
 }
 
