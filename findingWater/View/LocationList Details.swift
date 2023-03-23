@@ -3,12 +3,8 @@
 //  findingWater
 //
 //  Created by Bouchedoub Ramzi on 21/3/2023.
-//
 
 import SwiftUI
-
-
-
 struct LocationList_Details: View {
     let columns = [
             GridItem(.flexible()),
@@ -42,7 +38,6 @@ struct LocationList_Details: View {
                         } label: {
                             LocationActionButton(color: .newPrimaryColor, imageName: "location.fill")
                         }
-                        
                         Button {
                             
                         } label: {
@@ -55,7 +50,6 @@ struct LocationList_Details: View {
                     .font(.title2)
                 ScrollView {
                     LazyVGrid(columns: columns, content: {
-                        
                         ExtractedView()
                         ExtractedView()
                         ExtractedView()
@@ -63,18 +57,12 @@ struct LocationList_Details: View {
                         ExtractedView()
                         ExtractedView()
                         ExtractedView()
-                        
-                        
-                        
-                        
                     })
                     Spacer()
                 }
-                
             }
             .navigationTitle("Location Name")
             .navigationBarTitleDisplayMode(.inline)
-        
     }
 }
 
