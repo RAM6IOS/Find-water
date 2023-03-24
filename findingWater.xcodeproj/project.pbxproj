@@ -17,6 +17,7 @@
 		2D7028E829CC610500D990CE /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7028E729CC610500D990CE /* LocationCell.swift */; };
 		2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BA299ACB90000370CB /* LocationModel.swift */; };
 		2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BC299ACBAF000370CB /* locationManger.swift */; };
+		2DEC775529CDB54E00C520E5 /* waterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC775429CDB54E00C520E5 /* waterLocation.swift */; };
 		2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E42998F49D00244576 /* findingWaterApp.swift */; };
 		2DFE96E72998F49D00244576 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E62998F49D00244576 /* ContentView.swift */; };
 		2DFE96E92998F4A100244576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE96E82998F4A100244576 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		2D7028E729CC610500D990CE /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		2DE4F7BA299ACB90000370CB /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		2DE4F7BC299ACBAF000370CB /* locationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManger.swift; sourceTree = "<group>"; };
+		2DEC775429CDB54E00C520E5 /* waterLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterLocation.swift; sourceTree = "<group>"; };
 		2DFE96E12998F49D00244576 /* findingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFE96E42998F49D00244576 /* findingWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingWaterApp.swift; sourceTree = "<group>"; };
 		2DFE96E62998F49D00244576 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2DEC775329CDB51A00C520E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DEC775429CDB54E00C520E5 /* waterLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2DFE96D82998F49C00244576 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		2DFE96E32998F49D00244576 /* findingWater */ = {
 			isa = PBXGroup;
 			children = (
+				2DEC775329CDB51A00C520E5 /* Model */,
 				2D7028E629CC604C00D990CE /* View */,
 				2D3E9CB029C79A3A003B38DB /* extension  */,
 				2DFE96E42998F49D00244576 /* findingWaterApp.swift */,
@@ -208,6 +219,7 @@
 				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
 				2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
+				2DEC775529CDB54E00C520E5 /* waterLocation.swift in Sources */,
 				2D7028E829CC610500D990CE /* LocationCell.swift in Sources */,
 				2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */,
 				2D3E9CAA29C77316003B38DB /* ProfileView.swift in Sources */,
