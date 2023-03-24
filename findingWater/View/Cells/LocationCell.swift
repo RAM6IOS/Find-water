@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct LocationCell: View {
+    var location: Location
     var body: some View {
         HStack{
             Image("water")
@@ -16,7 +17,7 @@ struct LocationCell: View {
                 .clipShape(Circle())
                 .padding(.vertical, 8)
             VStack(alignment: .leading){
-                Text("Test Location Name")
+                Text(location.name)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .lineLimit(1)
@@ -34,8 +35,3 @@ struct LocationCell: View {
     }
 }
 
-struct LocationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationCell()
-    }
-}
