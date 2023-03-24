@@ -10,7 +10,7 @@ import CoreLocation
 
 
 
-struct Location: Identifiable {
+struct Location2: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
