@@ -8,7 +8,8 @@ import MapKit
 import CoreLocation
 import CoreLocationUI
 
-@MainActor
+
+/*
 struct ContentView: View {
     @StateObject var model =  locationManger()
     
@@ -77,3 +78,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+*/

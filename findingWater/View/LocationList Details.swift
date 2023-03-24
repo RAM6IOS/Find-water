@@ -13,6 +13,7 @@ struct LocationList_Details: View {
             GridItem(.flexible())
             
         ]
+    var location: Location
     var body: some View {
             VStack(spacing: 16) {
                 Image("pizza")
@@ -20,7 +21,7 @@ struct LocationList_Details: View {
                     .scaledToFill()
                     .frame(height: 250)
                 HStack {
-                    Label("123 Main Street", systemImage: "mappin.and.ellipse")
+                    Label(location.address, systemImage: "mappin.and.ellipse")
                         .font(.caption)
                         .foregroundColor(.secondary)
                     
@@ -61,16 +62,12 @@ struct LocationList_Details: View {
                     Spacer()
                 }
             }
-            .navigationTitle("Location Name")
+            .navigationTitle(location.name)
             .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct LocationList_Details_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationList_Details()
-    }
-}
+
 
 struct ExtractedView: View {
     var body: some View {
