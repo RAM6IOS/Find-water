@@ -23,6 +23,7 @@
 		F71622B929DE220A0023474D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F71622B829DE220A0023474D /* FirebaseAnalytics */; };
 		F71622BB29DE220A0023474D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F71622BA29DE220A0023474D /* FirebaseFirestore */; };
 		F71622BD29DED0ED0023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622BC29DED0EC0023474D /* GoogleService-Info.plist */; };
+		F71622BF29DEDE2F0023474D /* sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71622BE29DEDE2F0023474D /* sources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2DFE96EA2998F4A100244576 /* findingWater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = findingWater.entitlements; sourceTree = "<group>"; };
 		2DFE96EC2998F4A100244576 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F71622BC29DED0EC0023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F71622BE29DEDE2F0023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		2DEC775329CDB51A00C520E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F71622BE29DEDE2F0023474D /* sources.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71622BF29DEDE2F0023474D /* sources.swift in Sources */,
 				2DFE96E72998F49D00244576 /* ContentView.swift in Sources */,
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
