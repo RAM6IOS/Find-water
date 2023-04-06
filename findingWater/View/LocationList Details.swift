@@ -15,55 +15,10 @@ struct LocationList_Details: View {
         ]
     var location: Location
     var body: some View {
-            VStack(spacing: 16) {
-                Image("pizza")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 250)
-                HStack {
-                    Label(location.address, systemImage: "mappin.and.ellipse")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
-                ZStack {
-                    Capsule()
-                        .frame(height: 80)
-                        .foregroundColor(Color(.secondarySystemBackground))
-                    
-                    HStack(spacing: 20) {
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: .newPrimaryColor, imageName: "location.fill")
-                        }
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: .green, imageName: "person.fill.checkmark")
-                        }
-                    }
-                }
-                Text("Who s Here?")
-                    .bold()
-                    .font(.title2)
-                ScrollView {
-                    LazyVGrid(columns: columns, content: {
-                        ExtractedView()
-                        ExtractedView()
-                        ExtractedView()
-                        ExtractedView()
-                        ExtractedView()
-                        ExtractedView()
-                        ExtractedView()
-                    })
-                    Spacer()
-                }
-            }
-            .navigationTitle(location.name)
-            .navigationBarTitleDisplayMode(.inline)
+        VStack{
+            
+        }
+        
     }
 }
 

@@ -29,15 +29,7 @@ struct AppTabView: View {
                     Label("Profile", systemImage: "person")
                 }
         }
-        .onAppear {
-                if #available(iOS 15.0, *) {
-                        let appearance = UITabBarAppearance()
-                    UITabBar.appearance().backgroundColor = UIColor(named:"Color1")
-                            UITabBar.appearance().scrollEdgeAppearance = appearance
-                              
-                    
-                                       }
-                    }
+       
         
         .accentColor(.black)
     }
