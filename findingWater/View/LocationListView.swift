@@ -11,17 +11,7 @@ struct LocationListView: View {
     @State private var locations: [Location] = [Location(record: MockData.location)]
     var body: some View {
         NavigationView{
-            List{
-                ForEach(locations ,id:\.ckRecordID){ laction in
-                    NavigationLink{
-                        LocationList_Details(location: laction)
-                    }label: {
-                        LocationCell(location: laction)
-                    }
-                }
-            }
-            .listStyle(.plain)
-            .navigationTitle("LocationList")
+           
         }
     }
 }
