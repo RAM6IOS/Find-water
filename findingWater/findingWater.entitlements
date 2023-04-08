@@ -18,5 +18,9 @@
 	<true/>
 	<key>com.apple.security.files.user-selected.read-only</key>
 	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)me.ramzi.findingWater</string>
+	</array>
 </dict>
 </plist>
