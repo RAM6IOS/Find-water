@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var Firestname:String = ""
-    @State var lastname:String = ""
+    @ObservedObject var  LocationMapVM = LocationMapViewModel()
+    
     var body: some View {
-        NavigationView{
-          
-        }
+        NavigationView {
+            List(LocationMapVM.books) { user in
+                Text(user.name)
+                Text("\(user.location.latitude)")
+                Text("\(user.location.longitude)")
+                    }
+              .navigationBarTitle("Books")
+              .onAppear() { // (3)
+                  self.LocationMapVM.fetchData()
+              }
+            }
     }
 }
 
