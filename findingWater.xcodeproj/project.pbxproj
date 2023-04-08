@@ -26,7 +26,7 @@
 		F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */; };
 		F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622CD29E057240023474D /* GoogleService-Info.plist */; };
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
-		F7FC338F29E1D678006786B2 /* watertank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC338E29E1D678006786B2 /* watertank.swift */; };
+		F7FC339229E1D726006786B2 /* waterTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC339129E1D726006786B2 /* waterTank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		F71622C029DEE7520023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sources.swift; path = findingWater/sources.swift; sourceTree = SOURCE_ROOT; };
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F7FC338E29E1D678006786B2 /* watertank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = watertank.swift; path = ../../../../Downloads/Guardian/Guardian/Home/watertank.swift; sourceTree = "<group>"; };
+		F7FC339129E1D726006786B2 /* waterTank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterTank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,7 @@
 				2D3E9CA929C77316003B38DB /* ProfileView.swift */,
 				2D3E9CA529C772E9003B38DB /* LocationMapView.swift */,
 				2D3E9CAB29C778D4003B38DB /* AppTabView.swift */,
+				F7FC339129E1D726006786B2 /* waterTank.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				F71622C029DEE7520023474D /* sources.swift */,
-				F7FC338E29E1D678006786B2 /* watertank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FC339229E1D726006786B2 /* waterTank.swift in Sources */,
 				F71622C129DEE7520023474D /* sources.swift in Sources */,
 				2DFE96E72998F49D00244576 /* ContentView.swift in Sources */,
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
@@ -243,7 +244,6 @@
 				2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
 				2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */,
-				F7FC338F29E1D678006786B2 /* watertank.swift in Sources */,
 				2D3E9CAA29C77316003B38DB /* ProfileView.swift in Sources */,
 				2D3E9CAC29C778D4003B38DB /* AppTabView.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
