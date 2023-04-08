@@ -12,8 +12,6 @@ import CoreLocationUI
 
 struct LocationMapView: View {
     @State  var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-
-    
         @ObservedObject var  LocationMapVM = LocationMapViewModel()
         var body: some View {
             NavigationView{
