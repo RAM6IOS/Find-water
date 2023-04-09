@@ -21,8 +21,8 @@ struct WaterTank: Identifiable ,Codable {
     var VehicleModel:String
     //var image:String
     
-    enum CodingKeys: String, CodingKey {
-      case id
+    enum CodingKeys: String, CodingKey  {
+     case id
       case name
       case Phone
       case TankVolume
