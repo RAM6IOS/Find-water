@@ -26,6 +26,7 @@
 		F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */; };
 		F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622CD29E057240023474D /* GoogleService-Info.plist */; };
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
+		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		F71622C029DEE7520023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sources.swift; path = findingWater/sources.swift; sourceTree = SOURCE_ROOT; };
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				2D3E9CA929C77316003B38DB /* ProfileView.swift */,
 				2D3E9CA529C772E9003B38DB /* LocationMapView.swift */,
 				2D3E9CAB29C778D4003B38DB /* AppTabView.swift */,
+				F74FADB629E565D500D3B376 /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				2DFE96ED2998F4A100244576 /* Preview Assets.xcassets in Resources */,
 				F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */,
+				F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */,
 				2DFE96E92998F4A100244576 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
