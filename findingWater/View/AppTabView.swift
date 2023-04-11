@@ -11,27 +11,32 @@ struct AppTabView: View {
     init() {
             UITabBar.appearance().barTintColor = UIColor.blue
         }
+    @State var ShowOnboarding = true
+    //@AppStorage("ShowOnboarding")
 
     var body: some View {
-        TabView {
-            LocationMapView()
-                .tabItem {
-                    Label("Map", systemImage: "map")
-                }
+        if ShowOnboarding{
+            GetStarted(ShowOnboarding: $ShowOnboarding)
             
-            LocationListView()
-                .tabItem {
-                    Label("Locations", systemImage: "building")
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
+        } else{
+            TabView {
+                LocationMapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map")
+                    }
+                
+                LocationListView()
+                    .tabItem {
+                        Label("Locations", systemImage: "building")
+                    }
+                
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+            }
+            .accentColor(.black)
         }
-       
-        
-        .accentColor(.black)
     }
 }
 
