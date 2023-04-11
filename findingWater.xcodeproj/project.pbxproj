@@ -27,6 +27,7 @@
 		F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622CD29E057240023474D /* GoogleService-Info.plist */; };
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
+		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				2D3E9CA529C772E9003B38DB /* LocationMapView.swift */,
 				2D3E9CAB29C778D4003B38DB /* AppTabView.swift */,
 				F74FADB629E565D500D3B376 /* Launch Screen.storyboard */,
+				F74FADBA29E57E7B00D3B376 /* GetStarted.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
 				2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
+				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,
 				F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */,
 				2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */,
 				2D3E9CAA29C77316003B38DB /* ProfileView.swift in Sources */,
@@ -377,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = findingWater/findingWater.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -390,6 +395,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -414,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = findingWater/findingWater.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -427,6 +434,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
