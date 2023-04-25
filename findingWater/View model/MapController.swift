@@ -70,7 +70,7 @@ class MapController: ObservableObject {
                 
                 
             },
-            Action(title: "Direction", image: "car.fill") { [weak self] in
+            Action(title: "Direction", image: "phone.fill") { [weak self] in
                 guard let self = self else {return}
                 guard let phoneNumber = self.selectedBusiness?.phoneNumber else {return}
                 guard let url = URL(string:self.convertPhoneNumberFormat(phoneNumber: phoneNumber) ) else {return}
@@ -79,7 +79,7 @@ class MapController: ObservableObject {
                 
                 
             },
-            Action(title: "Direction", image: "car.fill") { [weak self] in
+            Action(title: "Direction", image: "safari.fill") { [weak self] in
                 guard let self = self else {return}
                 guard let Website = self.selectedBusiness?.Website else {return}
                // guard let url = URL(string:self.convertPhoneNumberFormat(phoneNumber:phoneNumber) )
