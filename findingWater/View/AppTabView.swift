@@ -25,12 +25,12 @@ struct AppTabView: View {
                         Label("Map", systemImage: "map")
                     }
                 
-                LocationListView()
+                Testview()
                     .tabItem {
                         Label("Locations", systemImage: "building")
                     }
                 
-                ProfileView()
+                ContentView()
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }

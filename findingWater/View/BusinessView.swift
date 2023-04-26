@@ -24,30 +24,32 @@ struct BusinessView: View {
                 Button{
                     mapController.isBusinessViewShowing.toggle()
                 } label: {
-                    Image(systemName: <#T##String#>)
+                    Image(systemName: "mark.circle.fill")
                 }
-                HStack{
-                    ForEach(mapController.actions){ action in
-                        VStack{
-                            Button{
-                                action.hadler()
-                            } label: {
-                                VStack{
-                                    Image(systemName: action.image)
-                                    Text(action.title)
-                                }
-                                .frame(maxWidth: .infinity)
-                            }
-                            .buttonStyle(.bordered)
-                        }
-                        
-                    }
-                }
+               
                 
             }
-            .padding()
+            HStack{
+                ForEach(mapController.actions){ action in
+                    VStack{
+                        Button{
+                            action.hadler()
+                        } label: {
+                            VStack{
+                                Image(systemName: action.image)
+                                Text(action.title)
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.bordered)
+                    }
+                    
+                }
+            }
+            
             
         }
+        .padding()
     }
 }
 /*
