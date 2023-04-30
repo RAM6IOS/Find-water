@@ -13,10 +13,17 @@ import GameKit
  @MainActor
  struct ContentView: View {
  @StateObject var model =  locationManger()
+    // @Environment(\.dismiss) var dismiss
+     @Environment(\.presentationMode) var presentationMode
+     
+     @Environment(\.dismiss) private var dismiss
+
+
+
  
  let locations = [
- Location2(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), free: true),
- Location2(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.158917), free: false),
+ Location2(name: "-1", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), free: true),
+ Location2(name: "0", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.158917), free: false),
  Location2(name: "1", coordinate: CLLocationCoordinate2D(latitude: 36.553840, longitude: 3.114948), free: true),
  Location2(name: "2", coordinate: CLLocationCoordinate2D(latitude: 36.553899, longitude: 3.118301), free: true),
  Location2(name: "4", coordinate: CLLocationCoordinate2D(latitude: 36.552798, longitude: 3.108479), free: true),
@@ -50,15 +57,19 @@ import GameKit
                               print("Tapped on \(location.name)")
                               
                           }
-                        /*  .sheet(isPresented: $show){
+                      /*
+                         .sheet(isPresented: $show){
                              
                                   VStack{
                                       Text("show water location")
                                           .font(.title)
+                                      Text("Tapped on \(location.name)")
                                       Text("\(location.coordinate.latitude)")
                                       Text("\(location.coordinate.longitude)")
                                       
-                                      
+                                      Button("Dismiss Me") {
+                                                  dismiss()
+                                              }
                                       Button{
                                           openMap(coordinate:  location.coordinate)
                                       }label: {
@@ -67,7 +78,8 @@ import GameKit
                                       }
                                   }
                               
-                         }*/
+                         }
+                       */
                   } else{
                       Image("notfreewater")
                           .resizable()
@@ -86,8 +98,53 @@ import GameKit
          
          
  }
-     
+     /*
      .sheet(isPresented: $show){
+         VStack{
+             Button("Dismiss Me") {
+                         dismiss()
+                     }
+             ScrollView{
+                 ForEach(locations){ locatio in
+                     VStack{
+                         Text("show water location")
+                             .font(.title)
+                         Text("\(locatio.coordinate.latitude)")
+                         Text("\(locatio.coordinate.longitude)")
+                         
+                         
+                         Button{
+                             openMap(coordinate:  locatio.coordinate)
+                         }label: {
+                             Text("Direction")
+                             
+                         }
+                     }
+                 }
+             }
+         }
+    }
+      */
+      
+ LocationButton(.currentLocation){
+ model.requesAllowOnceLocationPermission()
+ }
+ .foregroundColor(.white)
+ .cornerRadius(8)
+ .labelStyle(.iconOnly)
+ .symbolVariant(.fill)
+ .tint(.blue)
+ .frame(width: 40)
+ .clipShape(Circle())
+ .padding(.bottom ,50)
+ .padding(.trailing ,30)
+ }
+ .sheet(isPresented: $show){
+     
+         Button("Dismiss Me") {
+                     dismiss()
+                 }
+         /*
          ScrollView{
              ForEach(locations){ locatio in
                  VStack{
@@ -106,23 +163,10 @@ import GameKit
                  }
              }
          }
-    }
-      
+          */
      
- 
- LocationButton(.currentLocation){
- model.requesAllowOnceLocationPermission()
- }
- .foregroundColor(.white)
- .cornerRadius(8)
- .labelStyle(.iconOnly)
- .symbolVariant(.fill)
- .tint(.blue)
- .frame(width: 40)
- .clipShape(Circle())
- .padding(.bottom ,50)
- .padding(.trailing ,30)
- }
+}
+     
  .ignoresSafeArea()
  }
  }
@@ -131,6 +175,7 @@ import GameKit
          mapItem.openInMaps()
          
      }
+    
  }
  
  struct ContentView_Previews: PreviewProvider {
