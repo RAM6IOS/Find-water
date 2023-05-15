@@ -38,12 +38,14 @@ import GameKit
  
  ]
      @State var show:Bool = false
+     
+     @State private var selectedPlace: Location2?
+
  
  var body: some View {
  NavigationView{
      
  ZStack(alignment:.bottomTrailing){
-     
      Map(coordinateRegion: $model.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: locations) { location in
           MapAnnotation(coordinate: location.coordinate) {
               VStack{
@@ -53,13 +55,12 @@ import GameKit
                           .scaledToFill()
                           .frame(width: 44, height: 44)
                           .onTapGesture {
-                              show.toggle()
-                              print("Tapped on \(location.name)")
+                              selectedPlace = location
+
                               
                           }
                       /*
-                         .sheet(isPresented: $show){
-                             
+                         .sheet(isPresented: $show  ){
                                   VStack{
                                       Text("show water location")
                                           .font(.title)
@@ -67,9 +68,7 @@ import GameKit
                                       Text("\(location.coordinate.latitude)")
                                       Text("\(location.coordinate.longitude)")
                                       
-                                      Button("Dismiss Me") {
-                                                  dismiss()
-                                              }
+                                      
                                       Button{
                                           openMap(coordinate:  location.coordinate)
                                       }label: {
@@ -77,9 +76,9 @@ import GameKit
                                           
                                       }
                                   }
-                              
                          }
                        */
+                       
                   } else{
                       Image("notfreewater")
                           .resizable()
@@ -90,41 +89,9 @@ import GameKit
                           }
                   }
               }
-             
-             
  }
-          
-         
-         
-         
  }
-     /*
-     .sheet(isPresented: $show){
-         VStack{
-             Button("Dismiss Me") {
-                         dismiss()
-                     }
-             ScrollView{
-                 ForEach(locations){ locatio in
-                     VStack{
-                         Text("show water location")
-                             .font(.title)
-                         Text("\(locatio.coordinate.latitude)")
-                         Text("\(locatio.coordinate.longitude)")
-                         
-                         
-                         Button{
-                             openMap(coordinate:  locatio.coordinate)
-                         }label: {
-                             Text("Direction")
-                             
-                         }
-                     }
-                 }
-             }
-         }
-    }
-      */
+     
       
  LocationButton(.currentLocation){
  model.requesAllowOnceLocationPermission()
@@ -139,35 +106,43 @@ import GameKit
  .padding(.bottom ,50)
  .padding(.trailing ,30)
  }
- .sheet(isPresented: $show){
-     
-         Button("Dismiss Me") {
-                     dismiss()
-                 }
-         /*
-         ScrollView{
-             ForEach(locations){ locatio in
+
+ .ignoresSafeArea()
+ }
+ .sheet(item: $selectedPlace) { place in
+     if #available(iOS 16.0, *) {
+         VStack{
+             HStack(spacing:10){
+                 Image("water")
+                     .resizable()
+                     .scaledToFill()
+                     .frame(width: 70, height: 70)
                  VStack{
-                     Text("show water location")
-                         .font(.title)
-                     Text("\(locatio.coordinate.latitude)")
-                     Text("\(locatio.coordinate.longitude)")
-                     
-                     
+                     Text(place.name)
+                         .font(.title3)
+                     VStack{
+                         Text("Coordinate")
+                         Text("latitude:\(place.coordinate.latitude)")
+                         Text("longitude:\(place.coordinate.longitude)")
+                     }
                      Button{
-                         openMap(coordinate:  locatio.coordinate)
+                         openMap(coordinate:  place.coordinate)
                      }label: {
-                         Text("Direction")
+                         VStack{
+                             Image(systemName: "car.fill")
+                             Text("Direction")
+                         }
                          
                      }
                  }
              }
          }
-          */
-     
-}
-     
- .ignoresSafeArea()
+         .presentationDetents([.height(300)])
+         .presentationDragIndicator(.hidden)
+     } else {
+         // Fallback on earlier versions
+     }
+
  }
  }
      func openMap(coordinate:CLLocationCoordinate2D){

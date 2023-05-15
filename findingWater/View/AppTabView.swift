@@ -30,7 +30,7 @@ struct AppTabView: View {
                         Label("Locations", systemImage: "building")
                     }
                 
-                LocationList_Details()
+                ContentView()
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }
