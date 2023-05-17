@@ -11,8 +11,9 @@ import CoreLocationUI
 import GameKit
 
  //@MainActor
+/*
  struct ContentView: View {
-     @ObservedObject var model =  locationManger()
+     //@ObservedObject var model =  locationManger()
     // @State var show:Bool = false
     // @State private var selectedPlace: Location2?
      @State private var  region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.108917),
@@ -63,7 +64,7 @@ import GameKit
      
       
  LocationButton(.currentLocation){
- model.requesAllowOnceLocationPermission()
+ //model.requesAllowOnceLocationPermission()
  }
  .foregroundColor(.white)
  .cornerRadius(8)
@@ -76,14 +77,7 @@ import GameKit
  .padding(.leading ,30)
         
  }
-     .onAppear {
-             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                 withAnimation {
-                     region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 80, longitude: 80),
-                                                           span: MKCoordinateSpan(latitudeDelta: 100, longitudeDelta: 100))
-                 }
-             }
-         }
+    
 
      .ignoresSafeArea(.all, edges: .top)
  }
@@ -146,5 +140,5 @@ import GameKit
  ContentView()
  }
  }
- 
+ */
  

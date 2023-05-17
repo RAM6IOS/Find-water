@@ -33,6 +33,7 @@
 		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
 		F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657729F7DCA0005F87CB /* BusinessView.swift */; };
 		F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657929F7F6C1005F87CB /* Testview.swift */; };
+		F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */; };
 		F7E175D429F72DD1001DDA90 /* Action .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D329F72DD1001DDA90 /* Action .swift */; };
 		F7E175D629F72EF7001DDA90 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D529F72EF7001DDA90 /* Business.swift */; };
 		F7E175D829F73022001DDA90 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D729F73022001DDA90 /* MapController.swift */; };
@@ -64,6 +65,7 @@
 		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 		F7AF657729F7DCA0005F87CB /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
 		F7AF657929F7F6C1005F87CB /* Testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testview.swift; sourceTree = "<group>"; };
+		F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		F7E175D329F72DD1001DDA90 /* Action .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action .swift"; sourceTree = "<group>"; };
 		F7E175D529F72EF7001DDA90 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		F7E175D729F73022001DDA90 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				F7AF657729F7DCA0005F87CB /* BusinessView.swift */,
 				F7AF657929F7F6C1005F87CB /* Testview.swift */,
 				F73F548D29F951230004DC61 /* MapTest.swift */,
+				F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,7 +160,6 @@
 				2DFE96EA2998F4A100244576 /* findingWater.entitlements */,
 				2DFE96EB2998F4A100244576 /* Preview Content */,
 				2DE4F7BA299ACB90000370CB /* LocationModel.swift */,
-				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 				F7712BE529E2BF0900E1B59C /* Water tank.swift */,
 			);
 			path = findingWater;
@@ -176,6 +178,7 @@
 			children = (
 				F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */,
 				F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */,
+				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 				F7E175D729F73022001DDA90 /* MapController.swift */,
 			);
 			path = "View model";
@@ -291,6 +294,7 @@
 				F73F548E29F951230004DC61 /* MapTest.swift in Sources */,
 				F7E175D829F73022001DDA90 /* MapController.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
+				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

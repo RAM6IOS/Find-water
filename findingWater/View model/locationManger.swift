@@ -11,6 +11,7 @@ import CoreLocation
 import CoreLocationUI
 
 //@MainActor
+/*
 final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     /*
     @Published var locations = [
@@ -56,7 +57,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         print(error.localizedDescription)
     }
 }
-
+*/
 
 final class locationManger: NSObject, ObservableObject , CLLocationManagerDelegate {
     @Published var locations = [
@@ -76,16 +77,18 @@ final class locationManger: NSObject, ObservableObject , CLLocationManagerDelega
     
     @Published  var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916 ,longitude: 3.108917), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
     
-    let locationManger =  CLLocationManager()
+    var locationManger =  CLLocationManager()
     override init() {
         super.init()
         locationManger.delegate = self
     }
     
+    
     func requesAllowOnceLocationPermission(){
         
         locationManger.requestLocation()
     }
+     
     
     nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let latestLocation = locations.first else{
@@ -104,21 +107,4 @@ final class locationManger: NSObject, ObservableObject , CLLocationManagerDelega
 }
 
 
-class LocationManager2: NSObject, ObservableObject, CLLocationManagerDelegate {
-    let manager = CLLocationManager()
 
-    @Published var location: CLLocationCoordinate2D?
-
-    override init() {
-        super.init()
-        manager.delegate = self
-    }
-
-    func requestLocation() {
-        manager.requestLocation()
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.first?.coordinate
-    }
-}

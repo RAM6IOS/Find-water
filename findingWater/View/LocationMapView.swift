@@ -11,16 +11,14 @@ import CoreLocation
 import CoreLocationUI
 
 struct LocationMapView: View {
-    /*
-    @State  var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-     */
+    
     @ObservedObject var mapController = MapController()
     @ObservedObject var model =  locationManger()
     @State private var selectedPlace: Location2?
-       // @ObservedObject var  LocationMapVM = LocationMapViewModel()
+   
         var body: some View {
             NavigationView{
-                ZStack(alignment:.topLeading){
+                ZStack(alignment:.bottomTrailing){
                     Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: mapController.locations) { location in
                         
                         MapAnnotation(coordinate: location.coordinate){
