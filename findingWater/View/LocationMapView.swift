@@ -51,19 +51,17 @@ struct LocationMapView: View {
                 }
                 
             .sheet(item: $selectedPlace) { place in
-                
-                
                     if #available(iOS 16.0, *) {
-                        VStack{
-                            HStack(spacing:10){
+                        HStack(alignment:.top){
+                           
                                 Image("water")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 70, height: 70)
+                                    .frame(width: 80, height: 80)
                                 VStack{
-                                    Text(place.name)
+                                    Text("Algeria ,Blida ,ouled slama")
                                         .font(.title3)
-                                    VStack{
+                                    VStack(alignment: .leading){
                                         Text("Coordinate")
                                         Text("latitude:\(place.coordinate.latitude)")
                                         Text("longitude:\(place.coordinate.longitude)")
@@ -71,15 +69,27 @@ struct LocationMapView: View {
                                     Button{
                                         openMap(coordinate:  place.coordinate)
                                     }label: {
-                                        VStack{
-                                            Image(systemName: "car.fill")
+                                       HStack{
+                                            Image("send")
+                                               .resizable()
+                                               .scaledToFill()
+                                               .frame(width: 25, height: 25)
                                             Text("Direction")
                                         }
+                                       .foregroundColor(.white)
+                                       .frame(width: 200 ,height: 50)
+                                       .background(Color.blue)
                                         
                                     }
+                                    
+                                    
+                                    .cornerRadius(10)
                                 }
-                            }
+                            
+                            Spacer()
                         }
+                       .padding()
+                        
                         .presentationDetents([.height(300)])
                         .presentationDragIndicator(.hidden)
                     } else {

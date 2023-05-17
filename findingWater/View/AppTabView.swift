@@ -11,7 +11,7 @@ struct AppTabView: View {
     init() {
             UITabBar.appearance().barTintColor = UIColor.blue
         }
-    @State var ShowOnboarding = true
+    @State var ShowOnboarding = false
     //@AppStorage("ShowOnboarding")
 
     var body: some View {
