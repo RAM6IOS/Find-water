@@ -16,3 +16,11 @@ struct Business :Identifiable {
     var phoneNumber:String
     var Website:URL?
 }
+
+struct Location3: Identifiable {
+    let id = UUID()
+    let name: String
+    let coordinate: CLLocationCoordinate2D
+    let free :Bool
+}
+

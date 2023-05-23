@@ -18,6 +18,8 @@ struct Sources: Identifiable ,Codable {
     var name: String
     var adresser:String
     var location: GeoPoint
+    //let latitude: Double
+    //let longitude: Double
     //var image:String
     
     enum CodingKeys: String, CodingKey {

@@ -14,14 +14,15 @@ struct LocationMapView: View {
     
     @ObservedObject var mapController = MapController()
     @ObservedObject var model =  locationManger()
-    @State private var selectedPlace: Location2?
+    @State private var selectedPlace: Sources?
+    @ObservedObject var mapViewModel = LocationMapViewModel()
    
         var body: some View {
             NavigationView{
                 ZStack(alignment:.bottomTrailing){
-                    Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: mapController.locations) { location in
+                    Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.books) { location in
                         
-                        MapAnnotation(coordinate: location.coordinate){
+                        MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude, longitude: location.location.longitude)){
                             Image("water")
                                 .resizable()
                                 .scaledToFill()
@@ -63,11 +64,11 @@ struct LocationMapView: View {
                                         .font(.title3)
                                     VStack(alignment: .leading){
                                         Text("Coordinate")
-                                        Text("latitude:\(place.coordinate.latitude)")
-                                        Text("longitude:\(place.coordinate.longitude)")
+                                        Text("latitude:\(place.location.latitude)")
+                                        Text("longitude:\(place.location.longitude)")
                                     }
                                     Button{
-                                        openMap(coordinate:  place.coordinate)
+                                        openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
                                     }label: {
                                        HStack{
                                             Image("send")
