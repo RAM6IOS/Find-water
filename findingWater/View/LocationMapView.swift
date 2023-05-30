@@ -16,6 +16,14 @@ struct LocationMapView: View {
     @ObservedObject var model =  locationManger()
     @State private var selectedPlace: Sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
+    @ObservedObject var userlocation = UserLocation()
+    @StateObject var viewModel = BookViewModel()
+    let columns = [
+                GridItem(.flexible()),
+                GridItem(.flexible()),
+               GridItem(.flexible()),
+               GridItem(.flexible())
+        ]
    
         var body: some View {
             NavigationView{
@@ -53,8 +61,9 @@ struct LocationMapView: View {
                 
             .sheet(item: $selectedPlace) { place in
                     if #available(iOS 16.0, *) {
-                        HStack(alignment:.top){
-                           
+                        VStack{
+                            HStack(alignment:.top){
+                                
                                 Image("water")
                                     .resizable()
                                     .scaledToFill()
@@ -70,26 +79,57 @@ struct LocationMapView: View {
                                     Button{
                                         openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
                                     }label: {
-                                       HStack{
+                                        HStack{
                                             Image("send")
-                                               .resizable()
-                                               .scaledToFill()
-                                               .frame(width: 25, height: 25)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 25, height: 25)
                                             Text("Direction")
                                         }
-                                       .foregroundColor(.white)
-                                       .frame(width: 200 ,height: 50)
-                                       .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .frame(width: 200 ,height: 50)
+                                        .background(Color.blue)
                                         
                                     }
-                                    
-                                    
                                     .cornerRadius(10)
+                                    
+                                    Button{
+                                       // viewModel.save()
+                                    } label: {
+                                        Text("Direction")
+                                    }
                                 }
+                                
+                                Spacer()
+                            }
+                            .padding()
                             
-                            Spacer()
+                            VStack{
+                                Text("who is in location")
+                                    .font(.title)
+                                ScrollView {
+                                    LazyVGrid(columns: columns, spacing: 20) {
+                                        ForEach(0...10, id: \.self) { item in
+                                            Button{
+                                                
+                                            } label: {
+                                                Image(systemName: "bolt.fill")
+                                                       .foregroundColor(.white)
+                                                       .padding()
+                                                       .background(.green)
+                                                       .clipShape(Circle())
+                                                    
+                                            }
+                                            
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                            }
                         }
-                       .padding()
                         
                         .presentationDetents([.height(300)])
                         .presentationDragIndicator(.hidden)
@@ -110,6 +150,8 @@ struct LocationMapView: View {
         mapItem.openInMaps()
         
     }
+    
+    
         }
 
 
