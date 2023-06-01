@@ -31,6 +31,8 @@
 		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
+		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
+		F789F6762A292C620024D784 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6752A292C610024D784 /* SignupView.swift */; };
 		F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43BE2A1E276700534A99 /* UserLocation.swift */; };
 		F79E43C12A1E279C00534A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43C02A1E279C00534A99 /* User.swift */; };
 		F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657729F7DCA0005F87CB /* BusinessView.swift */; };
@@ -65,6 +67,8 @@
 		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F789F6752A292C610024D784 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F79E43BE2A1E276700534A99 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		F79E43C02A1E279C00534A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7AF657729F7DCA0005F87CB /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				F7AF657929F7F6C1005F87CB /* Testview.swift */,
 				F73F548D29F951230004DC61 /* MapTest.swift */,
 				F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */,
+				F789F6732A28F1F50024D784 /* LoginView.swift */,
+				F789F6752A292C610024D784 /* SignupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */,
 				2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
+				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
 				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,
 				F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */,
 				F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */,
@@ -302,6 +309,7 @@
 				F79E43C12A1E279C00534A99 /* User.swift in Sources */,
 				F7E175D829F73022001DDA90 /* MapController.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
+				F789F6762A292C620024D784 /* SignupView.swift in Sources */,
 				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
