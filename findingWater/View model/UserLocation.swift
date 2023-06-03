@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseAuth
 
 
 class UserLocation : ObservableObject {
@@ -86,14 +87,16 @@ class BookViewModel: ObservableObject {
      }
      */
     
-    let docData: [String: Any] = [
-        "name": "PoutineFiesta",
-        "address": "1234 Restaurant St",
-        "dateAdded": Timestamp(date: Date()),
-        "value":false
-    ]
+    
     func createRestaurant() {
-        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let docData: [String: Any] = [
+            "uid": uid,
+            "name": "PoutineFiesta",
+            "address": "1234 Restaurant St",
+            "dateAdded": Timestamp(date: Date()),
+            "value":false
+        ]
         let db = Firestore.firestore()
         
         let docRef = db.collection("Restaurants").document()
