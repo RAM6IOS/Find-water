@@ -27,6 +27,7 @@
 		F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622CD29E057240023474D /* GoogleService-Info.plist */; };
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
 		F73F548E29F951230004DC61 /* MapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F548D29F951230004DC61 /* MapTest.swift */; };
+		F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EA26C2A2939070090E75A /* CreateAccount.swift */; };
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
 		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
@@ -37,6 +38,8 @@
 		F79E43C12A1E279C00534A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43C02A1E279C00534A99 /* User.swift */; };
 		F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657729F7DCA0005F87CB /* BusinessView.swift */; };
 		F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657929F7F6C1005F87CB /* Testview.swift */; };
+		F7CE91182A2BA0B8000063B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91172A2BA0B8000063B6 /* FirebaseAuth */; };
+		F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91192A2BA375000063B6 /* FirebaseStorage */; };
 		F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */; };
 		F7E175D429F72DD1001DDA90 /* Action .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D329F72DD1001DDA90 /* Action .swift */; };
 		F7E175D629F72EF7001DDA90 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D529F72EF7001DDA90 /* Business.swift */; };
@@ -63,6 +66,7 @@
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F73F548D29F951230004DC61 /* MapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTest.swift; sourceTree = "<group>"; };
+		F74EA26C2A2939070090E75A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
@@ -85,9 +89,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71622B929DE220A0023474D /* FirebaseAnalytics in Frameworks */,
+				F7CE91182A2BA0B8000063B6 /* FirebaseAuth in Frameworks */,
 				2D3E9CAF29C7810C003B38DB /* CloudKit.framework in Frameworks */,
 				F71622BB29DE220A0023474D /* FirebaseFirestore in Frameworks */,
 				F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */,
+				F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +197,7 @@
 				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 				F7E175D729F73022001DDA90 /* MapController.swift */,
 				F79E43BE2A1E276700534A99 /* UserLocation.swift */,
+				F74EA26C2A2939070090E75A /* CreateAccount.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -225,6 +232,8 @@
 				F71622B829DE220A0023474D /* FirebaseAnalytics */,
 				F71622BA29DE220A0023474D /* FirebaseFirestore */,
 				F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */,
+				F7CE91172A2BA0B8000063B6 /* FirebaseAuth */,
+				F7CE91192A2BA375000063B6 /* FirebaseStorage */,
 			);
 			productName = findingWater;
 			productReference = 2DFE96E12998F49D00244576 /* findingWater.app */;
@@ -310,6 +319,7 @@
 				F7E175D829F73022001DDA90 /* MapController.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
 				F789F6762A292C620024D784 /* SignupView.swift in Sources */,
+				F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */,
 				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"findingWater/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DWNZ84LB2;
+				DEVELOPMENT_TEAM = 2H8H3AS73K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -477,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"findingWater/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DWNZ84LB2;
+				DEVELOPMENT_TEAM = 2H8H3AS73K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -555,6 +565,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F71622B729DE220A0023474D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		F7CE91172A2BA0B8000063B6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71622B729DE220A0023474D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F7CE91192A2BA375000063B6 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71622B729DE220A0023474D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

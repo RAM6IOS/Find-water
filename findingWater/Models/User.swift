@@ -27,3 +27,9 @@ struct Book: Identifiable, Codable {
     case numberOfPages = "pages"
   }
 }
+
+struct User2 : Identifiable, Codable {
+    @DocumentID var id: String?
+    var name: String
+    var email: String
+}

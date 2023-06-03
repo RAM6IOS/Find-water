@@ -14,6 +14,7 @@ struct SignupView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     @State private var name:String = ""
+    @StateObject var viewModel = CreateAccount()
     
     var body: some View {
         VStack {
@@ -52,16 +53,17 @@ struct SignupView: View {
             
             Button(action: {
                 // Perform signup logic here
-                // You can access the entered email, password, and confirmPassword using the respective variables
-                
-                // Example signup logic
-                if isValidSignup() {
-                    // Successful signup, navigate to the next screen or perform further actions
-                    print("Signup successful")
-                } else {
-                    // Failed signup, show an error message or perform other actions
-                    print("Signup failed")
-                }
+                withAnimation{
+                                           viewModel.register(withEmail: email,
+                                                              password: password,
+                                                               name: name
+                                                               )
+                                         if  viewModel.userSession != nil {
+                                               email = ""
+                                               name = ""
+                                              password = ""
+                                           }
+                                       }
             }) {
                 Text("Sign up")
                     .font(.headline)

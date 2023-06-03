@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @StateObject var viewModel = CreateAccount()
     
     var body: some View {
         ZStack{
@@ -41,17 +42,9 @@ struct LoginView: View {
                     .padding(.vertical)
                 
                 Button(action: {
-                    // Perform login logic here
-                    // You can access the entered email and password using the `email` and `password` variables
-                    
-                    // Example login logic
-                    if email == "user@example.com" && password == "password" {
-                        // Successful login, navigate to the next screen or perform further actions
-                        print("Login successful")
-                    } else {
-                        // Failed login, show an error message or perform other actions
-                        print("Login failed")
-                    }
+                    withAnimation{
+                                            viewModel.login(withEmail: email, password: password)
+                                        }
                 }) {
                     Text("Log in")
                         .foregroundColor(.white)
