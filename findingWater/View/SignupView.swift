@@ -14,89 +14,95 @@ struct SignupView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     @State private var name:String = ""
-    @StateObject var viewModel = CreateAccount()
+    @EnvironmentObject var viewModel : CreateAccount
     
     var body: some View {
-        VStack {
-            Image("drop")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 80, height: 80) // Replace with your Airbnb logo
-            
-            Text("Sign up ")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
-            TextField("Name", text: $name)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                .padding(.vertical)
-            
-            TextField("Email Address", text: $email)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                .padding(.vertical)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                .padding(.vertical)
-            
-            
-           
-            
-            Button(action: {
-                // Perform signup logic here
-                withAnimation{
-                                           viewModel.register(withEmail: email,
-                                                              password: password,
-                                                               name: name
-                                                               )
-                                         if  viewModel.userSession != nil {
-                                               email = ""
-                                               name = ""
-                                              password = ""
-                                           }
-                                       }
-            }) {
-                Text("Sign up")
-                    .font(.headline)
-                    .foregroundColor(.white)
+       
+            VStack {
+                Image("drop")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80) // Replace with your Airbnb logo
+                
+                Text("Sign up ")
+                    .font(.title)
+                    .fontWeight(.bold)
                     .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                TextField("Name", text: $name)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                    .padding(.vertical)
+                
+                TextField("Email Address", text: $email)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                    .padding(.vertical)
+                
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                    .padding(.vertical)
+                
+                
+                
+                
+                Button(action: {
+                    // Perform signup logic here
+                    withAnimation{
+                        viewModel.register(withEmail: email,
+                                           password: password,
+                                           name: name
+                        )
+                        
+                        email = ""
+                        name = ""
+                        password = ""
+                        viewModel.fetchUser()
+                        
+                    }
+                }) {
+                    Text("Sign up")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding()
+                Text("I already have an account")
+                    .foregroundColor(.gray)
+                
+                Button(action: {
+                    // Perform actions for sign up
+                    print("Login up tapped")
+                }) {
+                    Text("Log in")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+                .padding(.horizontal, 32)
+                
+                Text("By signing up, you agree to our Terms of Service and Privacy Policy.")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Spacer()
             }
             .padding()
-            Text("I already have an account")
-                .foregroundColor(.gray)
             
-            Button(action: {
-                // Perform actions for sign up
-                print("Login up tapped")
-            }) {
-                Text("Log in")
-                    .font(.headline)
-                    .foregroundColor(.blue)
-                    .padding()
-            }
-            .padding(.horizontal, 32)
-            
-            Text("By signing up, you agree to our Terms of Service and Privacy Policy.")
-                .font(.footnote)
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            Spacer()
-        }
-        .padding()
+        
+           
+        
     }
     
     private func isValidSignup() -> Bool {

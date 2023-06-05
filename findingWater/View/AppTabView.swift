@@ -13,8 +13,24 @@ struct AppTabView: View {
         }
     @State var ShowOnboarding = false
     //@AppStorage("ShowOnboarding")
-
+    @EnvironmentObject var viewModel : CreateAccount
     var body: some View {
+        
+            TabView {
+                SignupView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+                MapTest()
+                    .tabItem {
+                        Label("Locations", systemImage: "building")
+                    }
+            }
+            .accentColor(.black)
+            
+        
+            
+        /*
         if ShowOnboarding{
             GetStarted(ShowOnboarding: $ShowOnboarding)
             
@@ -36,8 +52,9 @@ struct AppTabView: View {
                     }
             }
             .accentColor(.black)
+         */
         }
-    }
+    
 }
 
 struct AppTabView_Previews: PreviewProvider {

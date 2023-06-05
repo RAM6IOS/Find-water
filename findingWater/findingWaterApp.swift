@@ -20,9 +20,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct findingWaterApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewModel = CreateAccount()
     var body: some Scene {
         WindowGroup {
             AppTabView()
+                .environmentObject(viewModel)
         }
     }
 }

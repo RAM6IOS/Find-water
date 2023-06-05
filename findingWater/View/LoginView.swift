@@ -14,7 +14,6 @@ struct LoginView: View {
     
     var body: some View {
         ZStack{
-        
             VStack {
                 Spacer()
                 Image("drop")
@@ -79,6 +78,9 @@ struct LoginView: View {
                 .padding(.horizontal, 32)
                 
                 Spacer()
+            }
+            onAppear{
+                self.viewModel.fetchUser()
             }
             .padding()
         }

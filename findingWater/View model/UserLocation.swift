@@ -13,7 +13,7 @@ import FirebaseAuth
 
 class UserLocation : ObservableObject {
     
-    @Published var  user = [User]()
+    //@Published var  user = [User]()
     @Published var modified = false
     /*
     init(user: User = User(usr: "")) {
@@ -56,42 +56,11 @@ class UserLocation : ObservableObject {
 class BookViewModel: ObservableObject {
     
     @Published var location = [DocData]()
-    /*
-     @Published var book: Book
-     @Published var modified = false
-     //private var cancellables = Set<AnyCancellable>()
-     init(book: Book = Book(title: "d", author: "d", numberOfPages: 0)) {
-     self.book = book
-     
-     self.$book
-     .dropFirst()
-     .sink { [weak self] book in
-     self?.modified = true
-     }
-     //.store(in: &self.cancellables)
-     }
-     
-     private var db = Firestore.firestore()
-     
-     private func addBook(book: Book) {
-     do {
-     let _ = try db.collection("books").addDocument(from: book)
-     }
-     catch {
-     print(error)
-     }
-     }
-     
-     func save(){
-     addBook(book:book)
-     }
-     */
-    
-    
+
     func createRestaurant() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
+       // guard let uid = Auth.auth().currentUser?.uid else { return }
         let docData: [String: Any] = [
-            "uid": uid,
+           // "uid": uid,
             "name": "PoutineFiesta",
             "address": "1234 Restaurant St",
             "dateAdded": Timestamp(date: Date()),

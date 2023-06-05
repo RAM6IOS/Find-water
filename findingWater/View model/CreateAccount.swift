@@ -14,16 +14,19 @@ import Firebase
 
 class CreateAccount: ObservableObject {
     @Published var userSession : FirebaseAuth.User?
-    @Published var currentUser: User2?
+    @Published var currentUser: User?
 
     //@Published var user = [User2]()
     
     init() {
                 self.userSession = Auth.auth().currentUser
-                //self.fetchUser()
+            self.fetchUser()
         
              print(userSession)
             }
+    
+    
+      
     
     func login(withEmail email: String, password: String) {
                Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -45,7 +48,6 @@ class CreateAccount: ObservableObject {
             }
             guard let user = result?.user else { return }
                         self.userSession = user
-           
                         let userData = ["email": email,
                                                     "name": name,
                                                     "uid": user.uid]
@@ -53,9 +55,34 @@ class CreateAccount: ObservableObject {
                                         .document(user.uid)
                                         .setData(userData) { _ in
                                         }
+            self.fetchUser()
+            print("register\(user)")
+            print("register\(self.userSession)")
                         
                     }
-        print(self.userSession)
+        
+       
         }
+    func fetchUser() {
+        guard let uid = self.userSession?.uid else { return }
+        fetchUser(withUid: uid) { user in
+            self.currentUser = user
+        }
+    }
+    func fetchUser(withUid uid: String , completion: @escaping(User) -> Void) {
+            Firestore.firestore().collection("users")
+                .document(uid)
+                .getDocument { snapshot, _ in
+                    guard  let  snapshot = snapshot else { return }
+                    guard let user = try? snapshot.data(as: User.self) else { return }
+                    completion(user)
+                }
+        }
+    
+    func logout() {
+               userSession = nil
+               try? Auth.auth().signOut()
+        print("logout\(userSession)")
+           }
     }
 
