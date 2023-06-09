@@ -50,6 +50,7 @@ class CreateAccount: ObservableObject {
                         self.userSession = user
                         let userData = ["email": email,
                                                     "name": name,
+                                                    "value":false ,
                                                     "uid": user.uid]
                         Firestore.firestore().collection("users")
                                         .document(user.uid)
@@ -84,5 +85,13 @@ class CreateAccount: ObservableObject {
                try? Auth.auth().signOut()
         print("logout\(userSession)")
            }
+    
+    func EditProducti(id:String ,value:Bool){
+        Firestore.firestore().collection("users").document(id)
+            .updateData(["value":value
+                        ]) { _ in
+            }
+        
+    }
     }
 

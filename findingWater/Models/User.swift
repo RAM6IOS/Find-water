@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+import Firebase
+import FirebaseAuth
 
 /*
 struct User : Identifiable, Codable {
@@ -32,4 +34,7 @@ struct User : Identifiable, Codable {
     @DocumentID var id: String?
     var name: String
     var email: String
+    var value: Bool
+    var isCurrantUser : Bool { return Auth.auth().currentUser?.uid == id }
+
 }
