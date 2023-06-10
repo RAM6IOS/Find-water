@@ -13,13 +13,7 @@ import FirebaseFirestoreSwift
 import Firebase
 import FirebaseAuth
 
-struct DocData: Identifiable, Decodable ,Hashable  {
-    @DocumentID var id: String?
-    let  name : String
-    let dateAdded: Timestamp
-    let address : String
-    let value : Bool
-}
+
 
 struct MapTest: View {
     let columns = [
@@ -34,7 +28,6 @@ struct MapTest: View {
     var body: some View {
        
             NavigationView{
-                
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         Button{
@@ -45,10 +38,12 @@ struct MapTest: View {
                              }
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(.white)
+                               // .foregroundColor(.white)
                                 .padding()
-                                .background(.green)
+                                //.background(.green)
                                 .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                                //.shadow(color: .black, radius: 5/, x: 0, y: 0)
                         }
                         .disabled( viewModel2.currentUser?.value == true)
                         ForEach(viewModel.location, id: \.self) { item in
@@ -66,7 +61,7 @@ struct MapTest: View {
                                     }
                                     
                                 } label: {
-                                    Image(systemName: "bolt.fill")
+                                    Image(systemName: "person.fill")
                                         .foregroundColor(.white)
                                         .padding()
                                         .background(.green)

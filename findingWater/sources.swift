@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 import CoreLocation
 
 
-struct Sources: Identifiable ,Codable {
+struct Sources: Identifiable ,Codable ,Hashable {
     
     @DocumentID var id: String?
     var name: String
@@ -21,12 +21,14 @@ struct Sources: Identifiable ,Codable {
     //let latitude: Double
     //let longitude: Double
     //var image:String
+    var user : [String]
     
     enum CodingKeys: String, CodingKey {
       case id
       case name
       case adresser
       case location
+     case user
       //case latitude
      // case longitude
       //case image

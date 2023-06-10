@@ -60,81 +60,21 @@ struct LocationMapView: View {
                 }
                 
             .sheet(item: $selectedPlace) { place in
-                    if #available(iOS 16.0, *) {
-                        VStack{
-                            HStack(alignment:.top){
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(mapViewModel.books, id: \.self) { item in
+                            Button{
                                 
-                                Image("water")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 80, height: 80)
-                                VStack{
-                                    Text("Algeria ,Blida ,ouled slama")
-                                        .font(.title3)
-                                    VStack(alignment: .leading){
-                                        Text("Coordinate")
-                                        Text("latitude:\(place.location.latitude)")
-                                        Text("longitude:\(place.location.longitude)")
-                                    }
-                                    Button{
-                                        openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
-                                    }label: {
-                                        HStack{
-                                            Image("send")
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 25, height: 25)
-                                            Text("Direction")
-                                        }
-                                        .foregroundColor(.white)
-                                        .frame(width: 200 ,height: 50)
-                                        .background(Color.blue)
-                                        
-                                    }
-                                    .cornerRadius(10)
-                                    
-                                    Button{
-                                       // viewModel.save()
-                                    } label: {
-                                        Text("Direction")
-                                    }
-                                }
-                                
-                                Spacer()
+                            }label: {
+                                Image(systemName: "person.fill")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(.green)
+                                    .clipShape(Circle())
                             }
-                            .padding()
                             
-                            VStack{
-                                Text("who is in location")
-                                    .font(.title)
-                                ScrollView {
-                                    LazyVGrid(columns: columns, spacing: 20) {
-                                        ForEach(0...10, id: \.self) { item in
-                                            Button{
-                                                
-                                            } label: {
-                                                Image(systemName: "bolt.fill")
-                                                       .foregroundColor(.white)
-                                                       .padding()
-                                                       .background(.green)
-                                                       .clipShape(Circle())
-                                                    
-                                            }
-                                            
-                                            
-                                            
-                                            
-                                        }
-                                        
-                                    }
-                                }
-                            }
                         }
-                        
-                        .presentationDetents([.height(300)])
-                        .presentationDragIndicator(.hidden)
-                    } else {
-                        // Fallback on earlier versions
+                       }
                     }
                 
 

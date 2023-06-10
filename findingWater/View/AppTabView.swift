@@ -25,6 +25,10 @@ struct AppTabView: View {
                     .tabItem {
                         Label("Locations", systemImage: "building")
                     }
+                LocationMapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map")
+                    }
             }
             .accentColor(.black)
             

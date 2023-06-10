@@ -8,7 +8,10 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseFirestoreSwift
+import Firebase
 import FirebaseAuth
+
 
 
 class UserLocation : ObservableObject {
@@ -52,6 +55,15 @@ class UserLocation : ObservableObject {
     
 }
 
+
+
+struct DocData: Identifiable, Decodable ,Hashable  {
+    @DocumentID var id: String?
+    let  name : String
+    let dateAdded: Timestamp
+    let address : String
+    let value : Bool
+}
 
 class BookViewModel: ObservableObject {
     
