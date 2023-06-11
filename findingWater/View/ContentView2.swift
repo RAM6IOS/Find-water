@@ -13,7 +13,7 @@ import CoreLocationUI
 struct ContentView2: View {
     @ObservedObject var mapController = MapController()
     //@ObservedObject var model =  locationManger()
-    @State private var selectedPlace: Location2?
+   // @State private var selectedPlace: Location2?
     
     @State private var  region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.108917),
                                                span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
@@ -30,8 +30,50 @@ struct ContentView2: View {
         Location2(name: "9", coordinate: CLLocationCoordinate2D(latitude: 36.543958, longitude: 3.088122), free: true),
         Location2(name: "10", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true)
     ]
-
+    @State private var selectedPlace: Sources?
+    @ObservedObject var mapViewModel = LocationMapViewModel()
     var body: some View {
+        NavigationView {
+             List {
+                 ForEach(mapViewModel.books, id: \.id) { place in
+                 Text(place.name)
+                     ForEach(place.user, id: \.self) { item in
+                         Text(item)
+                         
+                     }
+                     
+                 .onTapGesture {
+                   self.selectedPlace = place
+                 }
+               }
+             }
+             .sheet(item: $selectedPlace) { place in
+                 Text(place.name)
+                 Text("latitude:\(place.location.latitude)")
+                 Text("longitude:\(place.location.longitude)")
+                 Button{
+                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "r3few")
+                 }label: {
+                     Text("add new user")
+                 }
+                 Button{
+                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "Ramzi3")
+                 }label: {
+                     Text("add new user3")
+                 }
+                 Button{
+                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "Ramzi4")
+                 }label: {
+                     Text("add new user3")
+                 }
+                 
+                 ForEach(place.user, id: \.self) { item in
+                     Text(item)
+                     
+                 }
+             }
+           }
+        /*
         NavigationView{
             ZStack(alignment:.topLeading){
                 Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: locations) { location in
@@ -81,6 +123,7 @@ struct ContentView2: View {
 
             .ignoresSafeArea(.all, edges: .top)
         }
+         */
     }
 }
 

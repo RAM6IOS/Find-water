@@ -28,7 +28,7 @@ struct Sources: Identifiable ,Codable ,Hashable {
       case name
       case adresser
       case location
-     case user
+      case user
       //case latitude
      // case longitude
       //case image

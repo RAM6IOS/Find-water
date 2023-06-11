@@ -16,6 +16,7 @@ class LocationListViewModel : ObservableObject {
     init(){
         fetchData()
     }
+    
     func fetchData(){
         let db = Firestore.firestore()
                     db.collection(" truck").addSnapshotListener { (querySnapshot, error) in

@@ -60,7 +60,7 @@ struct LocationMapView: View {
                 }
                 
             .sheet(item: $selectedPlace) { place in
-                ScrollView {
+              /*  ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(mapViewModel.books, id: \.self) { item in
                             Button{
@@ -75,7 +75,49 @@ struct LocationMapView: View {
                             
                         }
                        }
+                    }*/
+                VStack{
+                    HStack(alignment:.top){
+                        
+                        Image(place.name)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 80)
+                        VStack{
+                            Text("Algeria ,Blida ,ouled slama")
+                                .font(.title3)
+                            VStack(alignment: .leading){
+                                Text("Coordinate")
+                                Text("latitude:\(place.location.latitude)")
+                                Text("longitude:\(place.location.longitude)")
+                            }
+                            Button{
+                                openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
+                            }label: {
+                                HStack{
+                                    Image("send")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 25, height: 25)
+                                    Text("Direction")
+                                }
+                                .foregroundColor(.white)
+                                .frame(width: 200 ,height: 50)
+                                .background(Color.blue)
+                                
+                            }
+                            .cornerRadius(10)
+                            
+                            Button{
+                                // viewModel.save()
+                            } label: {
+                                Text("Direction")
+                            }
+                        }
+                        
+                        Spacer()
                     }
+                }
                 
 
             }
