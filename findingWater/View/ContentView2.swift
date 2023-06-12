@@ -14,6 +14,12 @@ struct ContentView2: View {
     @ObservedObject var mapController = MapController()
     //@ObservedObject var model =  locationManger()
    // @State private var selectedPlace: Location2?
+    let columns = [
+                GridItem(.flexible()),
+                GridItem(.flexible()),
+               GridItem(.flexible()),
+               GridItem(.flexible())
+        ]
     
     @State private var  region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.108917),
                                                span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
@@ -34,42 +40,70 @@ struct ContentView2: View {
     @ObservedObject var mapViewModel = LocationMapViewModel()
     var body: some View {
         NavigationView {
-             List {
+            LazyVGrid(columns: columns, spacing: 20) {
+               
                  ForEach(mapViewModel.books, id: \.id) { place in
-                 Text(place.name)
+                     Text(place.name)
+                         .onTapGesture {
+                       self.selectedPlace = place
+                     }
+                 
                      ForEach(place.user, id: \.self) { item in
-                         Text(item)
+                              Button{
+                                  mapViewModel.rmove(id: place.id ?? "nr3ecwkjn", user: String(item.count) )
+                                  //mapViewModel.EditProducti(id: place.id ?? "nr3ecwkjn", value: item)
+                                  mapViewModel.fetchData()
+                                  
+                                  
+                              } label: {
+                                  Image(systemName: "person.fill")
+                                      .foregroundColor(.white)
+                                      .padding()
+                                      .background(.green)
+                                      .clipShape(Circle())
+                                  
+                              }
+                              
+                             
                          
                      }
                      
-                 .onTapGesture {
-                   self.selectedPlace = place
-                 }
+                    
                }
+                
              }
              .sheet(item: $selectedPlace) { place in
-                 Text(place.name)
-                 Text("latitude:\(place.location.latitude)")
-                 Text("longitude:\(place.location.longitude)")
-                 Button{
-                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "r3few")
-                 }label: {
-                     Text("add new user")
-                 }
-                 Button{
-                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "Ramzi3")
-                 }label: {
-                     Text("add new user3")
-                 }
-                 Button{
-                     mapViewModel.EditProducti(id: place.id ?? "redcw", user: "Ramzi4")
-                 }label: {
-                     Text("add new user3")
-                 }
-                 
-                 ForEach(place.user, id: \.self) { item in
-                     Text(item)
-                     
+                 if #available(iOS 16.0, *) {
+                     VStack{
+                         Text("add new location user")
+                             .font(.title)
+                         Button{
+                             mapViewModel.EditProducti(id: place.id ?? "redcw", user: String( place.user.count))
+                         }label: {
+                             Text("add new user")
+                                 .foregroundColor(.white)
+                                 .frame(width: 200, height: 79)
+                                 .background(.blue)
+                         }
+                         Button{
+                             mapViewModel.rmove(id: place.id ?? "nr3ecwkjn", user: String(place.user.count) )
+                            // mapViewModel.EditProducti(id: place.id ?? "nr3ecwkjn", value: place)
+                             mapViewModel.fetchData()
+                         }label: {
+                             Text("rove")
+                                 .foregroundColor(.white)
+                                 .frame(width: 200, height: 79)
+                                 .background(.blue)
+                         }
+                         
+                         
+                         
+                         
+                         
+                     }
+                     .presentationDetents([.height(300)])
+                 } else {
+                     // Fallback on earlier versions
                  }
              }
            }

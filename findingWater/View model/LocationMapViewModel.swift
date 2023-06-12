@@ -19,14 +19,24 @@ class LocationMapViewModel: ObservableObject {
     }
     
     func rmove(id:String ,user:String){
+        
         Firestore.firestore().collection("sources").document(id)
             .updateData(["user":FieldValue.arrayRemove([user])
                         ]) { _ in
             }
     }
+    
+    func EditProducti(id:String ,value:String){
+        Firestore.firestore().collection("sources").document(id)
+            .updateData(["user":[value]
+                        ]) { _ in
+            }
+        fetchData()
+        
+    }
     func EditProducti(id:String ,user:String){
         Firestore.firestore().collection("sources").document(id)
-            .updateData(["user":FieldValue.arrayUnion(["data"])
+            .updateData(["user":FieldValue.arrayUnion([user])
                         ]) { _ in
             }
         fetchData()
