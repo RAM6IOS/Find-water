@@ -9,6 +9,9 @@ import SwiftUI
 import MapKit
 import CoreLocation
 import CoreLocationUI
+import Firebase
+import FirebaseFirestoreSwift
+import CoreLocation
 
 struct LocationMapView: View {
     
@@ -38,11 +41,116 @@ struct LocationMapView: View {
                                 .onTapGesture {
                                     //mapController.setSelectedBusiness(for: location)
                                     selectedPlace = location
+                                    mapViewModel.fetchData2(mdel:location.name)
                                 }
+                                .onAppear{
+                                    mapViewModel.fetchData2(mdel:location.name)
+                                }
+                            
                                                     }
-                }
+                }/*
                     .sheet(isPresented: $mapController.isBusinessViewShowing){
                         BusinessView(mapController: mapController)
+                    }
+                  */
+                    
+                    .sheet(item: $selectedPlace) { place in
+                        Text(place.name)
+                        
+                        VStack{
+                            Button{
+                                
+                                
+                                mapViewModel.createRestaurant(mdel: place.name)
+                                mapViewModel.fetchData2(mdel:place.name)
+                            } label: {
+                                Text("add new location user \(place.name)")
+                            }
+                            ForEach(mapViewModel.user, id: \.self) { item in
+                                Button{
+                                   
+                                        
+                                        Firestore.firestore().collection(place.name).document(item.id ?? "eereded").delete() { err in
+                                            if let err = err {
+                                                print("Error removing document: \(err)")
+                                            } else {
+                                                print("Document successfully removed!")
+                                            }
+                                        }
+                                       
+                                        
+                                    
+                                   } label: {
+                                       Text(item.name)
+                                    }
+                                
+                            }
+                            .onAppear{
+                                mapViewModel.fetchData2(mdel:place.name)
+                            }
+                        }
+                      /*  ScrollView {
+                            LazyVGrid(columns: columns, spacing: 20) {
+                                ForEach(mapViewModel.books, id: \.self) { item in
+                                    Button{
+                                        
+                                    }label: {
+                                        Image(systemName: "person.fill")
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .background(.green)
+                                            .clipShape(Circle())
+                                    }
+                                    
+                                }
+                               }
+                            }*/
+                       
+                        /*
+                        VStack{
+                            HStack(alignment:.top){
+                                
+                                Image(place.name)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 80)
+                                VStack{
+                                    Text("Algeria ,Blida ,ouled slama")
+                                        .font(.title3)
+                                    VStack(alignment: .leading){
+                                        Text("Coordinate")
+                                        Text("latitude:\(place.location.latitude)")
+                                        Text("longitude:\(place.location.longitude)")
+                                    }
+                                    Button{
+                                        openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
+                                    }label: {
+                                        HStack{
+                                            Image("send")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 25, height: 25)
+                                            Text("Direction")
+                                        }
+                                        .foregroundColor(.white)
+                                        .frame(width: 200 ,height: 50)
+                                        .background(Color.blue)
+                                        
+                                    }
+                                    .cornerRadius(10)
+                                    
+                                    Button{
+                                        // viewModel.save()
+                                    } label: {
+                                        Text("Direction")
+                                    }
+                                }
+                                
+                                Spacer()
+                            }
+                        }*/
+                        
+
                     }
                     
                     LocationButton(.currentLocation){
@@ -59,68 +167,7 @@ struct LocationMapView: View {
                     .padding(.leading ,30)
                 }
                 
-            .sheet(item: $selectedPlace) { place in
-              /*  ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(mapViewModel.books, id: \.self) { item in
-                            Button{
-                                
-                            }label: {
-                                Image(systemName: "person.fill")
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(.green)
-                                    .clipShape(Circle())
-                            }
-                            
-                        }
-                       }
-                    }*/
-                VStack{
-                    HStack(alignment:.top){
-                        
-                        Image(place.name)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 80, height: 80)
-                        VStack{
-                            Text("Algeria ,Blida ,ouled slama")
-                                .font(.title3)
-                            VStack(alignment: .leading){
-                                Text("Coordinate")
-                                Text("latitude:\(place.location.latitude)")
-                                Text("longitude:\(place.location.longitude)")
-                            }
-                            Button{
-                                openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
-                            }label: {
-                                HStack{
-                                    Image("send")
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 25, height: 25)
-                                    Text("Direction")
-                                }
-                                .foregroundColor(.white)
-                                .frame(width: 200 ,height: 50)
-                                .background(Color.blue)
-                                
-                            }
-                            .cornerRadius(10)
-                            
-                            Button{
-                                // viewModel.save()
-                            } label: {
-                                Text("Direction")
-                            }
-                        }
-                        
-                        Spacer()
-                    }
-                }
-                
-
-            }
+           
                  
                 .ignoresSafeArea(.all, edges: .top)
                 

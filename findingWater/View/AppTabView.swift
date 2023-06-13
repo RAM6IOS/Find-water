@@ -21,7 +21,7 @@ struct AppTabView: View {
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }
-                MapTest()
+                LocationMapView()
                     .tabItem {
                         Label("Locations", systemImage: "building")
                     }

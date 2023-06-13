@@ -9,6 +9,8 @@ import SwiftUI
 import MapKit
 import CoreLocation
 import CoreLocationUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct ContentView2: View {
     @ObservedObject var mapController = MapController()
@@ -38,6 +40,7 @@ struct ContentView2: View {
     ]
     @State private var selectedPlace: Sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
+    
     var body: some View {
         NavigationView {
             LazyVGrid(columns: columns, spacing: 20) {
@@ -46,33 +49,37 @@ struct ContentView2: View {
                      Text(place.name)
                          .onTapGesture {
                        self.selectedPlace = place
+                            
                      }
+                         .onAppear{
+                             mapViewModel.fetchData2(mdel:place.name)
+                         }
                  
-                     ForEach(place.user, id: \.self) { item in
-                              Button{
-                                  mapViewModel.rmove(id: place.id ?? "nr3ecwkjn", user: String(item.count) )
-                                  //mapViewModel.EditProducti(id: place.id ?? "nr3ecwkjn", value: item)
-                                  mapViewModel.fetchData()
-                                  
-                                  
-                              } label: {
-                                  Image(systemName: "person.fill")
-                                      .foregroundColor(.white)
-                                      .padding()
-                                      .background(.green)
-                                      .clipShape(Circle())
-                                  
-                              }
-                              
-                             
-                         
-                     }
                      
                     
                }
                 
              }
              .sheet(item: $selectedPlace) { place in
+                 
+                 VStack{
+                     Button{
+                         
+                         
+                         mapViewModel.createRestaurant(mdel: place.name)
+                         mapViewModel.fetchData2(mdel:place.name)
+                     } label: {
+                         Text("add new location user \(place.name)")
+                     }
+                     ForEach(mapViewModel.user, id: \.self) { item in
+                         Text(item.name)
+                         
+                     }
+                     .onAppear{
+                         mapViewModel.fetchData2(mdel:place.name)
+                     }
+                 }
+                 /*
                  if #available(iOS 16.0, *) {
                      VStack{
                          Text("add new location user")
@@ -105,6 +112,7 @@ struct ContentView2: View {
                  } else {
                      // Fallback on earlier versions
                  }
+                  */
              }
            }
         /*
