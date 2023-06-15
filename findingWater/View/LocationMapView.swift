@@ -21,6 +21,8 @@ struct LocationMapView: View {
     @ObservedObject var mapViewModel = LocationMapViewModel()
     @ObservedObject var userlocation = UserLocation()
     @StateObject var viewModel = BookViewModel()
+    @EnvironmentObject var viewModel2 : CreateAccount
+    
     let columns = [
                 GridItem(.flexible()),
                 GridItem(.flexible()),
@@ -34,18 +36,17 @@ struct LocationMapView: View {
                     Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.books) { location in
                         
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude, longitude: location.location.longitude)){
-                            Image("water")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 44, height: 44)
-                                .onTapGesture {
-                                    //mapController.setSelectedBusiness(for: location)
-                                    selectedPlace = location
-                                    mapViewModel.fetchData2(mdel:location.name)
-                                }
-                                .onAppear{
-                                    mapViewModel.fetchData2(mdel:location.name)
-                                }
+                            NavigationLink(destination: locationDitels(soures: location)){
+                                Image("water")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 44, height: 44)
+                                   
+                                    .onAppear{
+                                        // mapViewModel.fetchData2(mdel:location.name)
+                                        //self.viewModel2.fetchUser()
+                                    }
+                            }
                             
                                                     }
                 }/*
@@ -55,38 +56,85 @@ struct LocationMapView: View {
                   */
                     
                     .sheet(item: $selectedPlace) { place in
-                        Text(place.name)
-                        
-                        VStack{
-                            Button{
+                        ScrollView {
+                            LazyVGrid(columns: columns, spacing: 20) {
+                                Text(place.name)
                                 
-                                
-                                mapViewModel.createRestaurant(mdel: place.name)
-                                mapViewModel.fetchData2(mdel:place.name)
-                            } label: {
-                                Text("add new location user \(place.name)")
-                            }
-                            ForEach(mapViewModel.user, id: \.self) { item in
-                                Button{
-                                   
+                               
+                                    Button{
                                         
-                                        Firestore.firestore().collection(place.name).document(item.id ?? "eereded").delete() { err in
-                                            if let err = err {
-                                                print("Error removing document: \(err)")
-                                            } else {
-                                                print("Document successfully removed!")
+                                        
+                                       //
+                                      
+                                            viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: true ?? true)
+                                            //mapViewModel.createRestaurant(mdel: place.name)
+                                            
+                                            let docData: [String: Any] = [
+                                                // "uid": uid,
+                                                "name": "PoutineFiesta",
+                                                "address": "1234 Restaurant St"
+                                            ]
+                                            let db = Firestore.firestore()
+                                            
+                                            let docRef = db.collection(place.name).document()
+                                            
+                                            docRef.setData(docData) { error in
+                                                if let error = error {
+                                                    print("Error writing document: \(error)")
+                                                } else {
+                                                    print("Document successfully written!")
+                                                }
                                             }
-                                        }
-                                       
+                                        viewModel2.fetchUser()
+                                        print(" viewModel2.1\(viewModel2.currentUser?.value)")
                                         
+                                       // viewModel2.currentUser?.value.toggle()
+                                       // mapViewModel.fetchData2(mdel:place.name)
+                                        
+                                    } label: {
+                                        Image(systemName: "plus")
+                                           // .foregroundColor(.white)
+                                            .padding()
+                                            //.background(.green)
+                                            .clipShape(Circle())
+                                            .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                                    }
                                     
-                                   } label: {
-                                       Text(item.name)
+                                    ForEach(mapViewModel.user, id: \.self) { item in
+                                        Button{
+                                            //viewModel2.currentUser?.value.toggle()
+                                           
+                                                Firestore.firestore().collection(place.name).document(item.id ?? "eereded").delete() { err in
+                                                    if let err = err {
+                                                        print("Error removing document: \(err)")
+                                                    } else {
+                                                        print("Document successfully removed!")
+                                                    }
+                                                }
+                                                //viewModel2.currentUser?.value.toggle()
+                                                
+                                                
+                                                viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: false ?? false)
+                                            viewModel2.fetchUser()
+                                            print(" viewModel2.\(viewModel2.currentUser?.value)")
+                                                
+                                            
+                                            
+                                        } label: {
+                                            Image(systemName: "person.fill")
+                                                .foregroundColor(.white)
+                                                .padding()
+                                                .background(.green)
+                                                .clipShape(Circle())
+                                        }
+                                        
+                                    }
+                                    .onAppear{
+                                       // mapViewModel.fetchData2(mdel:place.name)
+                                        print(viewModel2.currentUser?.value)
+                                       // self.viewModel2.fetchUser()
                                     }
                                 
-                            }
-                            .onAppear{
-                                mapViewModel.fetchData2(mdel:place.name)
                             }
                         }
                       /*  ScrollView {
@@ -170,6 +218,9 @@ struct LocationMapView: View {
            
                  
                 .ignoresSafeArea(.all, edges: .top)
+                .onAppear{
+                    //self.viewModel2.fetchUser()
+                }
                 
                 }
                 
