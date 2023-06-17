@@ -57,6 +57,23 @@ struct LocationMapView: View {
                     
                     .sheet(item: $selectedPlace) { place in
                         ScrollView {
+                            Button{
+                                openMap(coordinate: CLLocationCoordinate2D(latitude: place.location.latitude, longitude: place.location.longitude))
+                            }label: {
+                                HStack{
+                                    Image("send")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 25, height: 25)
+                                    Text("Direction")
+                                }
+                                .foregroundColor(.white)
+                                .frame(width: 200 ,height: 50)
+                                .background(Color.blue)
+                                
+                            }
+                            .cornerRadius(10)
+                            
                             LazyVGrid(columns: columns, spacing: 20) {
                                 Text(place.name)
                                 

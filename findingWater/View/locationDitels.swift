@@ -9,6 +9,10 @@ import SwiftUI
 import FirebaseFirestoreSwift
 import Firebase
 import FirebaseAuth
+import CoreLocation
+import CoreLocationUI
+import CoreLocation
+import MapKit
 
 struct locationDitels: View {
     var soures:Sources
@@ -21,18 +25,32 @@ struct locationDitels: View {
     @ObservedObject var viewModel2 = CreateAccount()
     @ObservedObject var mapViewModel = LocationMapViewModel()
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                Text(soures.name)
+        VStack{
+            Text(soures.name)
+            Text("latitude:\(soures.location.latitude)")
+            Text("latitude:\(soures.location.longitude)")
+            Button{
+                openMap(coordinate: CLLocationCoordinate2D(latitude: soures.location.latitude, longitude: soures.location.longitude))
+            }label: {
+                HStack{
+                    Image("send")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 25, height: 25)
+                    Text("Direction")
+                }
+                .foregroundColor(.white)
+                .frame(width: 200 ,height: 50)
+                .background(Color.blue)
                 
-               
+            }
+            .cornerRadius(10)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                   
+                    
+                    
                     Button{
-                        
-                        
-                       //
-                      
-                          //  viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: true ?? true)
-                            //mapViewModel.createRestaurant(mdel: place.name)
                         
                         if viewModel2.userSession != nil  {
                             viewModel2.currentUser?.value.toggle()
@@ -56,22 +74,17 @@ struct locationDitels: View {
                             
                             viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? true)
                         }
-                       // viewModel2.fetchUser()
-                       // print(" viewModel2.1\(viewModel2.currentUser?.value)")
-                        
-                       // viewModel2.currentUser?.value.toggle()
-                       // mapViewModel.fetchData2(mdel:place.name)
                         
                     } label: {
                         Image(systemName: "plus")
-                           // .foregroundColor(.white)
+                        // .foregroundColor(.white)
                             .padding()
-                            //.background(.green)
+                        //.background(.green)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.black, lineWidth: 1))
                     }
                     .disabled( viewModel2.currentUser?.value == true)
-              
+                    
                     
                     ForEach(mapViewModel.user, id: \.self) { item in
                         Button{
@@ -99,20 +112,22 @@ struct locationDitels: View {
                         }
                         
                     }
-                    .onAppear{
-                      
-                       // print(viewModel2.currentUser?.value)
-                       // self.viewModel2.fetchUser()
-                    }
-                
-            }
-            .onAppear{
-                mapViewModel.fetchData2(mdel:soures.name)
-                self.viewModel2.fetchUser()
-                viewModel2.userSession
-                print(viewModel2.currentUser?.value )
+                    
+                    
+                }
+                .onAppear{
+                    mapViewModel.fetchData2(mdel:soures.name)
+                    self.viewModel2.fetchUser()
+                    viewModel2.userSession
+                    
+                }
             }
         }
+    }
+    func openMap(coordinate:CLLocationCoordinate2D){
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate))
+        mapItem.openInMaps()
+        
     }
 }
 
