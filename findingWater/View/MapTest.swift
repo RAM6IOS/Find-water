@@ -34,7 +34,7 @@ struct MapTest: View {
                             if viewModel2.userSession != nil  {
                                  viewModel.createRestaurant()
                                  viewModel2.currentUser?.value.toggle()
-                                 viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? true)
+                                 viewModel2.editProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? true)
                              }
                         } label: {
                             Image(systemName: "plus")
@@ -56,7 +56,7 @@ struct MapTest: View {
                                         
                                         viewModel.excluirDaAgenda(documento: item.id ?? "brecdbjbewdbn" )
                                         
-                                        viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? false)
+                                        viewModel2.editProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? false)
                                         
                                     }
                                     
@@ -102,7 +102,7 @@ struct MapTest: View {
                            if viewModel2.userSession != nil  {
                                 viewModel.createRestaurant()
                                 viewModel2.currentUser?.value.toggle()
-                                viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? true)
+                                viewModel2.editProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: viewModel2.currentUser?.value ?? true)
                             }
                         }
                         .disabled( viewModel2.currentUser?.value == true)

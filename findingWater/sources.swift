@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 import CoreLocation
 
 
-struct Sources: Identifiable ,Codable ,Hashable {
+struct sources: Identifiable ,Codable ,Hashable {
     
     @DocumentID var id: String?
     var name: String

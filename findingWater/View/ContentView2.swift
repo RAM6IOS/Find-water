@@ -38,21 +38,21 @@ struct ContentView2: View {
         Location2(name: "9", coordinate: CLLocationCoordinate2D(latitude: 36.543958, longitude: 3.088122), free: true),
         Location2(name: "10", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true)
     ]
-    @State private var selectedPlace: Sources?
+    @State private var selectedPlace: sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
     
     var body: some View {
         NavigationView {
             LazyVGrid(columns: columns, spacing: 20) {
                
-                 ForEach(mapViewModel.books, id: \.id) { place in
+                ForEach(mapViewModel.source, id: \.id) { place in
                      Text(place.name)
                          .onTapGesture {
                        self.selectedPlace = place
                             
                      }
                          .onAppear{
-                             mapViewModel.fetchData2(mdel:place.name)
+                             mapViewModel.userInWaterLocation(mdel:place.name)
                          }
                  
                      
@@ -67,7 +67,7 @@ struct ContentView2: View {
                          
                          
                          mapViewModel.createRestaurant(mdel: place.name)
-                         mapViewModel.fetchData2(mdel:place.name)
+                         mapViewModel.userInWaterLocation(mdel:place.name)
                      } label: {
                          Text("add new location user \(place.name)")
                      }
@@ -76,7 +76,7 @@ struct ContentView2: View {
                          
                      }
                      .onAppear{
-                         mapViewModel.fetchData2(mdel:place.name)
+                         mapViewModel.userInWaterLocation(mdel:place.name)
                      }
                  }
                  /*

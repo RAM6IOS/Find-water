@@ -17,7 +17,7 @@ struct LocationMapView: View {
     
     @ObservedObject var mapController = MapController()
     @ObservedObject var model =  locationManger()
-    @State private var selectedPlace: Sources?
+    @State private var selectedPlace: sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
     @ObservedObject var userlocation = UserLocation()
     @StateObject var viewModel = BookViewModel()
@@ -33,7 +33,7 @@ struct LocationMapView: View {
         var body: some View {
             NavigationView{
                 ZStack(alignment:.bottomTrailing){
-                    Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.books) { location in
+                    Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.source) { location in
                         
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude, longitude: location.location.longitude)){
                             NavigationLink(destination: locationDitels(soures: location)){
@@ -54,7 +54,7 @@ struct LocationMapView: View {
                         BusinessView(mapController: mapController)
                     }
                   */
-                    
+                    /*
                     .sheet(item: $selectedPlace) { place in
                         ScrollView {
                             Button{
@@ -83,7 +83,7 @@ struct LocationMapView: View {
                                         
                                        //
                                       
-                                            viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: true ?? true)
+                                            viewModel2.editProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: true ?? true)
                                             //mapViewModel.createRestaurant(mdel: place.name)
                                             
                                             let docData: [String: Any] = [
@@ -131,7 +131,7 @@ struct LocationMapView: View {
                                                 //viewModel2.currentUser?.value.toggle()
                                                 
                                                 
-                                                viewModel2.EditProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: false ?? false)
+                                                viewModel2.editProducti(id: viewModel2.currentUser?.id  ?? "reewwedsewd", value: false ?? false)
                                             viewModel2.fetchUser()
                                             print(" viewModel2.\(viewModel2.currentUser?.value)")
                                                 
@@ -217,6 +217,7 @@ struct LocationMapView: View {
                         
 
                     }
+                     */
                     
                     LocationButton(.currentLocation){
                     model.requesAllowOnceLocationPermission()

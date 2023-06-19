@@ -86,7 +86,7 @@ class CreateAccount: ObservableObject {
         print("logout\(userSession)")
            }
     
-    func EditProducti(id:String ,value:Bool){
+    func editProducti(id:String ,value:Bool){
         Firestore.firestore().collection("users").document(id)
             .updateData(["value":value
                         ]) { _ in

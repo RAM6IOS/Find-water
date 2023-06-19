@@ -12,14 +12,14 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView {
-            List(LocationMapVM.books) { user in
+            List(LocationMapVM.source) { user in
                 Text(user.name)
                 Text("\(user.location.latitude)")
                 Text("\(user.location.longitude)")
                     }
               .navigationBarTitle("Books")
               .onAppear() { // (3)
-                  self.LocationMapVM.fetchData()
+                  self.LocationMapVM.fetchDataWaterSource()
               }
             }
     }

@@ -9,13 +9,12 @@ import SwiftUI
 
 struct AppTabView: View {
     init() {
-            UITabBar.appearance().barTintColor = UIColor.blue
+          //  UITabBar.appearance().barTintColor = UIColor.blue
         }
     @State var ShowOnboarding = false
     //@AppStorage("ShowOnboarding")
     @EnvironmentObject var viewModel : CreateAccount
     var body: some View {
-        
             TabView {
                 SignupView()
                     .tabItem {
@@ -23,12 +22,9 @@ struct AppTabView: View {
                     }
                 LocationMapView()
                     .tabItem {
-                        Label("Locations", systemImage: "building")
-                    }
-                ContentView2()
-                    .tabItem {
                         Label("Map", systemImage: "map")
                     }
+                
             }
             .accentColor(.black)
             
