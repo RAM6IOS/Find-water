@@ -10,11 +10,7 @@ import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
-struct UserHere: Identifiable, Decodable, Hashable {
-    @DocumentID var id: String?
-    let  name: String
-    let address: String
-    }
+
 class LocationMapViewModel: ObservableObject {
     @Published var source: Array = [Sources]()
     @Published var user: Array = [UserHere]()

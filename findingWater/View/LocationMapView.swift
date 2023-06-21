@@ -29,14 +29,13 @@ struct LocationMapView: View {
                GridItem(.flexible()),
                GridItem(.flexible())
         ]
-   
         var body: some View {
             NavigationView{
                 ZStack(alignment:.bottomTrailing){
                     Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.source) { location in
                         
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude, longitude: location.location.longitude)){
-                            NavigationLink(destination: LocationDitels(soures: location)){
+                            NavigationLink(destination: LocationDitels(soures: location)) {
                                 Image("water")
                                     .resizable()
                                     .scaledToFill()

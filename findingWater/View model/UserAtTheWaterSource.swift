@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
-class UserAtTheWaterSourceVM: ObservableObject  {
+class UserAtTheWaterSourceVM: ObservableObject {
     @Published var user: Array = [UserHere]()
     // This function will fetch Data from firebase that match the structure userHere
     func userInWaterLocation(mdel: String) {
@@ -49,5 +49,4 @@ class UserAtTheWaterSourceVM: ObservableObject  {
         }
     }
 
-    
 }

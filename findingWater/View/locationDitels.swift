@@ -22,13 +22,15 @@ struct LocationDitels: View {
         ]
     @ObservedObject var createAccountVM = CreateAccount()
     @ObservedObject var mapViewModel = LocationMapViewModel()
+    @ObservedObject var userAtTheWaterSourceVM = UserAtTheWaterSourceVM()
     var body: some View {
         VStack(alignment: .leading) {
             Image("caption")
                 .resizable()
                 .scaledToFit()
                 .aspectRatio(contentMode: .fill)
-                .frame(minWidth: nil, idealWidth: nil, maxWidth: UIScreen.main.bounds.width, minHeight: nil, idealHeight: nil, maxHeight: 300, alignment: .center)
+                .frame(minWidth: nil, idealWidth: nil, maxWidth: UIScreen.main.bounds.width, minHeight: nil
+                               , idealHeight: nil, maxHeight: 300, alignment: .center )
             .clipped()
             VStack(alignment: .leading, spacing: 10) {
                 ScrollView {
@@ -45,7 +47,8 @@ struct LocationDitels: View {
                     Text("latitude:\(soures.location.latitude)")
                     Text("latitude:\(soures.location.longitude)")
                     Button {
-                        openMap(coordinate: CLLocationCoordinate2D(latitude: soures.location.latitude, longitude: soures.location.longitude))
+                        openMap(coordinate: CLLocationCoordinate2D(latitude: soures.location.latitude
+                                                                 , longitude: soures.location.longitude))
                     }label: {
                         HStack {
                             Text("Get Directions")
@@ -67,8 +70,10 @@ struct LocationDitels: View {
                         Button {
                             if createAccountVM.userSession != nil   {
                                 createAccountVM.currentUser?.value.toggle()
-                                mapViewModel.createRestaurant(mdel: soures.name)
-                                createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd", value: createAccountVM.currentUser?.value ?? true)
+                                // mapViewModel.createRestaurant(mdel: soures.name)
+                                userAtTheWaterSourceVM.createNewReservation(mdel: soures.name)
+                                createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd"
+                                                             , value: createAccountVM.currentUser?.value ?? true)
                             }
                         } label: {
                             Image(systemName: "plus")
@@ -77,12 +82,13 @@ struct LocationDitels: View {
                                 .overlay(Circle().stroke(Color.black, lineWidth: 1))
                         }
                         .disabled( createAccountVM.currentUser?.value == true)
-                        ForEach(mapViewModel.user, id: \.self) { item in
+                        ForEach(userAtTheWaterSourceVM.user, id: \.self) { item in
                             Button {
                                 if createAccountVM.userSession != nil &&   createAccountVM.currentUser?.value == true {
                                     createAccountVM.currentUser?.value.toggle()
-                                    mapViewModel.rmoveUser(id: item.id ?? "eereded", user: soures.name)
-                                    createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd", value:  createAccountVM.currentUser?.value ?? false )
+                                    userAtTheWaterSourceVM.rmoveUser(id: item.id ?? "eereded" , user: soures.name)
+                                    createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd"
+                                                    , value:  createAccountVM.currentUser?.value ?? false )
                                 }
                             } label: {
                                 Image(systemName: "person.fill")
@@ -94,7 +100,7 @@ struct LocationDitels: View {
                         }
                     }
                     .onAppear {
-                        mapViewModel.userInWaterLocation(mdel: soures.name)
+                        userAtTheWaterSourceVM.userInWaterLocation(mdel: soures.name)
                         self.createAccountVM.fetchUser()
                     }
                 }

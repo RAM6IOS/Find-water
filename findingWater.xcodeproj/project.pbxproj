@@ -40,6 +40,7 @@
 		F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657729F7DCA0005F87CB /* BusinessView.swift */; };
 		F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657929F7F6C1005F87CB /* Testview.swift */; };
 		F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */; };
+		F7C266A12A43909A00CB414D /* UserHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C266A02A43909A00CB414D /* UserHere.swift */; };
 		F7CE91182A2BA0B8000063B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91172A2BA0B8000063B6 /* FirebaseAuth */; };
 		F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91192A2BA375000063B6 /* FirebaseStorage */; };
 		F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */; };
@@ -81,6 +82,7 @@
 		F7AF657729F7DCA0005F87CB /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
 		F7AF657929F7F6C1005F87CB /* Testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testview.swift; sourceTree = "<group>"; };
 		F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAtTheWaterSource.swift; sourceTree = "<group>"; };
+		F7C266A02A43909A00CB414D /* UserHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHere.swift; sourceTree = "<group>"; };
 		F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		F7E175D329F72DD1001DDA90 /* Action .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action .swift"; sourceTree = "<group>"; };
 		F7E175D529F72EF7001DDA90 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				F7E175D329F72DD1001DDA90 /* Action .swift */,
 				F7E175D529F72EF7001DDA90 /* Business.swift */,
 				F79E43C02A1E279C00534A99 /* User.swift */,
+				F7C266A02A43909A00CB414D /* UserHere.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,
 				F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */,
+				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
 				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
 				F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */,

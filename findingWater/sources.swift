@@ -17,7 +17,7 @@ struct Sources: Identifiable, Codable, Hashable {
     var adresser: String
     var location: GeoPoint
     var user: [String]
-    enum CodingKeys: String, CodingKey  {
+    enum CodingKeys: String, CodingKey {
       case id
       case name
       case adresser
