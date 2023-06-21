@@ -15,7 +15,7 @@ struct Testview: View {
         }
         .searchable(text: $mapController.searchTern)
         .onSubmit(of: .search) {
-            mapController.Search()
+            mapController.search()
         }
     }
 }

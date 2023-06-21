@@ -6,20 +6,18 @@
 //
 
 import SwiftUI
-
 struct ProfileView: View {
-    @ObservedObject var  LocationMapVM = LocationMapViewModel()
-    
+    @ObservedObject var  locationMapVM = LocationMapViewModel()
     var body: some View {
         NavigationView {
-            List(LocationMapVM.source) { user in
+            List(locationMapVM.source) { user in
                 Text(user.name)
                 Text("\(user.location.latitude)")
                 Text("\(user.location.longitude)")
                     }
               .navigationBarTitle("Books")
-              .onAppear() { // (3)
-                  self.LocationMapVM.fetchDataWaterSource()
+              .onAppear { // (3)
+                  self.locationMapVM.fetchDataWaterSource()
               }
             }
     }

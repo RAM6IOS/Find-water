@@ -7,19 +7,9 @@
 
 import Foundation
 
-
-
 struct Action: Identifiable {
-    
    var id = UUID()
     var title: String
-    var image :String
-    var hadler: ()->  Void
-   
-    //var image:String
-    
-    
-    
-   
-    
+    var image: String
+    var hadler: () ->Void
 }

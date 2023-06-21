@@ -11,8 +11,7 @@ struct AppTabView: View {
     init() {
           //  UITabBar.appearance().barTintColor = UIColor.blue
         }
-    @State var ShowOnboarding = false
-    //@AppStorage("ShowOnboarding")
+    @State var showOnbord : Bool = false
     @EnvironmentObject var viewModel : CreateAccount
     var body: some View {
             TabView {
@@ -24,12 +23,8 @@ struct AppTabView: View {
                     .tabItem {
                         Label("Map", systemImage: "map")
                     }
-                
             }
             .accentColor(.black)
-            
-        
-            
         /*
         if ShowOnboarding{
             GetStarted(ShowOnboarding: $ShowOnboarding)
@@ -54,7 +49,6 @@ struct AppTabView: View {
             .accentColor(.black)
          */
         }
-    
 }
 
 struct AppTabView_Previews: PreviewProvider {

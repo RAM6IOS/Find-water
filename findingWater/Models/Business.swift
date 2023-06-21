@@ -8,19 +8,18 @@
 import Foundation
 import MapKit
 
-struct Business :Identifiable {
+struct Business: Identifiable {
     var id = UUID()
-    var name : String
+    var name: String
     var placemark: MKPlacemark
     var coordinate: CLLocationCoordinate2D
-    var phoneNumber:String
-    var Website:URL?
+    var phoneNumber: String
+    var website: URL?
 }
 
 struct Location3: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
-    let free :Bool
+    let free: Bool
 }
-

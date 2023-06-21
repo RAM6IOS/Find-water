@@ -10,31 +10,19 @@ import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
-
 struct WaterTank: Identifiable ,Codable {
-    
     @DocumentID var id: String?
     var name: String
-    var Phone :String
-    var TankVolume: String
-    var VehicleNumber:String
-    var VehicleModel:String
-    //var image:String
-    
+    var phone: String
+    var tankVolume: String
+    var vehicleNumber: String
+    var vehicleModel: String
     enum CodingKeys: String, CodingKey  {
      case id
       case name
-      case Phone
-      case TankVolume
-      case VehicleNumber
-      case VehicleModel
-      //case latitude
-     // case longitude
-      //case image
-      
+      case phone
+      case tankVolume
+      case vehicleNumber
+      case vehicleModel
     }
-    
-   
-    
 }
-

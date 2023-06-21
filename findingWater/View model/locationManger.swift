@@ -9,11 +9,7 @@ import Foundation
 import MapKit
 import CoreLocation
 import CoreLocationUI
-
-//@MainActor
-
-
-final class locationManger: NSObject, ObservableObject , CLLocationManagerDelegate {
+final class LocationManger: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locations = [
     Location2(name: "-1", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.128917), free: true),
     Location2(name: "0", coordinate: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.158917), free: false),
@@ -25,40 +21,26 @@ final class locationManger: NSObject, ObservableObject , CLLocationManagerDelega
     Location2(name: "7", coordinate: CLLocationCoordinate2D(latitude: 36.567564, longitude: 3.158442), free: true),
     Location2(name: "8", coordinate: CLLocationCoordinate2D(latitude: 36.546298, longitude: 3.093918), free: true),
     Location2(name: "9", coordinate: CLLocationCoordinate2D(latitude: 36.543958, longitude: 3.088122), free: true),
-    Location2(name: "10", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true),
-    //Location2(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 36.544944, longitude: 3.074616), free: true)
+    Location2(name: "10", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true)
     ]
-    
-    @Published  var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916 ,longitude: 3.108917), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
-    
+    @Published  var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.552916, longitude: 3.108917), span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
     var locationManger =  CLLocationManager()
     override init() {
         super.init()
         locationManger.delegate = self
     }
-    
-    
-    func requesAllowOnceLocationPermission(){
-        
+    func requesAllowOnceLocationPermission() {
         locationManger.requestLocation()
     }
-     
-    
     nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let latestLocation = locations.first else{
+        guard let latestLocation = locations.first else {
             return
         }
         DispatchQueue.main.async {
-            self.region = MKCoordinateRegion(center: latestLocation.coordinate , span: MKCoordinateSpan(latitudeDelta: 0.9, longitudeDelta: 0.9))
+        self.region = MKCoordinateRegion(center: latestLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.9, longitudeDelta: 0.9))
         }
     }
-    
-    nonisolated func locationManager(_ manager:CLLocationManager , didFailWithError erroe:Error){
+    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError erroe:Error) {
         print(erroe.localizedDescription)
-        
     }
-    
 }
-
-
-

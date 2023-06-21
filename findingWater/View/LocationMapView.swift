@@ -16,8 +16,8 @@ import CoreLocation
 struct LocationMapView: View {
     
     @ObservedObject var mapController = MapController()
-    @ObservedObject var model =  locationManger()
-    @State private var selectedPlace: sources?
+    @ObservedObject var model =  LocationManger()
+    @State private var selectedPlace: Sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
     @ObservedObject var userlocation = UserLocation()
     @StateObject var viewModel = BookViewModel()
@@ -36,7 +36,7 @@ struct LocationMapView: View {
                     Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems:mapViewModel.source) { location in
                         
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude, longitude: location.location.longitude)){
-                            NavigationLink(destination: locationDitels(soures: location)){
+                            NavigationLink(destination: LocationDitels(soures: location)){
                                 Image("water")
                                     .resizable()
                                     .scaledToFill()

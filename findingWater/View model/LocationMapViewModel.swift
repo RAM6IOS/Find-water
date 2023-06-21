@@ -10,35 +10,31 @@ import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
-struct userHere: Identifiable, Decodable ,Hashable  {
+struct UserHere: Identifiable, Decodable, Hashable {
     @DocumentID var id: String?
-    let  name : String
-    let address : String
-    
-}
-
+    let  name: String
+    let address: String
+    }
 class LocationMapViewModel: ObservableObject {
-    @Published var source:Array = [sources]()
-    @Published var user:Array = [userHere]()
-    
+    @Published var source: Array = [Sources]()
+    @Published var user: Array = [UserHere]()
     init() {
         fetchDataWaterSource()
     }
     // This function will fetch Data from firebase that match the structure userHere
-    func userInWaterLocation(mdel:String){
-        let db = Firestore.firestore()
-        db.collection(mdel).addSnapshotListener { (querySnapshot, error) in
+    func userInWaterLocation(mdel: String) {
+        Firestore.firestore().collection(mdel).addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
-            self.user  = documents.compactMap { (queryDocumentSnapshot)-> userHere? in
-                return try? queryDocumentSnapshot.data(as:userHere.self)
+            self.user  = documents.compactMap { (queryDocumentSnapshot) -> UserHere? in
+                return try? queryDocumentSnapshot.data(as: UserHere.self)
             }
         }
     }
-    //This function will remove user item that matches id in userHere
-    func rmoveUser(id:String ,user:String){
+    // This function will remove user item that matches id in userHere
+    func rmoveUser(id: String, user: String) {
         Firestore.firestore().collection(user).document(id).delete() { err in
             if let err = err {
                 print("Error removing document: \(err)")
@@ -48,14 +44,12 @@ class LocationMapViewModel: ObservableObject {
         }
     }
     // This function will create new new item
-    func createRestaurant(mdel:String) {
+    func createRestaurant(mdel: String) {
         let docData: [String: Any] = [
             "name": "PoutineFiesta",
             "address": "1234 Restaurant St"
         ]
-        let db = Firestore.firestore()
-        let docRef = db.collection(mdel).document()
-        
+        let docRef = Firestore.firestore().collection(mdel).document()
         docRef.setData(docData) { error in
             if let error = error {
                 print("Error writing document: \(error)")
@@ -64,44 +58,36 @@ class LocationMapViewModel: ObservableObject {
             }
         }
     }
-    
-    func rmove(id:String ,user:String){
+    func rmove(id: String, user: String) {
         Firestore.firestore().collection("sources").document(id)
-            .updateData(["user":FieldValue.arrayRemove([user])
+            .updateData(["user": FieldValue.arrayRemove([user])
                         ]) { _ in
             }
     }
-    
-    func EditProducti(id:String ,value:String){
+    func editProducti(id: String, value: String) {
         Firestore.firestore().collection("sources").document(id)
-            .updateData(["user":[value]
-                        ]) { _ in
-            }
-        fetchDataWaterSource()
-        
-    }
-    func EditProducti(id:String ,user:String){
-        Firestore.firestore().collection("sources").document(id)
-            .updateData(["user":FieldValue.arrayUnion([user])
+            .updateData(["user": [value]
                         ]) { _ in
             }
         fetchDataWaterSource()
-        
     }
-    //This function will fetch Data from firebase that match the structure Sources
+    func editProducti(id: String, user: String) {
+        Firestore.firestore().collection("sources").document(id)
+            .updateData(["user": FieldValue.arrayUnion([user])
+                        ]) { _ in
+            }
+        fetchDataWaterSource()
+    }
+    // This function will fetch Data from firebase that match the structure Sources
     func fetchDataWaterSource() {
-        let db = Firestore.firestore()
-                    db.collection("sources").addSnapshotListener { (querySnapshot, error) in
+        Firestore.firestore().collection("sources").addSnapshotListener { (querySnapshot, error) in
                         guard let documents = querySnapshot?.documents else {
                           print("No documents")
                           return
                         }
-                        self.source = documents.compactMap { (queryDocumentSnapshot)-> sources? in
-                            return try? queryDocumentSnapshot.data(as:sources.self)
+                        self.source = documents.compactMap { (queryDocumentSnapshot) -> Sources? in
+                            return try? queryDocumentSnapshot.data(as: Sources.self)
                         }
                     }
     }
 }
- 
-
-

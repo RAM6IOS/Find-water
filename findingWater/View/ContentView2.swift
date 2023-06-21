@@ -38,7 +38,7 @@ struct ContentView2: View {
         Location2(name: "9", coordinate: CLLocationCoordinate2D(latitude: 36.543958, longitude: 3.088122), free: true),
         Location2(name: "10", coordinate: CLLocationCoordinate2D(latitude: 36.540878, longitude: 3.080164), free: true)
     ]
-    @State private var selectedPlace: sources?
+    @State private var selectedPlace: Sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
     
     var body: some View {

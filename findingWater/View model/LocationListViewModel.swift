@@ -10,28 +10,21 @@ import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
-class LocationListViewModel : ObservableObject {
+class LocationListViewModel: ObservableObject {
     @Published var location = [WaterTank]()
-    
-    init(){
+    init() {
         fetchData()
     }
-    
-    func fetchData(){
-        let db = Firestore.firestore()
-                    db.collection(" truck").addSnapshotListener { (querySnapshot, error) in
+    func fetchData() {
+        Firestore.firestore().collection(" truck").addSnapshotListener { (querySnapshot, error) in
                         guard let documents = querySnapshot?.documents else {
                           print("No documents")
                           return
                         }
 
-                        self.location  = documents.compactMap { (queryDocumentSnapshot)-> WaterTank? in
-                            return try? queryDocumentSnapshot.data(as:WaterTank.self)
+                        self.location  = documents.compactMap { (queryDocumentSnapshot) -> WaterTank? in
+                            return try? queryDocumentSnapshot.data(as: WaterTank.self)
                         }
                     }
     }
-    
-    
 }
-
-
