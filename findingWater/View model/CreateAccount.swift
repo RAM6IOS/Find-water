@@ -10,24 +10,15 @@ import FirebaseAuth
 import SwiftUI
 import FirebaseFirestore
 import Firebase
-//import FirebaseStorage
 
 class CreateAccount: ObservableObject {
-    @Published var userSession : FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
-
-    //@Published var user = [User2]()
-    
     init() {
                 self.userSession = Auth.auth().currentUser
             self.fetchUser()
-        
-             print(userSession)
+             print( userSession )
             }
-    
-    
-      
-    
     func login(withEmail email: String, password: String) {
                Auth.auth().signIn(withEmail: email, password: password) { result, error in
                    if let error = error {
@@ -36,7 +27,6 @@ class CreateAccount: ObservableObject {
                    }
                    guard let user = result?.user else { return }
                    self.userSession = user
-                   //self.fetchUser()
                    print("DEBUG: Did Log user in.. \(String(describing: self.userSession?.email))")
                }
            }
@@ -50,7 +40,7 @@ class CreateAccount: ObservableObject {
                         self.userSession = user
                         let userData = ["email": email,
                                                     "name": name,
-                                                    "value":false ,
+                                                    "value": false ,
                                                     "uid": user.uid]
                         Firestore.firestore().collection("users")
                                         .document(user.uid)
@@ -59,10 +49,7 @@ class CreateAccount: ObservableObject {
             self.fetchUser()
             print("register\(user)")
             print("register\(self.userSession)")
-                        
                     }
-        
-       
         }
     func fetchUser() {
         guard let uid = self.userSession?.uid else { return }
@@ -70,7 +57,7 @@ class CreateAccount: ObservableObject {
             self.currentUser = user
         }
     }
-    func fetchUser(withUid uid: String , completion: @escaping(User) -> Void) {
+    func fetchUser(withUid uid: String, completion: @escaping(User) -> Void) {
             Firestore.firestore().collection("users")
                 .document(uid)
                 .getDocument { snapshot, _ in
@@ -79,19 +66,15 @@ class CreateAccount: ObservableObject {
                     completion(user)
                 }
         }
-    
     func logout() {
                userSession = nil
                try? Auth.auth().signOut()
         print("logout\(userSession)")
            }
-    
-    func editProducti(id:String ,value:Bool){
+    func editProducti(id: String, value: Bool) {
         Firestore.firestore().collection("users").document(id)
-            .updateData(["value":value
+            .updateData(["value": value
                         ]) { _ in
             }
-        
     }
     }
-

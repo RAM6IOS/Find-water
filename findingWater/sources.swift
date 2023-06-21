@@ -11,33 +11,17 @@ import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
-
-struct Sources: Identifiable ,Codable ,Hashable {
-    
+struct Sources: Identifiable, Codable, Hashable {
     @DocumentID var id: String?
     var name: String
-    var adresser:String
+    var adresser: String
     var location: GeoPoint
-    //let latitude: Double
-    //let longitude: Double
-    //var image:String
-    var user : [String]
-    
-    enum CodingKeys: String, CodingKey {
+    var user: [String]
+    enum CodingKeys: String, CodingKey  {
       case id
       case name
       case adresser
       case location
       case user
-      //case latitude
-     // case longitude
-      //case image
-      
     }
-    
-   
-    
 }
-
-
-

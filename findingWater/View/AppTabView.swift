@@ -11,8 +11,8 @@ struct AppTabView: View {
     init() {
           //  UITabBar.appearance().barTintColor = UIColor.blue
         }
-    @State var showOnbord : Bool = false
-    @EnvironmentObject var viewModel : CreateAccount
+    @State var showOnbord: Bool = false
+    @EnvironmentObject var viewModel: CreateAccount
     var body: some View {
             TabView {
                 SignupView()
