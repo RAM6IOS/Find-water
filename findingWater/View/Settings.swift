@@ -13,17 +13,68 @@ struct Settings: View {
         if #available(iOS 16.0, *) {
             NavigationStack {
                 VStack {
-                    Text("A full-screen modal view.")
-                        .font(.title)
-                    Text("Tap to Dismiss")
+                    List {
+                        NavigationLink {
+                            Text("jdsjnmqds")
+                        } label: {
+                            HStack {
+                                Image(systemName: "book")
+                                Text("about")
+                            }
+                        }
+                        NavigationLink {
+                            Text("jdsjnmqds")
+                        } label: {
+                            HStack {
+                                Image(systemName: "person")
+                                Text("Change Profile")
+                            }
+                        }
+                        NavigationLink {
+                            Text("jdsjnmqds")
+                        } label: {
+                            HStack {
+                                    Image(systemName: "envelope")
+                                    Text("Change Email")
+                                    }
+                        }
+                        NavigationLink {
+                            Text("jdsjnmqds")
+                        } label: {
+                            HStack {
+                                Image(systemName: "lock")
+                                Text("Change Password")
+                                }
+                        }
+                        HStack {
+                                        Image(systemName: "i.circle")
+                                        Link("Privacy Policy", destination: URL(string: "https://akdili.vercel.app/")!)
+                                                    .foregroundColor(.black)
+                                            }
+                        HStack {
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                                               Button {
+                                                  // viewModel.logout()
+                                               } label: {
+                                                   HStack {
+                                                       Text("Logout")
+                                                           .foregroundColor(.black)
+                                                   }
+                                               }
+                                           }
+                        HStack {
+                            Image(systemName: "trash")
+                                Button {
+                                                   // viewModel.delete()
+                                  } label: {
+                                    HStack {
+                                            Text("Delete")
+                                                .foregroundColor(.black)
+                                                    }
+                                                }
+                                            }
+                    }
                 }
-                .onTapGesture {
-                    isPresenting.toggle()
-                }
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity,
-                       maxHeight: .infinity)
-                .ignoresSafeArea(edges: .all)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button {
