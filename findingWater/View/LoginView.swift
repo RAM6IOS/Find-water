@@ -11,37 +11,32 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @StateObject var viewModel = CreateAccount()
-    
     var body: some View {
-        ZStack{
+        ZStack {
             VStack {
                 Spacer()
                 Image("drop")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 100, height: 100)
-                
                 Text("Welcome back")
                     .font(.title)
                     .fontWeight(.bold)
                     .padding()
-                
                 TextField("Email Address", text: $email)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                     .padding(.vertical)
-                
                 SecureField("Password", text: $password)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                     .padding(.vertical)
-                
                 Button(action: {
-                    withAnimation{
+                    withAnimation {
                                             viewModel.login(withEmail: email, password: password)
                                         }
                 }) {
@@ -53,7 +48,6 @@ struct LoginView: View {
                         .cornerRadius(8)
                 }
                 .padding(.vertical)
-                
                 Button(action: {
                     // Perform actions for forgot password
                     print("Forgot password tapped")
@@ -62,10 +56,8 @@ struct LoginView: View {
                         .foregroundColor(.blue)
                         .padding(.bottom)
                 }
-                
                 Text("Don't have an account?")
-                    .foregroundColor(.gray)
-                
+                  .foregroundColor(.gray)
                 Button(action: {
                     // Perform actions for sign up
                     print("Sign up tapped")
@@ -76,20 +68,15 @@ struct LoginView: View {
                         .padding()
                 }
                 .padding(.horizontal, 32)
-                
                 Spacer()
             }
-            onAppear{
+            .onAppear {
                 self.viewModel.fetchUser()
             }
             .padding()
         }
     }
-    
     private func isValidLogin() -> Bool {
-        // Add your own login validation logic here
-        // For example, check if the email and password meet certain criteria
-        // Return true if the login is valid, false otherwise
         return !email.isEmpty && !password.isEmpty
     }
 }

@@ -68,7 +68,7 @@ struct LocationDitels: View {
                         .bold()
                     LazyVGrid(columns: columns, spacing: 20) {
                         Button {
-                            if createAccountVM.userSession != nil   {
+                            if createAccountVM.userSession != nil {
                                 createAccountVM.currentUser?.value.toggle()
                                 // mapViewModel.createRestaurant(mdel: soures.name)
                                 userAtTheWaterSourceVM.createNewReservation(mdel: soures.name)
@@ -86,9 +86,9 @@ struct LocationDitels: View {
                             Button {
                                 if createAccountVM.userSession != nil &&   createAccountVM.currentUser?.value == true {
                                     createAccountVM.currentUser?.value.toggle()
-                                    userAtTheWaterSourceVM.rmoveUser(id: item.id ?? "eereded" , user: soures.name)
+                                    userAtTheWaterSourceVM.rmoveUser(id: item.id ?? "eereded", user: soures.name)
                                     createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd"
-                                                    , value:  createAccountVM.currentUser?.value ?? false )
+                                                    , value : createAccountVM.currentUser?.value ?? false )
                                 }
                             } label: {
                                 Image(systemName: "person.fill")

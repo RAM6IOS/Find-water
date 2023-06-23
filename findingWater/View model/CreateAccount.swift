@@ -40,7 +40,7 @@ class CreateAccount: ObservableObject {
                         self.userSession = user
                         let userData = ["email": email,
                                                     "name": name,
-                                                    "value": false ,
+                                                    "value": false,
                                                     "uid": user.uid]
                         Firestore.firestore().collection("users")
                                         .document(user.uid)
@@ -48,7 +48,7 @@ class CreateAccount: ObservableObject {
                                         }
             self.fetchUser()
             print("register\(user)")
-            print("register\(self.userSession)")
+            print("register\( self.userSession)")
                     }
         }
     func fetchUser() {
@@ -69,7 +69,7 @@ class CreateAccount: ObservableObject {
     func logout() {
                userSession = nil
                try? Auth.auth().signOut()
-        print("logout\(userSession)")
+        print("logout\( userSession)")
            }
     func editProducti(id: String, value: Bool) {
         Firestore.firestore().collection("users").document(id)

@@ -10,12 +10,12 @@ import SwiftUI
 struct GetStarted: View {
     @Binding var show: Bool
     var body: some View {
-        VStack{
+        VStack {
             Spacer()
             Text("finding Water")
                 .font(.title2)
                 .fontWeight(.bold)
-            VStack(alignment: .leading, spacing: 32){
+            VStack(alignment: .leading, spacing: 32) {
                 HStack(spacing: 26) {
                     Image(systemName: "building.2.crop.circle" )
                         .resizable()
@@ -42,14 +42,14 @@ struct GetStarted: View {
                 }
             }
             Spacer()
-            Button{
+            Button {
                 show.toggle()
             }label: {
                 Text("GetStarted")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
             }
-            .frame(width: 340 ,height: 40)
+            .frame(width: 340, height: 40)
             .background(.blue)
             .cornerRadius(15)
         }
