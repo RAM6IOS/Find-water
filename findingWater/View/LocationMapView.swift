@@ -20,7 +20,7 @@ struct LocationMapView: View {
     @ObservedObject var userlocation = UserLocation()
     @StateObject var viewModel = BookViewModel()
     @EnvironmentObject var viewModel2: CreateAccount
-    @State private var isPresenting = false
+    @State  var isPresenting = false
     let columns = [
                 GridItem(.flexible()),
                 GridItem(.flexible()),
@@ -52,37 +52,7 @@ struct LocationMapView: View {
                         }
                         .padding(.leading, 30)
                         .fullScreenCover(isPresented: $isPresenting) {
-                            if #available(iOS 16.0, *) {
-                                NavigationStack {
-                                    VStack {
-                                        Text("A full-screen modal view.")
-                                            .font(.title)
-                                        Text("Tap to Dismiss")
-                                    }
-                                    .onTapGesture {
-                                        isPresenting.toggle()
-                                    }
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity,
-                                           maxHeight: .infinity)
-                                    .ignoresSafeArea(edges: .all)
-                                    .toolbar {
-                                        ToolbarItem(placement: .cancellationAction) {
-                                            Button {
-                                                isPresenting.toggle()
-                                            } label: {
-                                                HStack {
-                                                    Image(systemName: "arrow.left")
-                                                    Text("Back")
-                                                }
-                                                .foregroundColor(.blue)
-                                            }
-                                        }
-                                    }
-                                }
-                            } else {
-                                // Fallback on earlier versions
-                            }
+                            Settings(isPresenting: $isPresenting)
                         }
                         LocationButton(.currentLocation) {
                             model.requesAllowOnceLocationPermission()
