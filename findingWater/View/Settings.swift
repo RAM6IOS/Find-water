@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Settings: View {
     @Binding var isPresenting: Bool
+    @EnvironmentObject var createAccountVM : CreateAccount
     var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
@@ -55,6 +56,7 @@ struct Settings: View {
                             Image(systemName: "rectangle.portrait.and.arrow.right")
                                                Button {
                                                   // viewModel.logout()
+                                                   createAccountVM.logout()
                                                } label: {
                                                    HStack {
                                                        Text("Logout")
@@ -65,7 +67,7 @@ struct Settings: View {
                         HStack {
                             Image(systemName: "trash")
                                 Button {
-                                                   // viewModel.delete()
+                                    createAccountVM.delete()
                                   } label: {
                                     HStack {
                                             Text("Delete")

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SignupView: View {
     @State private var email: String = ""
     @State private var password: String = ""

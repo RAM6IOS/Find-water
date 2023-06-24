@@ -14,6 +14,9 @@ struct AppTabView: View {
     @State var showOnbord: Bool = false
     @EnvironmentObject var viewModel: CreateAccount
     var body: some View {
+        if viewModel.userSession == nil {
+            SignupView()
+        } else {
             TabView {
                 SignupView()
                     .tabItem {
@@ -25,6 +28,8 @@ struct AppTabView: View {
                     }
             }
             .accentColor(.black)
+            
+        }
         /*
         if ShowOnboarding{
             GetStarted(ShowOnboarding: $ShowOnboarding)

@@ -71,6 +71,15 @@ class CreateAccount: ObservableObject {
                try? Auth.auth().signOut()
         print("logout\( userSession)")
            }
+    func delete() {
+           userSession = nil
+           Auth.auth().currentUser?.delete{ error in
+             if let error = error {
+               print(error)
+             } else {
+             }
+           }
+           }
     func editProducti(id: String, value: Bool) {
         Firestore.firestore().collection("users").document(id)
             .updateData(["value": value
