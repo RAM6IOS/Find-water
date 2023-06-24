@@ -48,6 +48,7 @@
 		F7E175D429F72DD1001DDA90 /* Action .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D329F72DD1001DDA90 /* Action .swift */; };
 		F7E175D629F72EF7001DDA90 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D529F72EF7001DDA90 /* Business.swift */; };
 		F7E175D829F73022001DDA90 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D729F73022001DDA90 /* MapController.swift */; };
+		F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		F7E175D329F72DD1001DDA90 /* Action .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action .swift"; sourceTree = "<group>"; };
 		F7E175D529F72EF7001DDA90 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		F7E175D729F73022001DDA90 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				F789F6752A292C610024D784 /* SignupView.swift */,
 				F75010C32A3BB6B1006FC851 /* locationDitels.swift */,
 				F7DE2F6F2A46056F00166327 /* Settings.swift */,
+				F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				2D3E9CAA29C77316003B38DB /* ProfileView.swift in Sources */,
 				F7DE2F702A46056F00166327 /* Settings.swift in Sources */,
 				2D3E9CAC29C778D4003B38DB /* AppTabView.swift in Sources */,
+				F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */,
 				F73F548E29F951230004DC61 /* MapTest.swift in Sources */,
 				F75010C42A3BB6B1006FC851 /* locationDitels.swift in Sources */,
 				F79E43C12A1E279C00534A99 /* User.swift in Sources */,

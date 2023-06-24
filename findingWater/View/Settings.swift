@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Settings: View {
     @Binding var isPresenting: Bool
-    @EnvironmentObject var createAccountVM : CreateAccount
+    @EnvironmentObject var createAccountVM: CreateAccount
     var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
@@ -32,7 +32,7 @@ struct Settings: View {
                             }
                         }
                         NavigationLink {
-                            Text("jdsjnmqds")
+                            UpdateEmail()
                         } label: {
                             HStack {
                                     Image(systemName: "envelope")
