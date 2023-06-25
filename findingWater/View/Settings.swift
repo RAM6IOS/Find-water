@@ -40,7 +40,7 @@ struct Settings: View {
                                     }
                         }
                         NavigationLink {
-                            Text("jdsjnmqds")
+                            UpdatePassword()
                         } label: {
                             HStack {
                                 Image(systemName: "lock")

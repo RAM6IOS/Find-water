@@ -27,7 +27,7 @@ struct UpdateEmail: View {
 
                     }
     }
-    func updateEmail(newEmail: String, password:String ) {
+    func updateEmail(newEmail: String, password: String ) {
         let user = Auth.auth().currentUser
         // Prompt the user to reauthenticate
         let credential = EmailAuthProvider.credential(withEmail: user?.email ?? "medsmewd,rewd", password:password)

@@ -26,6 +26,7 @@
 		F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */; };
 		F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F71622CD29E057240023474D /* GoogleService-Info.plist */; };
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
+		F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7225DA92A484E550077075E /* UpdatePassword.swift */; };
 		F73F548E29F951230004DC61 /* MapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F548D29F951230004DC61 /* MapTest.swift */; };
 		F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EA26C2A2939070090E75A /* CreateAccount.swift */; };
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
@@ -70,6 +71,7 @@
 		F71622C029DEE7520023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sources.swift; path = findingWater/sources.swift; sourceTree = SOURCE_ROOT; };
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7225DA92A484E550077075E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		F73F548D29F951230004DC61 /* MapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTest.swift; sourceTree = "<group>"; };
 		F74EA26C2A2939070090E75A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				F75010C32A3BB6B1006FC851 /* locationDitels.swift */,
 				F7DE2F6F2A46056F00166327 /* Settings.swift */,
 				F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */,
+				F7225DA92A484E550077075E /* UpdatePassword.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,
 				F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */,
+				F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
 				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
