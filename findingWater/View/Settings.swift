@@ -49,7 +49,7 @@ struct Settings: View {
                         }
                         HStack {
                                         Image(systemName: "i.circle")
-                                        Link("Privacy Policy", destination: URL(string: "https://akdili.vercel.app/")!)
+                                        Link("Privacy Policy", destination: URL(string: "https://www.notion.so/Finding-Wat-fce51e5ee1494b578454b5c8a2fa5e16")!)
                                                     .foregroundColor(.black)
                                             }
                         HStack {
