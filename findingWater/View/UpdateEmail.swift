@@ -16,16 +16,36 @@ struct UpdateEmail: View {
     @State private var error: Error?
     @ObservedObject var createAccountVM = CreateAccount()
     var body: some View {
-        Form {
-                        TextField("New Email", text: $email)
-                TextField("Password", text: $password)
+VStack {
+        TextField("New Email", text: $email)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
+            .padding(.vertical)
+        TextField("Password", text: $password)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
+            .padding(.vertical)
+    Spacer()
             Button {
                 updateEmail(newEmail: email, password: password)
             }label: {
-                Text("Update")
+                Text("Update Email")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
+            .padding()
 
                     }
+.navigationTitle("Update Email")
+.padding()
     }
     func updateEmail(newEmail: String, password: String ) {
         let user = Auth.auth().currentUser
