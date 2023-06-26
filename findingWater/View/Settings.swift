@@ -16,7 +16,7 @@ struct Settings: View {
                 VStack {
                     List {
                         NavigationLink {
-                            Text("jdsjnmqds")
+                            About()
                         } label: {
                             HStack {
                                 Image(systemName: "book")
