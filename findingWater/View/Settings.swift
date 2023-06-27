@@ -24,7 +24,7 @@ struct Settings: View {
                             }
                         }
                         NavigationLink {
-                            Text("jdsjnmqds")
+                            ChangeProfile()
                         } label: {
                             HStack {
                                 Image(systemName: "person")

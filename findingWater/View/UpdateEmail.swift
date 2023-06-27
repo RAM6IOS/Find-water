@@ -77,7 +77,6 @@ VStack {
                         ]) { _ in
             }
     }
-       
 }
 
 struct UpdateEmail_Previews: PreviewProvider {

@@ -43,14 +43,13 @@ struct LocationMapView: View {
                 }
                     VStack {
                         Button {
-                            print("overlay")
                             isPresenting.toggle()
                         } label: {
                             Image(systemName: "gearshape.circle.fill")
                                 .foregroundColor(.black)
                                 .font(.system(size: 40))
                         }
-                        .padding(.leading, 30)
+                        //.padding(.leading, 50)
                         .fullScreenCover(isPresented: $isPresenting) {
                             Settings(isPresenting: $isPresenting)
                         }
@@ -64,11 +63,11 @@ struct LocationMapView: View {
                         .tint(.blue)
                         .frame(width: 40)
                         .clipShape(Circle())
-                        .padding(.leading, 30)
+                        //.padding(.leading, 50)
                     }
-                    .padding(.top, 50)
+                    .padding(.bottom ,100)
                 }
-                .ignoresSafeArea(.all, edges: .top)
+                .ignoresSafeArea(.all)
                 }
             }
     func openMap(coordinate: CLLocationCoordinate2D) {

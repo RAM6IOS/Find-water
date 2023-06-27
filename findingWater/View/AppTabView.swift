@@ -17,17 +17,13 @@ struct AppTabView: View {
         if viewModel.userSession == nil {
             SignupView()
         } else {
-            TabView {
-                SignupView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person")
-                    }
+            
+               
                 LocationMapView()
                     .tabItem {
                         Label("Map", systemImage: "map")
                     }
-            }
-            .accentColor(.black)
+           
             
         }
         /*
