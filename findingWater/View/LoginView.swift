@@ -11,6 +11,8 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @StateObject var viewModel = CreateAccount()
+    @State var showForgotPassword:Bool = false
+    @Binding var showLgn: Bool
     var body: some View {
         ZStack {
             VStack {
@@ -50,7 +52,8 @@ struct LoginView: View {
                 .padding(.vertical)
                 Button(action: {
                     // Perform actions for forgot password
-                    print("Forgot password tapped")
+                    showForgotPassword.toggle()
+                   
                 }) {
                     Text("Forgot password?")
                         .foregroundColor(.blue)
@@ -60,7 +63,7 @@ struct LoginView: View {
                   .foregroundColor(.gray)
                 Button(action: {
                     // Perform actions for sign up
-                    print("Sign up tapped")
+                    showLgn.toggle()
                 }) {
                     Text("Sign up")
                         .font(.headline)
@@ -70,6 +73,9 @@ struct LoginView: View {
                 .padding(.horizontal, 32)
                 Spacer()
             }
+            .sheet(isPresented: $showForgotPassword) {
+                ResetPassword()
+            }
             .onAppear {
                 self.viewModel.fetchUser()
             }
@@ -78,12 +84,6 @@ struct LoginView: View {
     }
     private func isValidLogin() -> Bool {
         return !email.isEmpty && !password.isEmpty
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }
 

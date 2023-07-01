@@ -19,8 +19,7 @@ struct ChangeProfile: View {
                 .background(Color.white)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-            .padding(.vertical)
-            
+               .padding(.vertical)
             Button {
                 updateName(name: name)
             }label: {
@@ -33,7 +32,6 @@ struct ChangeProfile: View {
                     .cornerRadius(10)
             }
             .padding()
-            
         }
         .navigationTitle("Update Name")
         .padding()

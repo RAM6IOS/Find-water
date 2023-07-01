@@ -53,6 +53,8 @@
 		F7E175D829F73022001DDA90 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D729F73022001DDA90 /* MapController.swift */; };
 		F7E1AB842A502F1800C518E0 /* Contacting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB832A502F1800C518E0 /* Contacting.swift */; };
 		F7E1AB862A502F9A00C518E0 /* MailView .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB852A502F9A00C518E0 /* MailView .swift */; };
+		F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB872A50357800C518E0 /* ResetPassword.swift */; };
+		F7E1AB8A2A50369200C518E0 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */; };
 		F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		F7E175D729F73022001DDA90 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		F7E1AB832A502F1800C518E0 /* Contacting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacting.swift; sourceTree = "<group>"; };
 		F7E1AB852A502F9A00C518E0 /* MailView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MailView .swift"; sourceTree = "<group>"; };
+		F7E1AB872A50357800C518E0 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
+		F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +162,7 @@
 				F7225DA92A484E550077075E /* UpdatePassword.swift */,
 				F78A210B2A4999E3008DE708 /* About.swift */,
 				F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */,
+				F7E1AB872A50357800C518E0 /* ResetPassword.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				F74EA26C2A2939070090E75A /* CreateAccount.swift */,
 				F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */,
 				F7E1AB852A502F9A00C518E0 /* MailView .swift */,
+				F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */,
 				F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */,
 				F7E1AB842A502F1800C518E0 /* Contacting.swift in Sources */,
+				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
 				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
@@ -379,6 +386,7 @@
 				F79E43C12A1E279C00534A99 /* User.swift in Sources */,
 				F7E175D829F73022001DDA90 /* MapController.swift in Sources */,
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
+				F7E1AB8A2A50369200C518E0 /* ResetPasswordViewModel.swift in Sources */,
 				F789F6762A292C620024D784 /* SignupView.swift in Sources */,
 				F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */,
 				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,

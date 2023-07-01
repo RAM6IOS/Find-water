@@ -17,12 +17,14 @@ struct AppTabView: View {
         if viewModel.userSession == nil {
             SignupView()
         } else {
-            
-               
+            SignupView()
+                
+               /*
                 LocationMapView()
                     .tabItem {
                         Label("Map", systemImage: "map")
                     }
+                */
            
             
         }

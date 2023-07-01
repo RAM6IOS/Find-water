@@ -54,17 +54,17 @@ struct Settings: View {
                                         Link("Privacy Policy", destination: URL(string: "https://www.notion.so/Finding-Wat-fce51e5ee1494b578454b5c8a2fa5e16")!)
                                                     .foregroundColor(.black)
                                             }
-                        HStack{
+                        HStack {
                                                 Image(systemName: "paperplane.fill")
-                                                Button{
+                                            Button {
                                                     sendEmail.toggle()
                                                 } label: {
-                                                    HStack{
+                                            HStack {
                                                         Text("Contact")
                                                             .foregroundColor(.black)
                                                     }
                                                 }
-                                                .sheet(isPresented: $sendEmail) {
+                                        .sheet(isPresented: $sendEmail) {
                                                     MailView(content: constants.contentPreText, to: constants.to,subject: constants.subject)
                                                 }
                                             }
