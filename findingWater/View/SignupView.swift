@@ -14,6 +14,7 @@ struct SignupView: View {
     @State private var name: String = ""
     @EnvironmentObject var viewModel: CreateAccount
     @State var showLgn: Bool = false
+    @State var showpasword = false
     var body: some View {
         VStack {
             if showLgn == true {
@@ -40,12 +41,37 @@ struct SignupView: View {
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                         .padding(.vertical)
-                    SecureField("Password", text: $password)
+                    if showpasword {
+                        HStack(alignment: .center) {
+                TextField("Password", text: $password)
+                            Image(systemName: "eye")
+                                            .onTapGesture {
+                                                withAnimation {
+                                                        self.showpasword.toggle()
+                                                               }
+                                                           }
+                                                   }
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                         .padding(.vertical)
+                    } else {
+                        HStack(alignment: .center) {
+                            SecureField("Password", text: $password)
+                            Image(systemName: "eye.slash")
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.showpasword.toggle()
+                                    }
+                                }
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                        .padding(.vertical)
+                    }
                     Button(action: {
                         // Perform signup logic here
                         withAnimation {

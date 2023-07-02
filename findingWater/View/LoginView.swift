@@ -13,6 +13,7 @@ struct LoginView: View {
     @StateObject var viewModel = CreateAccount()
     @State var showForgotPassword: Bool = false
     @Binding var showLgn: Bool
+    @State var showpasword = false
     var body: some View {
         ZStack {
             VStack {
@@ -31,16 +32,45 @@ struct LoginView: View {
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                     .padding(.vertical)
-                SecureField("Password", text: $password)
+                if showpasword {
+                    HStack(alignment: .center) {
+            TextField("Password", text: $password)
+                        Image(systemName: "eye")
+                                        .onTapGesture {
+                                            withAnimation {
+                                                    self.showpasword.toggle()
+                                                           }
+                                                       }
+                                               }
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                     .padding(.vertical)
+                } else {
+                    HStack(alignment: .center) {
+                        SecureField("Password", text: $password)
+                        Image(systemName: "eye.slash")
+                            .onTapGesture {
+                                withAnimation {
+                                    self.showpasword.toggle()
+                                }
+                            }
+                    }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                    .padding(.vertical)
+                }
                 Button(action: {
                     withAnimation {
                                             viewModel.login(withEmail: email, password: password)
+                        
                                         }
+                    email = ""
+                    password = ""
+                    viewModel.fetchUser()
                 }) {
                     Text("Log in")
                         .foregroundColor(.white)
@@ -76,7 +106,7 @@ struct LoginView: View {
                 ResetPassword()
             }
             .onAppear {
-                self.viewModel.fetchUser()
+               // self.viewModel.fetchUser()
             }
             .padding()
         }
