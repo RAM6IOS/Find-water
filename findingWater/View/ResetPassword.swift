@@ -21,7 +21,6 @@ struct ResetPassword: View {
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
                    .padding(.vertical)
-                
                 Button{
                     resetPasswordVM.resetPassword(email: email)
                     print("Password reset email sent successfully!")
@@ -35,8 +34,6 @@ struct ResetPassword: View {
                     .cornerRadius(10)
                 }
             }
-            
-            
         }
 }
 

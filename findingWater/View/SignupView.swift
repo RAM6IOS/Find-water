@@ -13,10 +13,10 @@ struct SignupView: View {
     @State private var confirmPassword: String = ""
     @State private var name: String = ""
     @EnvironmentObject var viewModel: CreateAccount
-    @State var showLgn :Bool = false
+    @State var showLgn: Bool = false
     var body: some View {
         VStack {
-            if showLgn == false {
+            if showLgn == true {
                 LoginView( showLgn: $showLgn)
             } else {
                 VStack {
@@ -90,22 +90,6 @@ struct SignupView: View {
                 .padding()
             }
         }
-    }
-    private func isValidSignup() -> Bool {
-        // Add your own signup validation logic here
-        // For example, check if the email is valid and if the passwords match certain criteria
-        // Return true if the signup is valid, false otherwise
-        return isValidEmail() && arePasswordsValid()
-    }
-    private func isValidEmail() -> Bool {
-        // Implement your email validation logic here
-        // Return true if the email is valid, false otherwise
-        return !email.isEmpty && email.contains("@")
-    }
-    private func arePasswordsValid() -> Bool {
-        // Implement your password validation logic here
-        // Return true if the passwords match and meet certain criteria, false otherwise
-        return !password.isEmpty && password == confirmPassword
     }
 }
 

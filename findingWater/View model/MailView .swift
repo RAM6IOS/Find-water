@@ -11,7 +11,7 @@ import MessageUI
 import SwiftUI
 import UIKit
 
-struct MailView: UIViewControllerRepresentable{
+struct MailView: UIViewControllerRepresentable {
     var content: String
     var to: String
     var subject: String
@@ -19,7 +19,7 @@ struct MailView: UIViewControllerRepresentable{
     func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: Context) {
     }
     func makeUIViewController(context: Context) -> MFMailComposeViewController {
-        if MFMailComposeViewController.canSendMail(){
+        if MFMailComposeViewController.canSendMail() {
             let view = MFMailComposeViewController()
             view.mailComposeDelegate = context.coordinator
             view.setToRecipients([to])
@@ -33,12 +33,12 @@ struct MailView: UIViewControllerRepresentable{
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)
     }
-    class Coordinator : NSObject, MFMailComposeViewControllerDelegate{
-        var parent : MailView
-        init(_ parent: MailView){
+    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        var parent: MailView
+        init(_ parent: MailView) {
             self.parent = parent
         }
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
             controller.dismiss(animated: true)
         }
     }

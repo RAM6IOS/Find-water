@@ -10,9 +10,8 @@ import Firebase
 import UIKit
 import FirebaseAuth
 
-class ResetPasswordViewModel : ObservableObject {
-    func resetPassword(email:String) {
-       
+class ResetPasswordViewModel: ObservableObject {
+    func resetPassword(email: String) {
         Auth.auth().sendPasswordReset(withEmail: email ) { error in
             if let error = error {
                 print("Error sending password reset email: \(error.localizedDescription)")
@@ -21,5 +20,4 @@ class ResetPasswordViewModel : ObservableObject {
             }
         }
     }
-    
 }
