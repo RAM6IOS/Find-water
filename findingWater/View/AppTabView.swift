@@ -17,40 +17,9 @@ struct AppTabView: View {
         if viewModel.userSession == nil {
             SignupView()
         } else {
-            SignupView()
-                
-               /*
-                LocationMapView()
-                    .tabItem {
-                        Label("Map", systemImage: "map")
-                    }
-                */
+            LocationMapView()
            
-            
         }
-        /*
-        if ShowOnboarding{
-            GetStarted(ShowOnboarding: $ShowOnboarding)
-            
-        } else{
-            TabView {
-                LocationMapView()
-                    .tabItem {
-                        Label("Map", systemImage: "map")
-                    }
-                
-                MapTest()
-                    .tabItem {
-                        Label("Locations", systemImage: "building")
-                    }
-                
-                SignupView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person")
-                    }
-            }
-            .accentColor(.black)
-         */
         }
 }
 

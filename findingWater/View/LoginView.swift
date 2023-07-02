@@ -11,7 +11,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @StateObject var viewModel = CreateAccount()
-    @State var showForgotPassword:Bool = false
+    @State var showForgotPassword: Bool = false
     @Binding var showLgn: Bool
     var body: some View {
         ZStack {
@@ -53,7 +53,6 @@ struct LoginView: View {
                 Button(action: {
                     // Perform actions for forgot password
                     showForgotPassword.toggle()
-                   
                 }) {
                     Text("Forgot password?")
                         .foregroundColor(.blue)
@@ -86,8 +85,4 @@ struct LoginView: View {
         return !email.isEmpty && !password.isEmpty
     }
 }
-
-
-
-
 

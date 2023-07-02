@@ -11,7 +11,7 @@ import MessageUI
 import SwiftUI
 import UIKit
 
-struct MailView: UIViewControllerRepresentable {
+struct MailView: UIViewControllerRepresentable  {
     var content: String
     var to: String
     var subject: String
