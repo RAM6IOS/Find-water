@@ -56,6 +56,7 @@
 		F7E1AB862A502F9A00C518E0 /* MailView .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB852A502F9A00C518E0 /* MailView .swift */; };
 		F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB872A50357800C518E0 /* ResetPassword.swift */; };
 		F7E1AB8A2A50369200C518E0 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */; };
+		F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */; };
 		F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		F7E1AB852A502F9A00C518E0 /* MailView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MailView .swift"; sourceTree = "<group>"; };
 		F7E1AB872A50357800C518E0 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
 		F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +237,7 @@
 				F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */,
 				F7E1AB852A502F9A00C518E0 /* MailView .swift */,
 				F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */,
+				F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
 				F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */,
 				F7E175D629F72EF7001DDA90 /* Business.swift in Sources */,
+				F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */,
 				F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */,
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,

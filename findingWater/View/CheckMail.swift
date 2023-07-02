@@ -17,7 +17,6 @@ struct CheckMail: View {
                 .font(.system(size: 40))
                 .font(.title3)
                 .bold()
-               
             Text("""
                  We have sent a Password recover
                  instructions to your email

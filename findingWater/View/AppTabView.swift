@@ -17,8 +17,7 @@ struct AppTabView: View {
         if viewModel.userSession == nil {
             SignupView()
         } else {
-            SignupView()
-           
+            LocationMapView()
         }
         }
 }

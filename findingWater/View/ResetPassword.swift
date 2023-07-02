@@ -20,7 +20,7 @@ struct ResetPassword: View {
                         CheckMail()
                     } else {
                         VStack {
-                            Text("""
+                Text("""
                              Enter the email associated with your account and we'll send an email With instructions to reset your password
                              """)
                             TextField("Email", text: $email)

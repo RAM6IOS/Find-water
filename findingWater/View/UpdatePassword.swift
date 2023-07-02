@@ -13,6 +13,7 @@ struct UpdatePassword: View {
     @State private var currentPassword: String = ""
     @State private var newPassword: String = ""
     @State private var error: Error?
+    @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
     var body: some View {
         VStack {
             SecureField("Current Password", text: $currentPassword)
@@ -29,7 +30,7 @@ struct UpdatePassword: View {
                 .padding(.vertical)
             Spacer()
                     Button(action: {
-                        updatePassword(newPassword: newPassword, currentPassword: currentPassword)
+                        updatePasswordVM.updatePassword(newPassword: newPassword, currentPassword: currentPassword)
                     }) {
                         Text("Update Password")
                             .font(.headline)
@@ -43,28 +44,6 @@ struct UpdatePassword: View {
                 }
         .navigationTitle("Update Password")
         .padding()
-    }
-    func updatePassword(newPassword: String, currentPassword: String) {
-        let user = Auth.auth().currentUser
-
-            let credential = EmailAuthProvider.credential(withEmail: user!.email!, password: currentPassword)
-
-            user?.reauthenticate(with: credential, completion: { ( authResult, error) in
-                if error != nil {
-                  // Handle re-authentication error
-                    print("Error reauthenticating user: \(error?.localizedDescription)")
-                  return
-               }
-               user?.updatePassword(to: newPassword, completion: { (error) in
-                   if error != nil {
-                     // Handle password update error
-                       print("Error updating email: \(error?.localizedDescription)")
-                     return
-                  }
-                  // Password update successful
-                   print("Password update successful")
-               })
-            })
     }
 }
 

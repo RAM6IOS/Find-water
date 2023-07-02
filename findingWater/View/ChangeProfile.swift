@@ -14,7 +14,7 @@ struct ChangeProfile: View {
     @ObservedObject var createAccountVM = CreateAccount()
     var body: some View {
         VStack {
-            TextField("New Email", text: $name)
+            TextField("Update Name", text: $name)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(8)
@@ -23,7 +23,7 @@ struct ChangeProfile: View {
             Button {
                 updateName(name: name)
             }label: {
-                Text("Update Email")
+                Text("Update Name")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
@@ -32,6 +32,7 @@ struct ChangeProfile: View {
                     .cornerRadius(10)
             }
             .padding()
+            Spacer()
         }
         .navigationTitle("Update Name")
         .padding()
