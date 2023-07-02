@@ -57,6 +57,7 @@
 		F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB872A50357800C518E0 /* ResetPassword.swift */; };
 		F7E1AB8A2A50369200C518E0 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */; };
 		F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */; };
+		F7EB32022A51E4CF0099AC1D /* UpdateEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EB32012A51E4CF0099AC1D /* UpdateEmailViewModel.swift */; };
 		F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		F7E1AB872A50357800C518E0 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
+		F7EB32012A51E4CF0099AC1D /* UpdateEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailViewModel.swift; sourceTree = "<group>"; };
 		F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 				F7E1AB852A502F9A00C518E0 /* MailView .swift */,
 				F7E1AB892A50369200C518E0 /* ResetPasswordViewModel.swift */,
 				F7EB31FF2A51E3150099AC1D /* UpdatePasswordViewModel.swift */,
+				F7EB32012A51E4CF0099AC1D /* UpdateEmailViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */,
 				F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */,
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
+				F7EB32022A51E4CF0099AC1D /* UpdateEmailViewModel.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,
 				F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */,
 				F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */,

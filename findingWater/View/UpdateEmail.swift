@@ -15,6 +15,7 @@ struct UpdateEmail: View {
     @State var password = ""
     @State private var error: Error?
     @ObservedObject var createAccountVM = CreateAccount()
+    @ObservedObject var updateEmailVM = UpdateEmailViewModel()
     var body: some View {
 VStack {
         TextField("New Email", text: $email)
@@ -31,7 +32,7 @@ VStack {
             .padding(.vertical)
     Spacer()
             Button {
-                updateEmail(newEmail: email, password: password)
+                updateEmailVM.updateEmail(newEmail: email, password: password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: email)
             }label: {
                 Text("Update Email")
                     .font(.headline)
@@ -47,36 +48,7 @@ VStack {
 .navigationTitle("Update Email")
 .padding()
     }
-    func updateEmail(newEmail: String, password: String ) {
-        let user = Auth.auth().currentUser
-        // Prompt the user to reauthenticate
-        let credential = EmailAuthProvider.credential(withEmail: user?.email ?? "medsmewd,rewd", password:password)
-        user?.reauthenticate(with: credential) { authResult, error in
-            if let error = error {
-                // Handle the reauthentication error
-                print("Error reauthenticating user: \(error.localizedDescription)")
-            } else {
-                // Reauthentication successful, update the email
-                user?.updateEmail(to: newEmail) { error in
-                    if let error = error {
-                        // Handle the update email error
-                        print("Error updating email: \(error.localizedDescription)")
-                    } else {
-                        // Email updated successfully
-                        print("Email updated successfully")
-                        editProducti()
-                    }
-                }
-            }
-        }
-    }
-
-    func editProducti() {
-        Firestore.firestore().collection("users").document(createAccountVM.currentUser?.id  ?? "reewwedsewd")
-            .updateData(["email": email
-                        ]) { _ in
-            }
-    }
+    
 }
 
 struct UpdateEmail_Previews: PreviewProvider {
