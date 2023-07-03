@@ -10,7 +10,6 @@ import Firebase
 import FirebaseAuth
 
 class  UpdatePasswordViewModel : ObservableObject {
-    
     func updatePassword(newPassword: String, currentPassword: String) {
         let user = Auth.auth().currentUser
 
@@ -33,5 +32,4 @@ class  UpdatePasswordViewModel : ObservableObject {
                })
             })
     }
-    
 }

@@ -48,7 +48,6 @@ VStack {
 .navigationTitle("Update Email")
 .padding()
     }
-    
 }
 
 struct UpdateEmail_Previews: PreviewProvider {

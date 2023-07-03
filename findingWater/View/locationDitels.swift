@@ -88,7 +88,7 @@ struct LocationDitels: View {
                                     createAccountVM.currentUser?.value.toggle()
                                     userAtTheWaterSourceVM.rmoveUser(id: item.id ?? "eereded", user: soures.name)
                                     createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd"
-                                                    , value : createAccountVM.currentUser?.value ?? false )
+                                                    , value: createAccountVM.currentUser?.value ?? false )
                                 }
                             } label: {
                                 Image(systemName: "person.fill")

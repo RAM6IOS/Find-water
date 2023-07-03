@@ -8,8 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseAuth
-class  UpdateEmailViewModel : ObservableObject {
-    
+class  UpdateEmailViewModel: ObservableObject {
     func updateEmail(newEmail: String, password: String, id:String, email:String) {
         let user = Auth.auth().currentUser
         // Prompt the user to reauthenticate
@@ -33,7 +32,7 @@ class  UpdateEmailViewModel : ObservableObject {
             }
         }
     }
-    func editProducti(id: String , email:String) {
+    func editProducti(id: String, email: String) {
         Firestore.firestore().collection("users").document(id)
             .updateData(["email": email
                         ]) { _ in
