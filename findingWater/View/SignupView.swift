@@ -21,6 +21,7 @@ struct SignupView: View {
                 LoginView( showLgn: $showLgn)
             } else {
                 VStack {
+                    Spacer()
                     Image("drop")
                         .resizable()
                         .scaledToFill()
@@ -29,6 +30,7 @@ struct SignupView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()
+                    VStack {
                     TextField("Name", text: $name)
                         .padding()
                         .background(Color.white)
@@ -43,14 +45,14 @@ struct SignupView: View {
                         .padding(.vertical)
                     if showpasword {
                         HStack(alignment: .center) {
-                TextField("Password", text: $password)
+                            TextField("Password", text: $password)
                             Image(systemName: "eye")
-                                            .onTapGesture {
-                                                withAnimation {
-                                                        self.showpasword.toggle()
-                                                               }
-                                                           }
-                                                   }
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.showpasword.toggle()
+                                    }
+                                }
+                        }
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
@@ -94,6 +96,7 @@ struct SignupView: View {
                             .cornerRadius(10)
                     }
                     .padding()
+                }
                     Text("I already have an account")
                         .foregroundColor(.gray)
                     Button( action: {

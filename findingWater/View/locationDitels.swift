@@ -29,7 +29,7 @@ struct LocationDitels: View {
                 .resizable()
                 .scaledToFit()
                 .aspectRatio(contentMode: .fill)
-                .frame(minWidth: nil, idealWidth: nil, maxWidth: UIScreen.main.bounds.width, minHeight: nil
+                .frame(minWidth: nil, idealWidth: nil, maxWidth: .infinity, minHeight: nil
                                , idealHeight: nil, maxHeight: 300, alignment: .center )
             .clipped()
             VStack(alignment: .leading, spacing: 10) {

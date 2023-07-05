@@ -25,6 +25,7 @@ struct FindingWaterApp: App {
         WindowGroup {
             AppTabView()
                 .environmentObject(viewModel)
+                .navigationBarHidden(true)
         }
     }
 }

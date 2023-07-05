@@ -32,15 +32,15 @@ struct LocationMapView: View {
                 ZStack(alignment: .bottomTrailing) {
                     Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: mapViewModel.source) { location in
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude,
-                                longitude: location.location.longitude)) {
+                                                                         longitude: location.location.longitude)) {
                             NavigationLink(destination: LocationDitels(soures: location)) {
                                 Image("water")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 44, height: 44)
                             }
-                                                    }
-                }
+                        }
+                    }
                     VStack {
                         Button {
                             isPresenting.toggle()
@@ -49,7 +49,6 @@ struct LocationMapView: View {
                                 .foregroundColor(.black)
                                 .font(.system(size: 40))
                         }
-                        //.padding(.leading, 50)
                         .fullScreenCover(isPresented: $isPresenting) {
                             Settings(isPresenting: $isPresenting)
                         }
@@ -68,7 +67,8 @@ struct LocationMapView: View {
                     .padding(.bottom ,100)
                 }
                 .ignoresSafeArea(.all)
-                }
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
             }
     func openMap(coordinate: CLLocationCoordinate2D) {
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate))

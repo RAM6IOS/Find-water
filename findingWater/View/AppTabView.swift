@@ -14,13 +14,15 @@ struct AppTabView: View {
     @State var showOnbord: Bool = false
     @EnvironmentObject var viewModel: CreateAccount
     var body: some View {
-        if showOnbord == false {
-            GetStarted(show: $showOnbord)
-        } else {
-            if viewModel.userSession == nil {
-                SignupView()
+        VStack {
+            if showOnbord == false {
+                GetStarted(show: $showOnbord)
             } else {
-                LocationMapView()
+                if viewModel.userSession == nil {
+                    SignupView()
+                } else {
+                    LocationMapView()
+                }
             }
         }
         }
