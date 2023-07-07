@@ -22,43 +22,7 @@ struct GetStarted: View {
                     .padding(.top, 44)
                 VStack {
                     if UIDevice.current.userInterfaceIdiom == .pad {
-                        Text("Welcome")
-                            .font(.system(size: 60))
-                        if #available(iOS 16.0, *) {
-                            Text("finding Water")
-                                .font(.system(size: 40))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                        HStack(alignment: .center,spacing: 40) {
-                            Image("route")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: reader.size.width * (1/5), height: reader.size.height * (1/5))
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                            VStack {
-                                Text("Resource water Locations").bold()
-                                Text("Find places to resource water")
-                                    .foregroundColor(.white)
-                            }
-                            .font(.system(size: 40))
-                            .minimumScaleFactor(0.5)
-                        }
-                        Spacer()
-                        Button {
-                            show.toggle()
-                        }label: {
-                            Text("Get Started")
-                                .font(.largeTitle)
-                                .foregroundColor(.blue)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                        }
-                        .padding()
+                        GetStartedScreniPad(show: $show, width: reader.size.width * (1/5), height: reader.size.height * (1/5))
                     } else {
                         Text("Welcome")
                             .font(.title)

@@ -33,6 +33,7 @@
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
 		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
 		F75010C42A3BB6B1006FC851 /* locationDitels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75010C32A3BB6B1006FC851 /* locationDitels.swift */; };
+		F75910842A58753F008462BA /* GetStartedScreniPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75910832A58753F008462BA /* GetStartedScreniPad.swift */; };
 		F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770D3A52A51A18100B762E0 /* CheckMail.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
@@ -87,6 +88,7 @@
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
 		F75010C32A3BB6B1006FC851 /* locationDitels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationDitels.swift; sourceTree = "<group>"; };
+		F75910832A58753F008462BA /* GetStartedScreniPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedScreniPad.swift; sourceTree = "<group>"; };
 		F770D3A52A51A18100B762E0 /* CheckMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMail.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */,
 				F7E1AB872A50357800C518E0 /* ResetPassword.swift */,
 				F770D3A52A51A18100B762E0 /* CheckMail.swift */,
+				F75910832A58753F008462BA /* GetStartedScreniPad.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */,
 				F7E1AB8A2A50369200C518E0 /* ResetPasswordViewModel.swift in Sources */,
 				F789F6762A292C620024D784 /* SignupView.swift in Sources */,
+				F75910842A58753F008462BA /* GetStartedScreniPad.swift in Sources */,
 				F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */,
 				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,
 			);
