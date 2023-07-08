@@ -14,7 +14,6 @@ import Firebase
 import FirebaseAuth
 
 
-
 struct MapTest: View {
     let columns = [
                 GridItem(.flexible()),

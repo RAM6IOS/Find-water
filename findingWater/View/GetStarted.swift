@@ -36,10 +36,10 @@ struct GetStarted: View {
                             // Fallback on earlier versions
                         }
                         HStack(alignment: .center) {
-                            Image("location")
+                            Image("route")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: reader.size.width * (1/5), height:  reader.size.height * (1/5))
+                                .frame(width: reader.size.width * (1/5), height: reader.size.height * (1/5))
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                             VStack {
                                 Text("Resource water Locations").bold()
