@@ -20,7 +20,7 @@ struct LocationMapView: View {
     @ObservedObject var userlocation = UserLocation()
     @StateObject var viewModel = BookViewModel()
     @EnvironmentObject var viewModel2: CreateAccount
-    @State  var isPresenting = false
+    @State var isPresenting = false
     let columns = [
                 GridItem(.flexible()),
                 GridItem(.flexible()),
@@ -62,9 +62,8 @@ struct LocationMapView: View {
                         .tint(.blue)
                         .frame(width: 40)
                         .clipShape(Circle())
-                        //.padding(.leading, 50)
                     }
-                    .padding(.bottom ,100)
+                    .padding(.bottom, 100)
                 }
                 .ignoresSafeArea(.all)
             }
