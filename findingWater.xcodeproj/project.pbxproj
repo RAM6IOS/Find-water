@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9CA529C772E9003B38DB /* LocationMapView.swift */; };
-		2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9CA729C772FE003B38DB /* LocationListView.swift */; };
 		2D3E9CAC29C778D4003B38DB /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9CAB29C778D4003B38DB /* AppTabView.swift */; };
 		2D3E9CAF29C7810C003B38DB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3E9CAE29C7810C003B38DB /* CloudKit.framework */; };
 		2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9CB129C79A4F003B38DB /* Coloer.swift */; };
-		2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44621A29C9B1BA00868C9F /* LocationList Details.swift */; };
 		2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BA299ACB90000370CB /* LocationModel.swift */; };
 		2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4F7BC299ACBAF000370CB /* locationManger.swift */; };
 		2DFE96E52998F49D00244576 /* findingWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E42998F49D00244576 /* findingWaterApp.swift */; };
-		2DFE96E72998F49D00244576 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE96E62998F49D00244576 /* ContentView.swift */; };
 		2DFE96E92998F4A100244576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE96E82998F4A100244576 /* Assets.xcassets */; };
 		2DFE96ED2998F4A100244576 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFE96EC2998F4A100244576 /* Preview Assets.xcassets */; };
 		F71622B929DE220A0023474D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F71622B829DE220A0023474D /* FirebaseAnalytics */; };
@@ -27,7 +24,6 @@
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
 		F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7225DA92A484E550077075E /* UpdatePassword.swift */; };
 		F72965DD2A4AEFAF00FDBCA0 /* ChangeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */; };
-		F73F548E29F951230004DC61 /* MapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F548D29F951230004DC61 /* MapTest.swift */; };
 		F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EA26C2A2939070090E75A /* CreateAccount.swift */; };
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
 		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
@@ -41,13 +37,10 @@
 		F78A210C2A4999E3008DE708 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A210B2A4999E3008DE708 /* About.swift */; };
 		F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43BE2A1E276700534A99 /* UserLocation.swift */; };
 		F79E43C12A1E279C00534A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43C02A1E279C00534A99 /* User.swift */; };
-		F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657729F7DCA0005F87CB /* BusinessView.swift */; };
-		F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF657929F7F6C1005F87CB /* Testview.swift */; };
 		F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */; };
 		F7C266A12A43909A00CB414D /* UserHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C266A02A43909A00CB414D /* UserHere.swift */; };
 		F7CE91182A2BA0B8000063B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91172A2BA0B8000063B6 /* FirebaseAuth */; };
 		F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91192A2BA375000063B6 /* FirebaseStorage */; };
-		F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */; };
 		F7DE2F702A46056F00166327 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE2F6F2A46056F00166327 /* Settings.swift */; };
 		F7E175D429F72DD1001DDA90 /* Action .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D329F72DD1001DDA90 /* Action .swift */; };
 		F7E175D629F72EF7001DDA90 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D529F72EF7001DDA90 /* Business.swift */; };
@@ -63,16 +56,13 @@
 
 /* Begin PBXFileReference section */
 		2D3E9CA529C772E9003B38DB /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
-		2D3E9CA729C772FE003B38DB /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		2D3E9CAB29C778D4003B38DB /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		2D3E9CAE29C7810C003B38DB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		2D3E9CB129C79A4F003B38DB /* Coloer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coloer.swift; sourceTree = "<group>"; };
-		2D44621A29C9B1BA00868C9F /* LocationList Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList Details.swift"; sourceTree = "<group>"; };
 		2DE4F7BA299ACB90000370CB /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		2DE4F7BC299ACBAF000370CB /* locationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManger.swift; sourceTree = "<group>"; };
 		2DFE96E12998F49D00244576 /* findingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFE96E42998F49D00244576 /* findingWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingWaterApp.swift; sourceTree = "<group>"; };
-		2DFE96E62998F49D00244576 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DFE96E82998F4A100244576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DFE96EA2998F4A100244576 /* findingWater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = findingWater.entitlements; sourceTree = "<group>"; };
 		2DFE96EC2998F4A100244576 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -81,7 +71,6 @@
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7225DA92A484E550077075E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfile.swift; sourceTree = "<group>"; };
-		F73F548D29F951230004DC61 /* MapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTest.swift; sourceTree = "<group>"; };
 		F74EA26C2A2939070090E75A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
@@ -95,11 +84,8 @@
 		F78A210B2A4999E3008DE708 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		F79E43BE2A1E276700534A99 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		F79E43C02A1E279C00534A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F7AF657729F7DCA0005F87CB /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
-		F7AF657929F7F6C1005F87CB /* Testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testview.swift; sourceTree = "<group>"; };
 		F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAtTheWaterSource.swift; sourceTree = "<group>"; };
 		F7C266A02A43909A00CB414D /* UserHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHere.swift; sourceTree = "<group>"; };
-		F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		F7DE2F6F2A46056F00166327 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F7E175D329F72DD1001DDA90 /* Action .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action .swift"; sourceTree = "<group>"; };
 		F7E175D529F72EF7001DDA90 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -149,16 +135,10 @@
 		2D7028E629CC604C00D990CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2D44621A29C9B1BA00868C9F /* LocationList Details.swift */,
-				2D3E9CA729C772FE003B38DB /* LocationListView.swift */,
 				2D3E9CA529C772E9003B38DB /* LocationMapView.swift */,
 				2D3E9CAB29C778D4003B38DB /* AppTabView.swift */,
 				F74FADB629E565D500D3B376 /* Launch Screen.storyboard */,
 				F74FADBA29E57E7B00D3B376 /* GetStarted.swift */,
-				F7AF657729F7DCA0005F87CB /* BusinessView.swift */,
-				F7AF657929F7F6C1005F87CB /* Testview.swift */,
-				F73F548D29F951230004DC61 /* MapTest.swift */,
-				F7D497EB2A14E03F00DFDBE7 /* ContentView2.swift */,
 				F789F6732A28F1F50024D784 /* LoginView.swift */,
 				F789F6752A292C610024D784 /* SignupView.swift */,
 				F75010C32A3BB6B1006FC851 /* locationDitels.swift */,
@@ -209,7 +189,6 @@
 				2D7028E629CC604C00D990CE /* View */,
 				2D3E9CB029C79A3A003B38DB /* extension  */,
 				2DFE96E42998F49D00244576 /* findingWaterApp.swift */,
-				2DFE96E62998F49D00244576 /* ContentView.swift */,
 				2DFE96E82998F4A100244576 /* Assets.xcassets */,
 				2DFE96EA2998F4A100244576 /* findingWater.entitlements */,
 				2DFE96EB2998F4A100244576 /* Preview Content */,
@@ -361,12 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71622C129DEE7520023474D /* sources.swift in Sources */,
-				2DFE96E72998F49D00244576 /* ContentView.swift in Sources */,
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
 				F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */,
 				F7E175D629F72EF7001DDA90 /* Business.swift in Sources */,
 				F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */,
-				F7AF657A29F7F6C1005F87CB /* Testview.swift in Sources */,
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F7EB32022A51E4CF0099AC1D /* UpdateEmailViewModel.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,
@@ -376,22 +353,18 @@
 				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
-				2D3E9CA829C772FE003B38DB /* LocationListView.swift in Sources */,
 				F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */,
-				2D44621B29C9B1BB00868C9F /* LocationList Details.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
 				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,
 				F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */,
-				F7AF657829F7DCA0005F87CB /* BusinessView.swift in Sources */,
 				F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */,
 				2DE4F7BD299ACBAF000370CB /* locationManger.swift in Sources */,
 				F7DE2F702A46056F00166327 /* Settings.swift in Sources */,
 				2D3E9CAC29C778D4003B38DB /* AppTabView.swift in Sources */,
 				F72965DD2A4AEFAF00FDBCA0 /* ChangeProfile.swift in Sources */,
 				F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */,
-				F73F548E29F951230004DC61 /* MapTest.swift in Sources */,
 				F7E1AB862A502F9A00C518E0 /* MailView .swift in Sources */,
 				F75010C42A3BB6B1006FC851 /* locationDitels.swift in Sources */,
 				F79E43C12A1E279C00534A99 /* User.swift in Sources */,
@@ -401,7 +374,6 @@
 				F789F6762A292C620024D784 /* SignupView.swift in Sources */,
 				F75910842A58753F008462BA /* GetStartedScreniPad.swift in Sources */,
 				F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */,
-				F7D497EC2A14E03F00DFDBE7 /* ContentView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
