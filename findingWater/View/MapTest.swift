@@ -13,7 +13,6 @@ import FirebaseFirestoreSwift
 import Firebase
 import FirebaseAuth
 
-
 struct MapTest: View {
     let columns = [
                 GridItem(.flexible()),
@@ -23,7 +22,7 @@ struct MapTest: View {
         ]
     @StateObject var viewModel = BookViewModel()
     @EnvironmentObject var viewModel2 : CreateAccount
-    @State   var value:Bool = false
+    @State  var value:Bool = false
     var body: some View {
        
             NavigationView{
@@ -39,7 +38,6 @@ struct MapTest: View {
                             Image(systemName: "plus")
                                // .foregroundColor(.white)
                                 .padding()
-                                //.background(.green)
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.black, lineWidth: 1))
                                 //.shadow(color: .black, radius: 5/, x: 0, y: 0)
