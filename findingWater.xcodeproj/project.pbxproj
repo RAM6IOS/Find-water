@@ -31,7 +31,6 @@
 		F75910842A58753F008462BA /* GetStartedScreniPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75910832A58753F008462BA /* GetStartedScreniPad.swift */; };
 		F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770D3A52A51A18100B762E0 /* CheckMail.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
-		F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */; };
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
 		F789F6762A292C620024D784 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6752A292C610024D784 /* SignupView.swift */; };
 		F78A210C2A4999E3008DE708 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A210B2A4999E3008DE708 /* About.swift */; };
@@ -78,7 +77,6 @@
 		F75910832A58753F008462BA /* GetStartedScreniPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedScreniPad.swift; sourceTree = "<group>"; };
 		F770D3A52A51A18100B762E0 /* CheckMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMail.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
-		F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F789F6752A292C610024D784 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F78A210B2A4999E3008DE708 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */,
-				F7712BE729E2D45600E1B59C /* LocationListViewModel.swift */,
 				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 				F7E175D729F73022001DDA90 /* MapController.swift */,
 				F79E43BE2A1E276700534A99 /* UserLocation.swift */,
@@ -347,7 +344,6 @@
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F7EB32022A51E4CF0099AC1D /* UpdateEmailViewModel.swift in Sources */,
 				F71622C429DEE9CF0023474D /* LocationMapViewModel.swift in Sources */,
-				F7712BE829E2D45600E1B59C /* LocationListViewModel.swift in Sources */,
 				F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */,
 				F7E1AB842A502F1800C518E0 /* Contacting.swift in Sources */,
 				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
