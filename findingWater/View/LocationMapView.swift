@@ -15,11 +15,7 @@ import FirebaseFirestoreSwift
 struct LocationMapView: View {
     @ObservedObject var mapController = MapController()
     @ObservedObject var model =  LocationManger()
-    @State private var selectedPlace: Sources?
     @ObservedObject var mapViewModel = LocationMapViewModel()
-    @ObservedObject var userlocation = UserLocation()
-    @StateObject var viewModel = BookViewModel()
-    @EnvironmentObject var viewModel2: CreateAccount
     @State var isPresenting = false
     let columns = [
                 GridItem(.flexible()),
