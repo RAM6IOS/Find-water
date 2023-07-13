@@ -9,45 +9,35 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import Combine
+
 class  UpdateEmailViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
-        
-        func updateEmail(newEmail: String, password: String, id: String, email: String) {
-            guard let user = Auth.auth().currentUser else {
-                print("No authenticated user")
-                return
-            }
-            
-            // Prompt the user to reauthenticate
-            let credential = EmailAuthProvider.credential(withEmail: user.email ?? "", password: password)
-            
-            user.reauthenticate(with: credential)
-                .flatMap { _ in
-                    user.updateEmail(to: newEmail)
-                        .eraseToAnyPublisher()
-                }
-                .receive(on: DispatchQueue.main)
-                .sink { completion in
-                    switch completion {
-                    case .failure(let error):
-                        // Handle the update email error
-                        print("Error updating email: \(error.localizedDescription)")
-                    case .finished:
-                        // Email updated successfully
-                        print("Email updated successfully")
-                        self.editProducti(id: id, email: email)
-                    }
-                } receiveValue: { _ in }
-                .store(in: &self.cancellables)
-        }
-
-        
-        
-        
-    
-   
-
     /*
+    func updateEmail(newEmail: String, password: String, id: String, email: String) {
+        let user = Auth.auth().currentUser
+        let credential = EmailAuthProvider.credential(withEmail: user?.email ?? "", password: password)
+        
+        user?.reauthenticate(with: credential)
+            .flatMap { _ in
+                user?.updateEmail(to: newEmail).publisher
+                    .mapError { $0 as Error }
+                    .eraseToAnyPublisher()
+            }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    // Handle the update email error
+                    print("Error updating email: \(error.localizedDescription)")
+                case .finished:
+                    // Email updated successfully
+                    print("Email updated successfully")
+                    self.editProducti(id: id, email: email)
+                }
+            }, receiveValue: { _ in })
+            .store(in: &cancellables)
+    }
+    */
     func updateEmail(newEmail: String, password: String, id: String, email: String) {
         let user = Auth.auth().currentUser
         // Prompt the user to reauthenticate
@@ -71,7 +61,7 @@ class  UpdateEmailViewModel: ObservableObject {
             }
         }
     }
-     */
+    
     func editProducti(id: String, email: String) {
         Firestore.firestore().collection("users").document(id)
             .updateData(["email": email
@@ -79,3 +69,8 @@ class  UpdateEmailViewModel: ObservableObject {
             }
     }
 }
+
+
+
+
+
