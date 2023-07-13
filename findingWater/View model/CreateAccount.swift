@@ -17,7 +17,6 @@ class CreateAccount: ObservableObject {
     init() {
                 self.userSession = Auth.auth().currentUser
             self.fetchUser()
-             print( userSession )
             }
     func login(withEmail email: String, password: String) {
                Auth.auth().signIn(withEmail: email, password: password) { result, error in
