@@ -38,6 +38,8 @@ class  UpdateEmailViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     */
+
+    /*
     func updateEmail(newEmail: String, password: String, id: String, email: String) {
         let user = Auth.auth().currentUser
         // Prompt the user to reauthenticate
@@ -61,7 +63,46 @@ class  UpdateEmailViewModel: ObservableObject {
             }
         }
     }
-    
+     */
+    func updateEmail(newEmail: String, password: String, id: String, email: String) {
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        let credential = EmailAuthProvider.credential(withEmail: user.email ?? "", password: password)
+        let reauthPublisher = Future<Void, Error> { promise in
+            user.reauthenticate(with: credential) { _, error in
+                if let error = error {
+                    promise(.failure(error))
+                } else {
+                    promise(.success(()))
+                }
+            }
+        }
+        let updateEmailPublisher = reauthPublisher
+            .flatMap { _ in
+                Future<Void, Error> { promise in
+                    user.updateEmail(to: newEmail) { error in
+                        if let error = error {
+                            promise(.failure(error))
+                        } else {
+                            promise(.success(()))
+                        }
+                    }
+                }
+            }
+        updateEmailPublisher
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print("Error updating email: \(error.localizedDescription)")
+                case .finished:
+                    print("Email updated successfully")
+                    self.editProducti(id: id, email: email)
+                }
+            }, receiveValue: { _ in })
+            .store(in: &cancellables)
+    }
+
     func editProducti(id: String, email: String) {
         Firestore.firestore().collection("users").document(id)
             .updateData(["email": email
@@ -69,8 +110,4 @@ class  UpdateEmailViewModel: ObservableObject {
             }
     }
 }
-
-
-
-
 
