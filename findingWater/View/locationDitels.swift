@@ -21,7 +21,6 @@ struct LocationDitels: View {
                GridItem(.flexible())
         ]
     @ObservedObject var createAccountVM = CreateAccount()
-    @ObservedObject var mapViewModel = LocationMapViewModel()
     @ObservedObject var userAtTheWaterSourceVM = UserAtTheWaterSourceVM()
     var body: some View {
         VStack(alignment: .leading) {
@@ -70,7 +69,6 @@ struct LocationDitels: View {
                         Button {
                             if createAccountVM.userSession != nil {
                                 createAccountVM.currentUser?.value.toggle()
-                                // mapViewModel.createRestaurant(mdel: soures.name)
                                 userAtTheWaterSourceVM.createNewReservation(mdel: soures.name)
                                 createAccountVM.editProducti(id: createAccountVM.currentUser?.id  ?? "reewwedsewd"
                                                              , value: createAccountVM.currentUser?.value ?? true)

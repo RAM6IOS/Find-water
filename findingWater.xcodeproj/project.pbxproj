@@ -34,7 +34,6 @@
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
 		F789F6762A292C620024D784 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6752A292C610024D784 /* SignupView.swift */; };
 		F78A210C2A4999E3008DE708 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A210B2A4999E3008DE708 /* About.swift */; };
-		F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43BE2A1E276700534A99 /* UserLocation.swift */; };
 		F79E43C12A1E279C00534A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43C02A1E279C00534A99 /* User.swift */; };
 		F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */; };
 		F7C266A12A43909A00CB414D /* UserHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C266A02A43909A00CB414D /* UserHere.swift */; };
@@ -81,7 +80,6 @@
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F789F6752A292C610024D784 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F78A210B2A4999E3008DE708 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		F79E43BE2A1E276700534A99 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		F79E43C02A1E279C00534A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAtTheWaterSource.swift; sourceTree = "<group>"; };
 		F7C266A02A43909A00CB414D /* UserHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHere.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */,
 				2DE4F7BC299ACBAF000370CB /* locationManger.swift */,
 				F7E175D729F73022001DDA90 /* MapController.swift */,
-				F79E43BE2A1E276700534A99 /* UserLocation.swift */,
 				F74EA26C2A2939070090E75A /* CreateAccount.swift */,
 				F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */,
 				F7E1AB852A502F9A00C518E0 /* MailView .swift */,
@@ -352,7 +349,6 @@
 				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
-				F79E43BF2A1E276700534A99 /* UserLocation.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,

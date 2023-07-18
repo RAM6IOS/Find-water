@@ -13,7 +13,6 @@ import Firebase
 import FirebaseFirestoreSwift
 
 struct LocationMapView: View {
-    @ObservedObject var mapController = MapController()
     @ObservedObject var model =  LocationManger()
     @ObservedObject var mapViewModel = LocationMapViewModel()
     @State var isPresenting = false
@@ -26,7 +25,7 @@ struct LocationMapView: View {
         var body: some View {
             NavigationView {
                 ZStack(alignment: .bottomTrailing) {
-                    Map(coordinateRegion: $mapController.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: mapViewModel.source) { location in
+                    Map(coordinateRegion: $model.region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: mapViewModel.source) { location in
                         MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.location.latitude,
                                                                          longitude: location.location.longitude)) {
                             NavigationLink(destination: LocationDitels(soures: location)) {
