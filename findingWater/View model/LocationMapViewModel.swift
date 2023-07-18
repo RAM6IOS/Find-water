@@ -16,26 +16,6 @@ class LocationMapViewModel: ObservableObject {
     init() {
         fetchDataWaterSource()
     }    
-    func rmove(id: String, user: String) {
-        Firestore.firestore().collection("sources").document(id)
-            .updateData(["user": FieldValue.arrayRemove([user])
-                        ]) { _ in
-            }
-    }
-    func editProducti(id: String, value: String) {
-        Firestore.firestore().collection("sources").document(id)
-            .updateData(["user": [value]
-                        ]) { _ in
-            }
-        fetchDataWaterSource()
-    }
-    func editProducti(id: String, user: String) {
-        Firestore.firestore().collection("sources").document(id)
-            .updateData(["user": FieldValue.arrayUnion([user])
-                        ]) { _ in
-            }
-        fetchDataWaterSource()
-    }
     // This function will fetch Data from firebase that match the structure Sources
     func fetchDataWaterSource() {
         Firestore.firestore().collection("sources").addSnapshotListener { (querySnapshot, error) in

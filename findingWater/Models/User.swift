@@ -11,11 +11,6 @@ import Firebase
 import FirebaseAuth
 
 /*
-struct User : Identifiable, Codable {
-    @DocumentID var id: String?
-    var usr: String
-}
-*/
 struct Book: Identifiable, Codable {
   @DocumentID var id: String?
   var title: String
@@ -28,6 +23,7 @@ struct Book: Identifiable, Codable {
     case numberOfPages = "pages"
   }
 }
+ */
 
 struct User: Identifiable, Codable {
     @DocumentID var id: String?

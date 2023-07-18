@@ -41,8 +41,6 @@
 		F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7CE91192A2BA375000063B6 /* FirebaseStorage */; };
 		F7D3FE1C2A6078E10058DDBC /* CombineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3FE1B2A6078E10058DDBC /* CombineTest.swift */; };
 		F7DE2F702A46056F00166327 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE2F6F2A46056F00166327 /* Settings.swift */; };
-		F7E175D429F72DD1001DDA90 /* Action .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D329F72DD1001DDA90 /* Action .swift */; };
-		F7E175D629F72EF7001DDA90 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D529F72EF7001DDA90 /* Business.swift */; };
 		F7E175D829F73022001DDA90 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E175D729F73022001DDA90 /* MapController.swift */; };
 		F7E1AB842A502F1800C518E0 /* Contacting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB832A502F1800C518E0 /* Contacting.swift */; };
 		F7E1AB862A502F9A00C518E0 /* MailView .swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1AB852A502F9A00C518E0 /* MailView .swift */; };
@@ -65,7 +63,7 @@
 		2DFE96E82998F4A100244576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DFE96EA2998F4A100244576 /* findingWater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = findingWater.entitlements; sourceTree = "<group>"; };
 		2DFE96EC2998F4A100244576 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F71622C029DEE7520023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sources.swift; path = findingWater/sources.swift; sourceTree = SOURCE_ROOT; };
+		F71622C029DEE7520023474D /* sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sources.swift; path = findingWater/Models/sources.swift; sourceTree = SOURCE_ROOT; };
 		F71622C329DEE9CF0023474D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7225DA92A484E550077075E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
@@ -85,8 +83,6 @@
 		F7C266A02A43909A00CB414D /* UserHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHere.swift; sourceTree = "<group>"; };
 		F7D3FE1B2A6078E10058DDBC /* CombineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTest.swift; sourceTree = "<group>"; };
 		F7DE2F6F2A46056F00166327 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		F7E175D329F72DD1001DDA90 /* Action .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action .swift"; sourceTree = "<group>"; };
-		F7E175D529F72EF7001DDA90 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		F7E175D729F73022001DDA90 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		F7E1AB832A502F1800C518E0 /* Contacting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacting.swift; sourceTree = "<group>"; };
 		F7E1AB852A502F9A00C518E0 /* MailView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MailView .swift"; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 		2DEC775329CDB51A00C520E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F71622C029DEE7520023474D /* sources.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,9 +219,8 @@
 		F7E175D229F72DBD001DDA90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7E175D329F72DD1001DDA90 /* Action .swift */,
-				F7E175D529F72EF7001DDA90 /* Business.swift */,
 				F79E43C02A1E279C00534A99 /* User.swift */,
+				F71622C029DEE7520023474D /* sources.swift */,
 				F7C266A02A43909A00CB414D /* UserHere.swift */,
 				F7E1AB832A502F1800C518E0 /* Contacting.swift */,
 			);
@@ -339,7 +333,6 @@
 				F71622C129DEE7520023474D /* sources.swift in Sources */,
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
 				F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */,
-				F7E175D629F72EF7001DDA90 /* Business.swift in Sources */,
 				F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */,
 				2D3E9CA629C772E9003B38DB /* LocationMapView.swift in Sources */,
 				F7EB32022A51E4CF0099AC1D /* UpdateEmailViewModel.swift in Sources */,
@@ -348,7 +341,6 @@
 				F7E1AB842A502F1800C518E0 /* Contacting.swift in Sources */,
 				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
-				F7E175D429F72DD1001DDA90 /* Action .swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
