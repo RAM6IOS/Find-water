@@ -14,6 +14,7 @@ import Firebase
 class CreateAccount: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var showOnbord: Bool = false
     init() {
                 self.userSession = Auth.auth().currentUser
             self.fetchUser()

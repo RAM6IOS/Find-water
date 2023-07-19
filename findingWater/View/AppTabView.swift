@@ -11,12 +11,11 @@ struct AppTabView: View {
     init() {
           //  UITabBar.appearance().barTintColor = UIColor.blue
         }
-    @State var showOnbord: Bool = false
     @EnvironmentObject var viewModel: CreateAccount
     var body: some View {
         VStack {
-            if showOnbord == false {
-                GetStarted(show: $showOnbord)
+            if viewModel.showOnbord == false {
+                GetStarted(show: $viewModel.showOnbord)
             } else {
                 if viewModel.userSession == nil {
                     SignupView()
