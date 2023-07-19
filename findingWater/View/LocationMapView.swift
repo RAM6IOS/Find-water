@@ -15,7 +15,6 @@ import FirebaseFirestoreSwift
 struct LocationMapView: View {
     @ObservedObject var model =  LocationManger()
     @ObservedObject var mapViewModel = LocationMapViewModel()
-    @State var isPresenting = false
     let columns = [
                 GridItem(.flexible()),
                 GridItem(.flexible()),
@@ -38,14 +37,14 @@ struct LocationMapView: View {
                     }
                     VStack {
                         Button {
-                            isPresenting.toggle()
+                            model.isPresenting.toggle()
                         } label: {
                             Image(systemName: "gearshape.circle.fill")
                                 .foregroundColor(.black)
                                 .font(.system(size: 40))
                         }
-                        .fullScreenCover(isPresented: $isPresenting) {
-                            Settings(isPresenting: $isPresenting)
+                        .fullScreenCover(isPresented: $model.isPresenting) {
+                            Settings(isPresenting: $model.isPresenting)
                         }
                         LocationButton(.currentLocation) {
                             model.requesAllowOnceLocationPermission()
