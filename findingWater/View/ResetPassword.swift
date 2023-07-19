@@ -11,7 +11,6 @@ import UIKit
 import FirebaseAuth
 
 struct ResetPassword: View {
-    @State private var email = ""
     @ObservedObject var resetPasswordVM = ResetPasswordViewModel()
         var body: some View {
             if #available(iOS 16.0, *) {
@@ -23,14 +22,14 @@ struct ResetPassword: View {
                 Text("""
                              Enter the email associated with your account and we'll send an email With instructions to reset your password
                              """)
-                            TextField("Email", text: $email)
+                            TextField("Email", text: $resetPasswordVM.email)
                                 .padding()
                                 .background(Color.white)
                                 .cornerRadius(8)
                                 .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
                                 .padding(.vertical)
                             Button {
-                                resetPasswordVM.resetPassword(email: email)
+                                resetPasswordVM.resetPassword(email: resetPasswordVM.email)
                                 print("Password reset email sent successfully!")
                             }label: {
                                 Text("Reset Password")
