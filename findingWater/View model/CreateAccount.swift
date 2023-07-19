@@ -15,6 +15,12 @@ class CreateAccount: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var showOnbord: Bool = false
+    
+   // user information
+    @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var confirmPassword: String = ""
+    @Published var name: String = ""
     init() {
                 self.userSession = Auth.auth().currentUser
             self.fetchUser()
@@ -47,8 +53,6 @@ class CreateAccount: ObservableObject {
                                         .setData(userData) { _ in
                                         }
             self.fetchUser()
-            print("register\(user)")
-            print("register\( self.userSession)")
                     }
         }
     func fetchUser() {

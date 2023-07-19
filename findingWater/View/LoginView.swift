@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @StateObject var viewModel = CreateAccount()
+
+    @EnvironmentObject var viewModel : CreateAccount
     @State var showForgotPassword: Bool = false
     @Binding var showLgn: Bool
     @State var showpasword = false
@@ -26,7 +25,7 @@ struct LoginView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding()
-                TextField("Email Address", text: $email)
+                TextField("Email Address", text: $viewModel.email)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
@@ -34,7 +33,7 @@ struct LoginView: View {
                     .padding(.vertical)
                 if showpasword {
                     HStack(alignment: .center) {
-            TextField("Password", text: $password)
+                        TextField("Password", text: $viewModel.password)
                         Image(systemName: "eye")
                                         .onTapGesture {
                                             withAnimation {
@@ -49,7 +48,7 @@ struct LoginView: View {
                     .padding(.vertical)
                 } else {
                     HStack(alignment: .center) {
-                        SecureField("Password", text: $password)
+                        SecureField("Password", text: $viewModel.password)
                         Image(systemName: "eye.slash")
                             .onTapGesture {
                                 withAnimation {
@@ -65,11 +64,11 @@ struct LoginView: View {
                 }
                 Button(action: {
                     withAnimation {
-                                            viewModel.login(withEmail: email, password: password)
+                        viewModel.login(withEmail: viewModel.email, password: viewModel.password)
                         
                                         }
-                    email = ""
-                    password = ""
+                    viewModel.email = ""
+                    viewModel.password = ""
                     viewModel.fetchUser()
                 }) {
                     Text("Log in")

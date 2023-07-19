@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct SignupView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-    @State private var name: String = ""
     @EnvironmentObject var viewModel: CreateAccount
     @State var showLgn: Bool = false
     @State var showpasword = false
@@ -31,13 +27,13 @@ struct SignupView: View {
                         .fontWeight(.bold)
                         .padding()
                     VStack {
-                    TextField("Name", text: $name)
+                        TextField("Name", text: $viewModel.name)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                         .padding(.vertical)
-                    TextField("Email Address", text: $email)
+                        TextField("Email Address", text: $viewModel.email)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
@@ -45,7 +41,7 @@ struct SignupView: View {
                         .padding(.vertical)
                     if showpasword {
                         HStack(alignment: .center) {
-                            TextField("Password", text: $password)
+                            TextField("Password", text: $viewModel.password)
                             Image(systemName: "eye")
                                 .onTapGesture {
                                     withAnimation {
@@ -60,7 +56,7 @@ struct SignupView: View {
                         .padding(.vertical)
                     } else {
                         HStack(alignment: .center) {
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $viewModel.password)
                             Image(systemName: "eye.slash")
                                 .onTapGesture {
                                     withAnimation {
@@ -77,13 +73,13 @@ struct SignupView: View {
                     Button(action: {
                         // Perform signup logic here
                         withAnimation {
-                            viewModel.register(withEmail: email,
-                                               password: password,
-                                               name: name
+                            viewModel.register(withEmail: viewModel.email,
+                                               password: viewModel.password,
+                                               name: viewModel.name
                             )
-                            email = ""
-                            name = ""
-                            password = ""
+                            viewModel.email = ""
+                            viewModel.name = ""
+                            viewModel.password = ""
                             viewModel.fetchUser()
                         }
                     }) {
