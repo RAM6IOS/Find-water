@@ -11,20 +11,17 @@ import FirebaseAuth
 import FirebaseFirestore
 
 struct UpdateEmail: View {
-    @State var email = ""
-    @State var password = ""
-    @State private var error: Error?
     @ObservedObject var createAccountVM = CreateAccount()
     @ObservedObject var updateEmailVM = UpdateEmailViewModel()
     var body: some View {
 VStack {
-        TextField("New Email", text: $email)
+    TextField("New Email", text: $updateEmailVM .email)
             .padding()
             .background(Color.white)
             .cornerRadius(8)
             .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
             .padding(.vertical)
-        TextField("Password", text: $password)
+    TextField("Password", text: $updateEmailVM.password)
             .padding()
             .background(Color.white)
             .cornerRadius(8)
@@ -32,7 +29,7 @@ VStack {
             .padding(.vertical)
     Spacer()
             Button {
-                updateEmailVM.updateEmail(newEmail: email, password: password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: email)
+                updateEmailVM.updateEmail(newEmail: updateEmailVM .email, password: updateEmailVM .password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: updateEmailVM.email)
             }label: {
                 Text("Update Email")
                     .font(.headline)

@@ -11,6 +11,9 @@ import FirebaseAuth
 import Combine
 
 class  UpdateEmailViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var error: Error?
     private var cancellables = Set<AnyCancellable>()
     /*
     func updateEmail(newEmail: String, password: String, id: String, email: String) {
