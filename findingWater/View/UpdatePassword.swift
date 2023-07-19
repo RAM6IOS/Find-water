@@ -10,19 +10,16 @@ import Firebase
 import FirebaseAuth
 
 struct UpdatePassword: View {
-    @State private var currentPassword: String = ""
-    @State private var newPassword: String = ""
-    @State private var error: Error?
     @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
     var body: some View {
         VStack {
-            SecureField("Current Password", text: $currentPassword)
+            SecureField("Current Password", text: $updatePasswordVM.currentPassword)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
                 .padding(.vertical)
-            SecureField("New Password", text: $newPassword)
+            SecureField("New Password", text: $updatePasswordVM.newPassword)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(8)
@@ -30,7 +27,7 @@ struct UpdatePassword: View {
                 .padding(.vertical)
             Spacer()
                     Button(action: {
-                        updatePasswordVM.updatePassword(newPassword: newPassword, currentPassword: currentPassword)
+                        updatePasswordVM.updatePassword(newPassword: updatePasswordVM.newPassword, currentPassword: updatePasswordVM.currentPassword)
                     }) {
                         Text("Update Password")
                             .font(.headline)

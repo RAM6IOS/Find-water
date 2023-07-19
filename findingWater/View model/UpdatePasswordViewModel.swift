@@ -10,6 +10,10 @@ import Firebase
 import FirebaseAuth
 
 class  UpdatePasswordViewModel : ObservableObject {
+    
+    @Published var currentPassword: String = ""
+    @Published var newPassword: String = ""
+    @Published var error: Error?
     func updatePassword(newPassword: String, currentPassword: String) {
         let user = Auth.auth().currentUser
 
