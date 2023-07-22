@@ -53,4 +53,3 @@ struct GetStartedScreniPad: View {
         }
     }
 }
-

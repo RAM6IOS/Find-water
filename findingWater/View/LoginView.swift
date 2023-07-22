@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-
     @EnvironmentObject var viewModel : CreateAccount
-    @State var showForgotPassword: Bool = false
+    @State var showForgotPassword:Bool = false
     @Binding var showLgn: Bool
     @State var showpasword = false
     var body: some View {
@@ -71,7 +70,7 @@ struct LoginView: View {
                     viewModel.password = ""
                     viewModel.fetchUser()
                 }) {
-                    Text("Log in")
+                Text("Log in")
                         .foregroundColor(.white)
                         .padding(.vertical, 16)
                         .frame(maxWidth: .infinity)
@@ -83,7 +82,7 @@ struct LoginView: View {
                     // Perform actions for forgot password
                     showForgotPassword.toggle()
                 }) {
-                    Text("Forgot password?")
+                Text("Forgot password?")
                         .foregroundColor(.blue)
                         .padding(.bottom)
                 }
@@ -93,7 +92,7 @@ struct LoginView: View {
                     // Perform actions for sign up
                     showLgn.toggle()
                 }) {
-                    Text("Sign up")
+                Text("Sign up")
                         .font(.headline)
                         .foregroundColor(.blue)
                         .padding()
@@ -110,8 +109,9 @@ struct LoginView: View {
             .padding()
         }
     }
+    /*
     private func isValidLogin() -> Bool {
         return !email.isEmpty && !password.isEmpty
     }
+     */
 }
-

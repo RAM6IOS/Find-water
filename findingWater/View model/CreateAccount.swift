@@ -73,14 +73,13 @@ class CreateAccount: ObservableObject {
     func logout() {
                userSession = nil
                try? Auth.auth().signOut()
-        print("logout\( userSession)")
            }
     func delete() {
-           userSession = nil
            Auth.auth().currentUser?.delete{ error in
              if let error = error {
                print(error)
              } else {
+                 self.userSession = nil
              }
            }
            }

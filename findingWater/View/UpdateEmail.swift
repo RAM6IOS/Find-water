@@ -29,7 +29,9 @@ VStack {
             .padding(.vertical)
     Spacer()
             Button {
-                updateEmailVM.updateEmail(newEmail: updateEmailVM .email, password: updateEmailVM .password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: updateEmailVM.email)
+                updateEmailVM.updateEmail(newEmail: updateEmailVM.email, password: updateEmailVM.password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: updateEmailVM.email)
+                updateEmailVM.email = ""
+                updateEmailVM.password = " "
             }label: {
                 Text("Update Email")
                     .font(.headline)
