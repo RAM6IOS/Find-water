@@ -28,6 +28,8 @@ struct UpdatePassword: View {
             Spacer()
                     Button(action: {
                         updatePasswordVM.updatePassword(newPassword: updatePasswordVM.newPassword, currentPassword: updatePasswordVM.currentPassword)
+                        updatePasswordVM.currentPassword = ""
+                        updatePasswordVM.newPassword = ""
                     }) {
                         Text("Update Password")
                             .font(.headline)

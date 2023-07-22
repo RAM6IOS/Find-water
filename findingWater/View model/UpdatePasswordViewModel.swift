@@ -9,8 +9,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-class  UpdatePasswordViewModel : ObservableObject {
-    
+class  UpdatePasswordViewModel: ObservableObject {
     @Published var currentPassword: String = ""
     @Published var newPassword: String = ""
     @Published var error: Error?
