@@ -13,6 +13,8 @@ class  UpdatePasswordViewModel: ObservableObject {
     @Published var currentPassword: String = ""
     @Published var newPassword: String = ""
     @Published var error: Error?
+    @Published var showPassword: Bool = false
+    @Published var showNewPassword: Bool = false
     func updatePassword(newPassword: String, currentPassword: String) {
         let user = Auth.auth().currentUser
 

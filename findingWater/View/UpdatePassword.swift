@@ -11,17 +11,15 @@ import FirebaseAuth
 
 struct UpdatePassword: View {
     @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
-    @State var showPasword: Bool = false
-    @State var showNewPassword: Bool = false
     var body: some View {
         VStack {
-            if showPasword {
+            if updatePasswordVM.showPassword {
                 HStack(alignment: .center) {
                     TextField("Password", text: $updatePasswordVM.currentPassword)
                     Image(systemName: "eye")
                         .onTapGesture {
                             withAnimation {
-                                self.showPasword.toggle()
+                                self.updatePasswordVM.showPassword.toggle()
                             }
                         }
                 }
@@ -36,7 +34,7 @@ struct UpdatePassword: View {
                     Image(systemName: "eye.slash")
                         .onTapGesture {
                             withAnimation {
-                                self.showPasword.toggle()
+                                self.updatePasswordVM.showPassword.toggle()
                             }
                         }
                 }
@@ -46,14 +44,13 @@ struct UpdatePassword: View {
                 .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                 .padding(.vertical)
             }
-            
-            if showNewPassword {
+            if updatePasswordVM.showNewPassword {
                 HStack(alignment: .center) {
                     TextField("New Password", text: $updatePasswordVM.newPassword)
                     Image(systemName: "eye")
                         .onTapGesture {
                             withAnimation {
-                                self.showNewPassword.toggle()
+                                self.updatePasswordVM.showNewPassword.toggle()
                             }
                         }
                 }
@@ -68,7 +65,7 @@ struct UpdatePassword: View {
                     Image(systemName: "eye.slash")
                         .onTapGesture {
                             withAnimation {
-                                self.showNewPassword.toggle()
+                                self.updatePasswordVM.showNewPassword.toggle()
                             }
                         }
                 }
