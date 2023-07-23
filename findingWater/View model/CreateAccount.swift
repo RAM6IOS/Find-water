@@ -71,8 +71,13 @@ class CreateAccount: ObservableObject {
                 }
         }
     func logout() {
-               userSession = nil
-               try? Auth.auth().signOut()
+        do {
+            userSession = nil
+            try? Auth.auth().signOut()
+        } catch let signOutError as NSError  {
+            print("Error signing out: %@", signOutError)
+        }
+               
            }
     func delete() {
            Auth.auth().currentUser?.delete{ error in
