@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var viewModel : CreateAccount
-    @State var showForgotPassword:Bool = false
+    @EnvironmentObject var viewModel: CreateAccount
+    @State var showForgotPassword: Bool = false
     @Binding var showLgn: Bool
     @State var showpasword = false
     var body: some View {
