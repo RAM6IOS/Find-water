@@ -13,6 +13,7 @@ import Combine
 class  UpdateEmailViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
+    @Published var showPassword = false
     @Published var error: Error?
     private var cancellables = Set<AnyCancellable>()
     /*

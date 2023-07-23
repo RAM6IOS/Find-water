@@ -14,12 +14,7 @@ struct ChangeProfile: View {
     @ObservedObject var createAccountVM = CreateAccount()
     var body: some View {
         VStack {
-            TextField("Update Name", text: $name)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-               .padding(.vertical)
+            TextFieldComponat2(name: $name, title: "Name")
             Button {
                 updateName(name: name)
             }label: {

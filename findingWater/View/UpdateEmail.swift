@@ -15,18 +15,14 @@ struct UpdateEmail: View {
     @ObservedObject var updateEmailVM = UpdateEmailViewModel()
     var body: some View {
 VStack {
-    TextField("New Email", text: $updateEmailVM .email)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(8)
-            .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-            .padding(.vertical)
-    TextField("Password", text: $updateEmailVM.password)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(8)
-            .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-            .padding(.vertical)
+    TextFieldComponat2(name: $updateEmailVM.email, title: "New Email")
+    if updateEmailVM.showPassword {
+    TextFieldComponat(name: $updateEmailVM.password,show: $updateEmailVM.showPassword
+                      , title: "Password")
+    } else {
+        SecureFieldComponat(name: $updateEmailVM.password, show: $updateEmailVM.showPassword
+                            , title: "Password")
+    }
     Spacer()
             Button {
                 updateEmailVM.updateEmail(newEmail: updateEmailVM.email, password: updateEmailVM.password, id: createAccountVM.currentUser?.id  ?? "reewwedsewd", email: updateEmailVM.email)

@@ -50,3 +50,16 @@ struct SecureFieldComponat: View {
         .padding(.vertical)
     }
 }
+
+struct TextFieldComponat2: View {
+    @Binding var name: String
+    var title: String
+    var body: some View {
+        TextField(title, text: $name)
+        .padding()
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+        .padding(.vertical)
+    }
+}

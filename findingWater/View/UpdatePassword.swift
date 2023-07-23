@@ -13,11 +13,11 @@ struct UpdatePassword: View {
      @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
     var body: some View {
         VStack {
-            if updatePasswordVM.showPassword {
-            TextFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword
+            if updatePasswordVM.showPassword  {
+            TextFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword 
                               , title: "Password")
             } else {
-                SecureFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword
+                SecureFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword 
                                     , title: "Password")
             }
             if updatePasswordVM.showNewPassword {
