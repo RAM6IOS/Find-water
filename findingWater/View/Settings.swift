@@ -43,6 +43,7 @@ struct Settings: View {
                         }
                         NavigationLink {
                             UpdatePassword()
+                                .environmentObject(UpdatePasswordViewModel())
                         } label: {
                             HStack {
                                 Image(systemName: "lock")
