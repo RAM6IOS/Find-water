@@ -34,6 +34,7 @@
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
 		F789F6762A292C620024D784 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6752A292C610024D784 /* SignupView.swift */; };
 		F78A210C2A4999E3008DE708 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A210B2A4999E3008DE708 /* About.swift */; };
+		F7936FAB2A6D574900646212 /* TextFieldComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7936FAA2A6D574900646212 /* TextFieldComponat.swift */; };
 		F79E43C12A1E279C00534A99 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E43C02A1E279C00534A99 /* User.swift */; };
 		F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */; };
 		F7C266A12A43909A00CB414D /* UserHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C266A02A43909A00CB414D /* UserHere.swift */; };
@@ -78,6 +79,7 @@
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F789F6752A292C610024D784 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F78A210B2A4999E3008DE708 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		F7936FAA2A6D574900646212 /* TextFieldComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponat.swift; sourceTree = "<group>"; };
 		F79E43C02A1E279C00534A99 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7C2669E2A435C7700CB414D /* UserAtTheWaterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAtTheWaterSource.swift; sourceTree = "<group>"; };
 		F7C266A02A43909A00CB414D /* UserHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHere.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		2D7028E629CC604C00D990CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F7936FA92A6D570200646212 /* Componat */,
 				2D3E9CA529C772E9003B38DB /* LocationMapView.swift */,
 				2D3E9CAB29C778D4003B38DB /* AppTabView.swift */,
 				F74FADB629E565D500D3B376 /* Launch Screen.storyboard */,
@@ -214,6 +217,14 @@
 				F7D3FE1B2A6078E10058DDBC /* CombineTest.swift */,
 			);
 			path = "View model";
+			sourceTree = "<group>";
+		};
+		F7936FA92A6D570200646212 /* Componat */ = {
+			isa = PBXGroup;
+			children = (
+				F7936FAA2A6D574900646212 /* TextFieldComponat.swift */,
+			);
+			path = Componat;
 			sourceTree = "<group>";
 		};
 		F7E175D229F72DBD001DDA90 /* Models */ = {
@@ -342,6 +353,7 @@
 				F7E1AB882A50357800C518E0 /* ResetPassword.swift in Sources */,
 				F7C266A12A43909A00CB414D /* UserHere.swift in Sources */,
 				2D3E9CB229C79A4F003B38DB /* Coloer.swift in Sources */,
+				F7936FAB2A6D574900646212 /* TextFieldComponat.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
 				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,

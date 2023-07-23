@@ -10,70 +10,22 @@ import Firebase
 import FirebaseAuth
 
 struct UpdatePassword: View {
-    @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
+     @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
     var body: some View {
         VStack {
             if updatePasswordVM.showPassword {
-                HStack(alignment: .center) {
-                    TextField("Password", text: $updatePasswordVM.currentPassword)
-                    Image(systemName: "eye")
-                        .onTapGesture {
-                            withAnimation {
-                                self.updatePasswordVM.showPassword.toggle()
-                            }
-                        }
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-                .padding(.vertical)
+            TextFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword
+                              , title: "Password")
             } else {
-                HStack(alignment: .center) {
-                    SecureField("Password", text: $updatePasswordVM.currentPassword)
-                    Image(systemName: "eye.slash")
-                        .onTapGesture {
-                            withAnimation {
-                                self.updatePasswordVM.showPassword.toggle()
-                            }
-                        }
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                .padding(.vertical)
+                SecureFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword
+                                    , title: "Password")
             }
             if updatePasswordVM.showNewPassword {
-                HStack(alignment: .center) {
-                    TextField("New Password", text: $updatePasswordVM.newPassword)
-                    Image(systemName: "eye")
-                        .onTapGesture {
-                            withAnimation {
-                                self.updatePasswordVM.showNewPassword.toggle()
-                            }
-                        }
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-                .padding(.vertical)
+                TextFieldComponat(name: $updatePasswordVM.newPassword, show: $updatePasswordVM.showNewPassword
+                                  , title: "New Password")
             } else {
-                HStack(alignment: .center) {
-                    SecureField("New Password", text: $updatePasswordVM.newPassword)
-                    Image(systemName: "eye.slash")
-                        .onTapGesture {
-                            withAnimation {
-                                self.updatePasswordVM.showNewPassword.toggle()
-                            }
-                        }
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                .padding(.vertical)
+                SecureFieldComponat(name: $updatePasswordVM.newPassword, show: $updatePasswordVM.showNewPassword
+                                    ,title: "New Password")
             }
             Spacer()
                     Button(action: {
@@ -93,6 +45,7 @@ struct UpdatePassword: View {
                 }
         .navigationTitle("Update Password")
         .padding()
+
     }
 }
 
