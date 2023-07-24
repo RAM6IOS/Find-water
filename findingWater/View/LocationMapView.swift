@@ -35,29 +35,7 @@ struct LocationMapView: View {
                             }
                         }
                     }
-                    VStack {
-                        Button {
-                            model.isPresenting.toggle()
-                        } label: {
-                            Image(systemName: "gearshape.circle.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 40))
-                        }
-                        .fullScreenCover(isPresented: $model.isPresenting) {
-                            Settings(isPresenting: $model.isPresenting)
-                        }
-                        LocationButton(.currentLocation) {
-                            model.requesAllowOnceLocationPermission()
-                        }
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                        .labelStyle(.iconOnly)
-                        .symbolVariant(.fill)
-                        .tint(.blue)
-                        .frame(width: 40)
-                        .clipShape(Circle())
-                    }
-                    .padding(.bottom, 100)
+                    LocationMapComponat(isPresenting: $model.isPresenting)
                 }
                 .ignoresSafeArea(.all)
             }

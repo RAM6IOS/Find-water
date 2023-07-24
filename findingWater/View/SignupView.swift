@@ -40,13 +40,7 @@ struct SignupView: View {
                             viewModel.fetchUser()
                         }
                     }) {
-                        Text("Sign up")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                        ButtonComponat(text: "Sign up")
                     }
                     .padding()
                 }
