@@ -22,23 +22,12 @@ struct ResetPassword: View {
                 Text("""
                              Enter the email associated with your account and we'll send an email With instructions to reset your password
                              """)
-                            TextField("Email", text: $resetPasswordVM.email)
-                                .padding()
-                                .background(Color.white)
-                                .cornerRadius(8)
-                                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 1, y: 2)
-                                .padding(.vertical)
+                            TextFieldComponat2(name: $resetPasswordVM.email, title: "Email")
                             Button {
                                 resetPasswordVM.resetPassword(email: resetPasswordVM.email)
                                 print("Password reset email sent successfully!")
                             }label: {
-                                Text("Reset Password")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
+                                ButtonComponat(text: "Reset Password")
                             }
                             Spacer()
                         }
