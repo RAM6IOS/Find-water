@@ -30,6 +30,8 @@
 		F75010C42A3BB6B1006FC851 /* locationDitels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75010C32A3BB6B1006FC851 /* locationDitels.swift */; };
 		F75910842A58753F008462BA /* GetStartedScreniPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75910832A58753F008462BA /* GetStartedScreniPad.swift */; };
 		F761279C2A6E94570065D941 /* SignupViewComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F761279B2A6E94570065D941 /* SignupViewComponat.swift */; };
+		F761279E2A6EA6F00065D941 /* LoginViewComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */; };
+		F76157242A6EEA2000553BF7 /*  ButtonComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */; };
 		F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770D3A52A51A18100B762E0 /* CheckMail.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
@@ -76,6 +78,8 @@
 		F75010C32A3BB6B1006FC851 /* locationDitels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationDitels.swift; sourceTree = "<group>"; };
 		F75910832A58753F008462BA /* GetStartedScreniPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedScreniPad.swift; sourceTree = "<group>"; };
 		F761279B2A6E94570065D941 /* SignupViewComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewComponat.swift; sourceTree = "<group>"; };
+		F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewComponat.swift; sourceTree = "<group>"; };
+		F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ButtonComponat.swift"; sourceTree = "<group>"; };
 		F770D3A52A51A18100B762E0 /* CheckMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMail.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			children = (
 				F7936FAA2A6D574900646212 /* TextFieldComponat.swift */,
 				F761279B2A6E94570065D941 /* SignupViewComponat.swift */,
+				F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */,
+				F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */,
 			);
 			path = Componat;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71622C129DEE7520023474D /* sources.swift in Sources */,
+				F76157242A6EEA2000553BF7 /*  ButtonComponat.swift in Sources */,
 				2DE4F7BB299ACB90000370CB /* LocationModel.swift in Sources */,
 				F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */,
 				F7EB32002A51E3150099AC1D /* UpdatePasswordViewModel.swift in Sources */,
@@ -359,6 +366,7 @@
 				F7936FAB2A6D574900646212 /* TextFieldComponat.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
+				F761279E2A6EA6F00065D941 /* LoginViewComponat.swift in Sources */,
 				F761279C2A6E94570065D941 /* SignupViewComponat.swift in Sources */,
 				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,
 				F7C2669F2A435C7700CB414D /* UserAtTheWaterSource.swift in Sources */,
