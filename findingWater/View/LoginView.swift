@@ -16,55 +16,16 @@ struct LoginView: View {
         ZStack {
             VStack {
                 Spacer()
-                Image("drop")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 100, height: 100)
-                Text("Welcome back")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-                TextField("Email Address", text: $viewModel.email)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                    .padding(.vertical)
+                SignupViewComponat(title: "drop", title2: "Welcome back", fram: 100)
+                TextFieldComponat2(name: $viewModel.email, title: "Email Address")
                 if showpasword {
-                    HStack(alignment: .center) {
-                        TextField("Password", text: $viewModel.password)
-                        Image(systemName: "eye")
-                                        .onTapGesture {
-                                            withAnimation {
-                                                    self.showpasword.toggle()
-                                                           }
-                                                       }
-                                               }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                    .padding(.vertical)
+                    TextFieldComponat(name: $viewModel.password, show: $showpasword, title: "Password")
                 } else {
-                    HStack(alignment: .center) {
-                        SecureField("Password", text: $viewModel.password)
-                        Image(systemName: "eye.slash")
-                            .onTapGesture {
-                                withAnimation {
-                                    self.showpasword.toggle()
-                                }
-                            }
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                    .padding(.vertical)
+                    SecureFieldComponat(name: $viewModel.password, show: $showpasword, title: "Password")
                 }
                 Button(action: {
                     withAnimation {
                         viewModel.login(withEmail: viewModel.email, password: viewModel.password)
-                        
                                         }
                     viewModel.email = ""
                     viewModel.password = ""
@@ -78,40 +39,9 @@ struct LoginView: View {
                         .cornerRadius(8)
                 }
                 .padding(.vertical)
-                Button(action: {
-                    // Perform actions for forgot password
-                    showForgotPassword.toggle()
-                }) {
-                Text("Forgot password?")
-                        .foregroundColor(.blue)
-                        .padding(.bottom)
-                }
-                Text("Don't have an account?")
-                  .foregroundColor(.gray)
-                Button(action: {
-                    // Perform actions for sign up
-                    showLgn.toggle()
-                }) {
-                Text("Sign up")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .padding()
-                }
-                .padding(.horizontal, 32)
-                Spacer()
-            }
-            .sheet(isPresented: $showForgotPassword) {
-                ResetPassword()
-            }
-            .onAppear {
-               // self.viewModel.fetchUser()
+                SignupViewComponat2(showForgotPassword: $showForgotPassword, showLign: $showLgn)
             }
             .padding()
         }
     }
-    /*
-    private func isValidLogin() -> Bool {
-        return !email.isEmpty && !password.isEmpty
-    }
-     */
 }
