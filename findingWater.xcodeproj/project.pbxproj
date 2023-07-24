@@ -32,6 +32,7 @@
 		F761279C2A6E94570065D941 /* SignupViewComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F761279B2A6E94570065D941 /* SignupViewComponat.swift */; };
 		F761279E2A6EA6F00065D941 /* LoginViewComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */; };
 		F76157242A6EEA2000553BF7 /*  ButtonComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */; };
+		F76157262A6EEB9000553BF7 /* LocationMapComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76157252A6EEB9000553BF7 /* LocationMapComponat.swift */; };
 		F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770D3A52A51A18100B762E0 /* CheckMail.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
@@ -80,6 +81,7 @@
 		F761279B2A6E94570065D941 /* SignupViewComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewComponat.swift; sourceTree = "<group>"; };
 		F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewComponat.swift; sourceTree = "<group>"; };
 		F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ButtonComponat.swift"; sourceTree = "<group>"; };
+		F76157252A6EEB9000553BF7 /* LocationMapComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapComponat.swift; sourceTree = "<group>"; };
 		F770D3A52A51A18100B762E0 /* CheckMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMail.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				F761279B2A6E94570065D941 /* SignupViewComponat.swift */,
 				F761279D2A6EA6F00065D941 /* LoginViewComponat.swift */,
 				F76157232A6EEA2000553BF7 /*  ButtonComponat.swift */,
+				F76157252A6EEB9000553BF7 /* LocationMapComponat.swift */,
 			);
 			path = Componat;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				F7936FAB2A6D574900646212 /* TextFieldComponat.swift in Sources */,
 				F78A210C2A4999E3008DE708 /* About.swift in Sources */,
 				F789F6742A28F1F50024D784 /* LoginView.swift in Sources */,
+				F76157262A6EEB9000553BF7 /* LocationMapComponat.swift in Sources */,
 				F761279E2A6EA6F00065D941 /* LoginViewComponat.swift in Sources */,
 				F761279C2A6E94570065D941 /* SignupViewComponat.swift in Sources */,
 				F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */,
