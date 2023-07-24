@@ -18,57 +18,14 @@ struct SignupView: View {
             } else {
                 VStack {
                     Spacer()
-                    Image("drop")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 80, height: 80) // Replace with your Airbnb logo
-                    Text("Sign up ")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding()
+                    SignupViewComponat(title: "drop", title2: "Sign up", fram: 80)
                     VStack {
-                        TextField("Name", text: $viewModel.name)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                        .padding(.vertical)
-                        TextField("Email Address", text: $viewModel.email)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                        .padding(.vertical)
+                        TextFieldComponat2(name: $viewModel.name, title: "Name")
+                        TextFieldComponat2(name: $viewModel.email, title: "Email Address")
                     if showpasword {
-                        HStack(alignment: .center) {
-                            TextField("Password", text: $viewModel.password)
-                            Image(systemName: "eye")
-                                .onTapGesture {
-                                    withAnimation {
-                                        self.showpasword.toggle()
-                                    }
-                                }
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                        .padding(.vertical)
+                        TextFieldComponat(name: $viewModel.password, show: $showpasword, title: "Password")
                     } else {
-                        HStack(alignment: .center) {
-                            SecureField("Password", text: $viewModel.password)
-                            Image(systemName: "eye.slash")
-                                .onTapGesture {
-                                    withAnimation {
-                                        self.showpasword.toggle()
-                                    }
-                                }
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                        .padding(.vertical)
+                        SecureFieldComponat(name: $viewModel.password, show: $showpasword, title: "Password")
                     }
                     Button(action: {
                         // Perform signup logic here
@@ -93,24 +50,7 @@ struct SignupView: View {
                     }
                     .padding()
                 }
-                    Text("I already have an account")
-                        .foregroundColor(.gray)
-                    Button( action: {
-                        // Perform actions for sign up
-                        showLgn.toggle()
-                    }) {
-                        Text("Log in")
-                            .font(.headline)
-                            .foregroundColor(.blue)
-                            .padding()
-                    }
-                    .padding(.horizontal, 32)
-                    Text("By signing up, you agree to our Terms of Service and Privacy Policy.")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    Spacer()
+                    LoginViewComponat(showLign: $showLgn)
                 }
                 .padding()
             }
