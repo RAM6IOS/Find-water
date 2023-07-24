@@ -29,13 +29,7 @@ VStack {
                 updateEmailVM.email = ""
                 updateEmailVM.password = " "
             }label: {
-                Text("Update Email")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                ButtonComponat(text: "Update Email")
             }
             .padding()
 
