@@ -24,6 +24,7 @@
 		F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F71622CF29E0BD0B0023474D /* FirebaseFirestoreSwift */; };
 		F7225DAA2A484E550077075E /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7225DA92A484E550077075E /* UpdatePassword.swift */; };
 		F72965DD2A4AEFAF00FDBCA0 /* ChangeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */; };
+		F736BE4C2A6FEDB3001C0258 /* findingWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736BE4B2A6FEDB3001C0258 /* findingWaterTests.swift */; };
 		F74EA26D2A2939070090E75A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EA26C2A2939070090E75A /* CreateAccount.swift */; };
 		F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74FADB629E565D500D3B376 /* Launch Screen.storyboard */; };
 		F74FADBB29E57E7B00D3B376 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74FADBA29E57E7B00D3B376 /* GetStarted.swift */; };
@@ -56,6 +57,29 @@
 		F7ED17832A474BD0005EABF9 /* UpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED17822A474BD0005EABF9 /* UpdateEmail.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F736BE4D2A6FEDB3001C0258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DFE96D92998F49C00244576 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFE96E02998F49C00244576;
+			remoteInfo = findingWater;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F736BE412A6FED17001C0258 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2D3E9CA529C772E9003B38DB /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		2D3E9CAB29C778D4003B38DB /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
@@ -73,6 +97,8 @@
 		F71622CD29E057240023474D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7225DA92A484E550077075E /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		F72965DC2A4AEFAF00FDBCA0 /* ChangeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfile.swift; sourceTree = "<group>"; };
+		F736BE492A6FEDB3001C0258 /* findingWaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findingWaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F736BE4B2A6FEDB3001C0258 /* findingWaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findingWaterTests.swift; sourceTree = "<group>"; };
 		F74EA26C2A2939070090E75A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		F74FADB629E565D500D3B376 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F74FADBA29E57E7B00D3B376 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
@@ -114,6 +140,13 @@
 				F71622BB29DE220A0023474D /* FirebaseFirestore in Frameworks */,
 				F71622D029E0BD0B0023474D /* FirebaseFirestoreSwift in Frameworks */,
 				F7CE911A2A2BA375000063B6 /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F736BE462A6FEDB3001C0258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2DFE96E32998F49D00244576 /* findingWater */,
+				F736BE4A2A6FEDB3001C0258 /* findingWaterTests */,
 				2DFE96E22998F49D00244576 /* Products */,
 				2D3E9CAD29C7810B003B38DB /* Frameworks */,
 			);
@@ -179,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				2DFE96E12998F49D00244576 /* findingWater.app */,
+				F736BE492A6FEDB3001C0258 /* findingWaterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +262,14 @@
 			path = "View model";
 			sourceTree = "<group>";
 		};
+		F736BE4A2A6FEDB3001C0258 /* findingWaterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F736BE4B2A6FEDB3001C0258 /* findingWaterTests.swift */,
+			);
+			path = findingWaterTests;
+			sourceTree = "<group>";
+		};
 		F7936FA92A6D570200646212 /* Componat */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +304,7 @@
 				2DFE96DE2998F49C00244576 /* Frameworks */,
 				2DFE96DF2998F49C00244576 /* Resources */,
 				F78841CB2A42F50D000C09A6 /* ShellScript */,
+				F736BE412A6FED17001C0258 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -278,6 +322,24 @@
 			productReference = 2DFE96E12998F49D00244576 /* findingWater.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F736BE482A6FEDB3001C0258 /* findingWaterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F736BE4F2A6FEDB3001C0258 /* Build configuration list for PBXNativeTarget "findingWaterTests" */;
+			buildPhases = (
+				F736BE452A6FEDB3001C0258 /* Sources */,
+				F736BE462A6FEDB3001C0258 /* Frameworks */,
+				F736BE472A6FEDB3001C0258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F736BE4E2A6FEDB3001C0258 /* PBXTargetDependency */,
+			);
+			name = findingWaterTests;
+			productName = findingWaterTests;
+			productReference = F736BE492A6FEDB3001C0258 /* findingWaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,6 +352,10 @@
 				TargetAttributes = {
 					2DFE96E02998F49C00244576 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					F736BE482A6FEDB3001C0258 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 2DFE96E02998F49C00244576;
 					};
 				};
 			};
@@ -310,6 +376,7 @@
 			projectRoot = "";
 			targets = (
 				2DFE96E02998F49C00244576 /* findingWater */,
+				F736BE482A6FEDB3001C0258 /* findingWaterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +390,13 @@
 				F71622CE29E057240023474D /* GoogleService-Info.plist in Resources */,
 				F74FADB729E565D500D3B376 /* Launch Screen.storyboard in Resources */,
 				2DFE96E92998F4A100244576 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F736BE472A6FEDB3001C0258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +467,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F736BE452A6FEDB3001C0258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F736BE4C2A6FEDB3001C0258 /* findingWaterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F736BE4E2A6FEDB3001C0258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFE96E02998F49C00244576 /* findingWater */;
+			targetProxy = F736BE4D2A6FEDB3001C0258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2DFE96EE2998F4A100244576 /* Debug */ = {
@@ -585,6 +675,47 @@
 			};
 			name = Release;
 		};
+		F736BE502A6FEDB3001C0258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H8H3AS73K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RamziBouchedoub.findingWaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findingWater.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/findingWater";
+			};
+			name = Debug;
+		};
+		F736BE512A6FEDB3001C0258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H8H3AS73K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RamziBouchedoub.findingWaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findingWater.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/findingWater";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +733,15 @@
 			buildConfigurations = (
 				2DFE96F12998F4A100244576 /* Debug */,
 				2DFE96F22998F4A100244576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F736BE4F2A6FEDB3001C0258 /* Build configuration list for PBXNativeTarget "findingWaterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F736BE502A6FEDB3001C0258 /* Debug */,
+				F736BE512A6FEDB3001C0258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
