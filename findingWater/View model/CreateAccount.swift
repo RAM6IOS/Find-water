@@ -15,7 +15,6 @@ class CreateAccount: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var showOnbord: Bool = false
-    
    // user information
     @Published var email: String = ""
     @Published var password: String = ""
