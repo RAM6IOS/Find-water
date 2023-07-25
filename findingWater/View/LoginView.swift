@@ -31,12 +31,7 @@ struct LoginView: View {
                     viewModel.password = ""
                     viewModel.fetchUser()
                 }) {
-                Text("Log in")
-                        .foregroundColor(.white)
-                        .padding(.vertical, 16)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(8)
+                    ButtonComponat(text: "Log in")
                 }
                 .padding(.vertical)
                 SignupViewComponat2(showForgotPassword: $showForgotPassword, showLign: $showLgn)

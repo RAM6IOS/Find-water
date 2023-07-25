@@ -18,13 +18,7 @@ struct ChangeProfile: View {
             Button {
                 updateName(name: name)
             }label: {
-                Text("Update Name")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                ButtonComponat(text: "Update Name")
             }
             .padding()
             Spacer()

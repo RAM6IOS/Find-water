@@ -13,9 +13,9 @@ struct UpdatePassword: View {
      @ObservedObject var updatePasswordVM = UpdatePasswordViewModel()
     var body: some View {
         VStack {
-            if updatePasswordVM.showPassword  {
+            if updatePasswordVM.showPassword {
             TextFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword 
-                              , title: "Password")
+                              ,title: "Password")
             } else {
                 SecureFieldComponat(name: $updatePasswordVM.currentPassword, show: $updatePasswordVM.showPassword 
                                     , title: "Password")
@@ -25,7 +25,7 @@ struct UpdatePassword: View {
                                   , title: "New Password")
             } else {
                 SecureFieldComponat(name: $updatePasswordVM.newPassword, show: $updatePasswordVM.showNewPassword
-                                    ,title: "New Password")
+                                ,title: "New Password")
             }
             Spacer()
                     Button(action: {
@@ -33,13 +33,7 @@ struct UpdatePassword: View {
                         updatePasswordVM.currentPassword = ""
                         updatePasswordVM.newPassword = ""
                     }) {
-                        Text("Update Password")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                        ButtonComponat(text: "Update Password")
                     }
                     .padding()
                 }
