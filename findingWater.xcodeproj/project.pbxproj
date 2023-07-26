@@ -36,6 +36,7 @@
 		F76157262A6EEB9000553BF7 /* LocationMapComponat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76157252A6EEB9000553BF7 /* LocationMapComponat.swift */; };
 		F770D3A62A51A18100B762E0 /* CheckMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770D3A52A51A18100B762E0 /* CheckMail.swift */; };
 		F7712BE629E2BF0900E1B59C /* Water tank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712BE529E2BF0900E1B59C /* Water tank.swift */; };
+		F772EABE2A71B2B90098899C /* MailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772EABD2A71B2B90098899C /* MailViewTests.swift */; };
 		F789F6742A28F1F50024D784 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6732A28F1F50024D784 /* LoginView.swift */; };
 		F789F6762A292C620024D784 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789F6752A292C610024D784 /* SignupView.swift */; };
 		F78A210C2A4999E3008DE708 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A210B2A4999E3008DE708 /* About.swift */; };
@@ -110,6 +111,7 @@
 		F76157252A6EEB9000553BF7 /* LocationMapComponat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapComponat.swift; sourceTree = "<group>"; };
 		F770D3A52A51A18100B762E0 /* CheckMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMail.swift; sourceTree = "<group>"; };
 		F7712BE529E2BF0900E1B59C /* Water tank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Water tank.swift"; sourceTree = "<group>"; };
+		F772EABD2A71B2B90098899C /* MailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewTests.swift; sourceTree = "<group>"; };
 		F789F6732A28F1F50024D784 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F789F6752A292C610024D784 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F78A210B2A4999E3008DE708 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				F736BE4B2A6FEDB3001C0258 /* findingWaterTests.swift */,
+				F772EABD2A71B2B90098899C /* MailViewTests.swift */,
 			);
 			path = findingWaterTests;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F736BE4C2A6FEDB3001C0258 /* findingWaterTests.swift in Sources */,
+				F772EABE2A71B2B90098899C /* MailViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
